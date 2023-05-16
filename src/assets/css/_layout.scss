@@ -1,0 +1,13 @@
+.home {
+  &-bg {
+    background-image: url('@/assets/images/main.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/9;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
