@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Link, HashRouter } from "react-router-dom";
 
 // layout
 import DefaultLayout from "@/layout/DefaultLayout";
@@ -36,8 +36,8 @@ const Home = () => {
               <Logo />
             </div>
             <div className='flex gap20 alignCenter'>
-              <a href='/nds-ui/DefaultLayout/UserGuide/Overview'> <Button size='large' variant='outlined' radius='round'>User Guide</Button> </a>
-              <a href='/nds-ui/DefaultLayout/Component/AutocompletePage'> <Button size='large' variant='outlined' radius='round'>Components</Button> </a>
+              <Link to='/DefaultLayout/UserGuide/Overview'> <Button size='large' variant='outlined' radius='round'>User Guide</Button> </Link>
+              <Link to='/DefaultLayout/Component/AutocompletePage'> <Button size='large' variant='outlined' radius='round'>Components</Button> </Link>
             </div>
             <div className='width175 flex alignCenter gap20'>
               <Button className='minw45 h45' square theme='grayc'>
@@ -71,14 +71,14 @@ const Home = () => {
               </div>
             </div>
             <div className='flex gap20'>
-              <a href='/nds-ui/DefaultLayout/UserGuide/Overview'> 
+              <Link to='/DefaultLayout/UserGuide/Overview'> 
                 <Button size='large' variant='contained'>
                   <div className='flexCenter gap10'>
                     <i className='i-arrow-right w20 h20 bgc-white'/>
                     NDS UI
                   </div>
                 </Button>
-              </a>
+              </Link>
               <Button size='large' variant='outlined' onClick={() => Copy('npm i nds-ui@latest sass')}>
                 <div className='flexCenter gap10' >
                   npm i nds-ui sass
@@ -111,9 +111,8 @@ function App() {
   }, [])
   return (
     <>
-      <BrowserRouter 
-        // basename='/nds-ui/'
-        basename='https://nextreeui.github.io/nds-ui'
+      <HashRouter
+        // basename='https://nextreeui.github.io/nds-ui'
       >
         <Routes>
           <Route path='/*' element={<Home/>} />
@@ -121,7 +120,7 @@ function App() {
           <Route path='/GuideLayout/*' element={<GuideLayout />} />
           <Route path='/NoLayout/*' element={<NoLayout />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 import { Logo } from "@/component";
 import { Button } from "@/nds-ui/component";
@@ -12,29 +13,29 @@ function Lnb({address1, address2}) {
         </div>
         <div className="width100 vh100-70 scrollYAuto p40 flexColumn gap40">
           <div className="flex gap10">
-            <a href='/nds-ui/DefaultLayout/UserGuide/Overview'> 
+            <Link to='/DefaultLayout/UserGuide/Overview'> 
               <Button className='px20' size="small" radius='round' variant={address1 == 'UserGuide' ? 'contained' : 'outlined'}>User Guide</Button>
-            </a>
-            <a href='/nds-ui/DefaultLayout/Component/AutocompletePage'> 
+            </Link>
+            <Link to='/DefaultLayout/Component/AutocompletePage'> 
               <Button className='px20' size="small" radius='round' variant={address1 == 'Component' ? 'contained' : 'outlined'}>Components</Button>
-            </a>
+            </Link>
           </div>
           <div className="flexColumn">
             {
               address1 == 'UserGuide' ?
               <>
-                <a href='/nds-ui/DefaultLayout/UserGuide/Overview'>
+                <Link to='/DefaultLayout/UserGuide/Overview'>
                   <Button bg={address2 == 'Overview' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">Overview</p></Button>
-                </a>
-                <a href='/nds-ui/DefaultLayout/UserGuide/HowtoUse'>
+                </Link>
+                <Link to='/DefaultLayout/UserGuide/HowtoUse'>
                   <Button bg={address2 == 'HowtoUse' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">How to Use</p></Button>
-                </a>
-                <a href='/nds-ui/DefaultLayout/UserGuide/Variable'>
+                </Link>
+                <Link to='/DefaultLayout/UserGuide/Variable'>
                   <Button bg={address2 == 'Variable' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">_variable.scss</p></Button>
-                </a>
-                <a href='/nds-ui/DefaultLayout/UserGuide/Util'>
+                </Link>
+                <Link to='/DefaultLayout/UserGuide/Util'>
                   <Button bg={address2 == 'Util' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">_util.scss</p></Button>
-                </a>
+                </Link>
               </>
               : address1 == 'Component' ?
               <>
@@ -42,30 +43,30 @@ function Lnb({address1, address2}) {
                   <div className="flexColumn gap10">
                     <p className="size12 b txt-gray6 ls2"> INPUT</p>
                     <div className="flexColumn">
-                      <a href='/nds-ui/DefaultLayout/Component/AutocompletePage'>
+                      <Link to='/DefaultLayout/Component/AutocompletePage'>
                         <Button bg={address2 == 'AutocompletePage' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">Autocomplete</p></Button>
-                      </a>
-                      <a href='/nds-ui/DefaultLayout/Component/ButtonPage'>
+                      </Link>
+                      <Link to='/DefaultLayout/Component/ButtonPage'>
                         <Button bg={address2 == 'ButtonPage' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">Button</p></Button>
-                      </a>
-                      <a href='/nds-ui/DefaultLayout/Component/CheckboxPage'>
+                      </Link>
+                      <Link to='/DefaultLayout/Component/CheckboxPage'>
                         <Button bg={address2 == 'CheckboxPage' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">Checkbox</p></Button>
-                      </a>
-                      <a href='/nds-ui/DefaultLayout/Component/RadioPage'>
+                      </Link>
+                      <Link to='/DefaultLayout/Component/RadioPage'>
                         <Button bg={address2 == 'RadioPage' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">Radio</p></Button>
-                      </a>
-                      <a href='/nds-ui/DefaultLayout/Component/SelectPage'>
+                      </Link>
+                      <Link to='/DefaultLayout/Component/SelectPage'>
                         <Button bg={address2 == 'SelectPage' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">Select</p></Button>
-                      </a>
-                      <a href='/nds-ui/DefaultLayout/Component/SwitchPage'>
+                      </Link>
+                      <Link to='/DefaultLayout/Component/SwitchPage'>
                         <Button bg={address2 == 'SwitchPage' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">Switch (Toggle)</p></Button>
-                      </a>
-                      <a href='/nds-ui/DefaultLayout/Component/TextareaPage'>
+                      </Link>
+                      <Link to='/DefaultLayout/Component/TextareaPage'>
                         <Button bg={address2 == 'TextareaPage' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">TextArea</p></Button>
-                      </a>
-                      <a href='/nds-ui/DefaultLayout/Component/TextfieldPage'>
+                      </Link>
+                      <Link to='/DefaultLayout/Component/TextfieldPage'>
                         <Button bg={address2 == 'TextfieldPage' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">TextField</p></Button>
-                      </a>
+                      </Link>
                     </div>
                     
                   </div>
