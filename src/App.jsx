@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes, Link, HashRouter } from "react-router-dom
 import DefaultLayout from "@/layout/DefaultLayout";
 import GuideLayout from "@/layout/GuideLayout";
 import NoLayout from "@/layout/NoLayout";
-import LoadingPage from "@/layout/components/LoadingPage";
+// import LoadingPage from "@/layout/components/LoadingPage";
 
 // nds-ui
 import { Button, Popup } from '@/nds-ui/component';
@@ -99,7 +99,7 @@ const Home = () => {
       </div>
       <div className='fixed width100 hegith100 bgc-black_10p'></div>
 
-      <LoadingPage />
+      {/* <LoadingPage /> */}
     </>
   )
 }
