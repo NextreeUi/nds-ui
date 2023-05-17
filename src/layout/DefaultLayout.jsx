@@ -5,6 +5,7 @@ import { Route, Routes, useLocation, useParams } from "react-router-dom";
 import Lnb from "@/layout/components/Lnb";
 import Header from "@/layout/components/Header";
 import Contents from "@/layout/components/Contents";
+// import LoadingPage from "@/layout/components/LoadingPage";
 
 function DefaultLayout() {
   const { type, id } = useParams();
@@ -24,6 +25,7 @@ function DefaultLayout() {
         </div>
         
       </div>
+      {/* <LoadingPage/> */}
 
       {/* App > DefaultLayout > Lnb / Contents */}
     </>
