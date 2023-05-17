@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // layout
 import DefaultLayout from "@/layout/DefaultLayout";
@@ -37,7 +37,7 @@ const Home = () => {
             </div>
             <div className='flex gap20 alignCenter'>
               <a href='/nds-ui/DefaultLayout/UserGuide/Overview'> <Button size='large' variant='outlined' radius='round'>User Guide</Button> </a>
-              <Button size='large' variant='outlined' radius='round'>Components</Button>
+              <a href='/nds-ui/DefaultLayout/Component/AutocompletePage'> <Button size='large' variant='outlined' radius='round'>Components</Button> </a>
             </div>
             <div className='width175 flex alignCenter gap20'>
               <Button className='minw45 h45' square theme='grayc'>
@@ -71,12 +71,14 @@ const Home = () => {
               </div>
             </div>
             <div className='flex gap20'>
-              <Button size='large' variant='contained'>
-                <div className='flexCenter gap10'>
-                  <i className='i-arrow-right w20 h20 bgc-white'/>
-                  NDS UI
-                </div>
-              </Button>
+              <a href='/nds-ui/DefaultLayout/UserGuide/Overview'> 
+                <Button size='large' variant='contained'>
+                  <div className='flexCenter gap10'>
+                    <i className='i-arrow-right w20 h20 bgc-white'/>
+                    NDS UI
+                  </div>
+                </Button>
+              </a>
               <Button size='large' variant='outlined' onClick={() => Copy('npm i nds-ui@latest sass')}>
                 <div className='flexCenter gap10' >
                   npm i nds-ui sass
@@ -109,14 +111,17 @@ function App() {
   }, [])
   return (
     <>
-      <HashRouter>
+      <BrowserRouter 
+        // basename='/nds-ui/'
+        basename='https://nextreeui.github.io/nds-ui'
+      >
         <Routes>
-          <Route path='/nds-ui/*' element={<Home/>} />
-          <Route path='/nds-ui/DefaultLayout/:type/:id' element={<DefaultLayout />} />
-          <Route path='/nds-ui/GuideLayout/*' element={<GuideLayout />} />
-          <Route path='/nds-ui/NoLayout/*' element={<NoLayout />} />
+          <Route path='/*' element={<Home/>} />
+          <Route path='/DefaultLayout/:type/:id' element={<DefaultLayout />} />
+          <Route path='/GuideLayout/*' element={<GuideLayout />} />
+          <Route path='/NoLayout/*' element={<NoLayout />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }
