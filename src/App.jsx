@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
 // layout
 import DefaultLayout from "@/layout/DefaultLayout";
@@ -109,14 +109,14 @@ function App() {
   }, [])
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path='/nds-ui/*' element={<Home/>} />
           <Route path='/nds-ui/DefaultLayout/:type/:id' element={<DefaultLayout />} />
           <Route path='/nds-ui/GuideLayout/*' element={<GuideLayout />} />
           <Route path='/nds-ui/NoLayout/*' element={<NoLayout />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
