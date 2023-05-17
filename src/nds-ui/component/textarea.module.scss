@@ -1,0 +1,32 @@
+@import "../css/variable";
+
+.textarea {
+    font-family: var(--font);
+    border-radius: var(--radius);
+    font-weight: 400;
+    font-size: var(--textarea-font-size);
+    color: var(--textfield-color);
+    padding: var(--textarea-p);
+    resize: none;
+    border: none ;
+    border: 1px solid var(--textarea-otl) ;
+    background-color: var(--white);
+    &.rect {
+        border-radius: 0rem;
+    }
+    &:focus {
+        border: 1px solid var(--textarea-focus-otl);
+        outline: none;
+        color: var(--textfield-focus-color);
+        &~.textarea-max {
+            color: var(--textfield-focus-color);
+        }
+    }
+    &:read-only {
+        background-color: var(--textfield-read-only-bg);
+    }
+    &:disabled {
+        border: var(--textfield-disabled-otl);
+        background-color: var(--textfield-disabled-bg);
+    }
+}

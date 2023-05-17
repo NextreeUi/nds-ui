@@ -1,0 +1,180 @@
+@import "../css/variable";
+
+.button {
+    font-family: var(--font);
+    border: 1px solid var(--transparent);
+    background-color: var(--transparent);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    transition: 0.5s;
+    overflow: hidden;
+    &:not(.disabled) {
+        cursor: pointer;
+    }
+    
+    // Ripple
+    &::before {
+        content: '';
+        position: absolute;
+        border-radius: 300rem;
+        width: 200rem;
+        height: 200rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+    &:not(.disabled):active::before {
+        width: 0rem;
+        height: 0rem;
+        opacity: 1;
+        visibility: visible;
+        transition: 0s;
+    }
+    &.ripple {
+        @each $semantic, $color in $main {
+            &-#{$semantic}::before {
+                background-color: rgb($color, 0.15);
+            }
+        }
+        &-disabled::before {
+            background-color: transparent;
+        }
+    }
+    // round
+    &.radius {
+        &-round {
+            border-radius: 1000rem;
+        }
+        &-rect {
+            border-radius: 0rem;
+        }
+        &-normal {
+            border-radius: var(--radius);
+        }
+    }
+    // shadow
+    &.shadow {
+        box-shadow: var(--btn-shadow);
+    }
+    
+    // color
+    &.color {
+        @each $semantic, $color in $colors {
+            &-#{$semantic} {
+                color: $color;
+            }
+        }
+    }
+    
+    // outlined 
+    &.otl {
+        @each $semantic, $color in $colors {
+            &-#{$semantic} {
+                border: 1px solid $color;
+            }
+        }
+    }
+
+    // bg color
+    &.bg {
+        @each $semantic, $color in $colors {
+            &-#{$semantic} {
+                background-color: $color;
+            }
+        }
+    }
+
+    //size
+    &.large {
+        font-size: var(--btn-txt-large);
+        height: var(--btn-size-large);
+        padding: var(--btn-p-large);
+        &.square {
+            width: var(--btn-size-large);
+            max-width: var(--btn-size-large);
+            min-width: var(--btn-size-large);
+            padding: 0;
+        }
+    }
+    &.medium {
+        font-size: var(--btn-txt-medium);
+        height: var(--btn-size-medium);
+        padding: var(--btn-p-medium);
+        &.square {
+            width: var(--btn-size-medium);
+            max-width: var(--btn-size-medium);
+            min-width: var(--btn-size-medium);
+            padding: 0;
+        }
+    }
+    &.small {
+        font-size: var(--btn-txt-small);
+        height: var(--btn-size-small);
+        padding: var(--btn-p-small);
+        &.square {
+            width: var(--btn-size-small);
+            max-width: var(--btn-size-small);
+            min-width: var(--btn-size-small);
+            padding: 0;
+        }
+    }
+    &.extraSmall {
+        font-size: var(--btn-txt-extraSmall);
+        height: var(--btn-size-extraSmall);
+        padding: var(--btn-p-extraSmall);
+        &.square {
+            width: var(--btn-size-extraSmall);
+            max-width: var(--btn-size-extraSmall);
+            min-width: var(--btn-size-extraSmall);
+            padding: 0;
+        }
+    }
+
+    // hover
+    &.hover {
+        &-bg {
+            @each $semantic, $color in $colors {
+                &-#{$semantic}:hover {
+                    background-color: $color;
+                }
+            }
+            @each $semantic, $color in $main {
+                &-#{$semantic}_15p:hover {
+                    background-color: rgb($color, 0.15);
+                }
+            }
+        }
+        &-otl {
+            @each $semantic, $color in $colors {
+                &-#{$semantic}:hover {
+                    border: 1px solid $color;
+                }
+            }
+        }
+        &-color {
+            @each $semantic, $color in $colors {
+                &-#{$semantic}:hover {
+                    color: $color;
+                }
+            }
+        }
+        &-radius {
+            &-round:hover {
+                border-radius: 1000rem;
+                transition: 2s;
+            }
+            &-rect:hover {
+                border-radius: 0rem;
+                transition: 2s;
+            }
+            &-normal:hover {
+                border-radius: var(--radius);
+                transition: 2s;
+            }
+        }
+    }
+    
+}

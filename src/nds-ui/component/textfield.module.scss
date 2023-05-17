@@ -1,0 +1,61 @@
+@import "../css/variable";
+
+@mixin textfield {
+    font-family: var(--font);
+    border-radius: var(--radius);
+    border: 1px solid var(--textfield-otl);
+    font-weight: 400;
+    color: var(--textfield-color);
+    background-color: var(--white);
+    &:focus {
+        border: 1px solid var(--textfield-focus-otl);
+        outline: none;
+        color: var(--textfield-focus-color);
+        &::placeholder {
+            color: var(--textfield-focus-placeholder-color);
+        }
+    }
+    &::placeholder {
+        color: var(--textfield-placeholder-color);
+    }
+    &:read-only {
+        background-color: var(--textfield-read-only-bg);
+    }
+    &:disabled {
+        border: var(--textfield-disabled-otl);
+        background-color: var(--textfield-disabled-bg);
+    }
+}
+
+.textfield {
+    @include textfield;
+    //size
+    &.large {
+        height: var(--textfield-size-large);
+        font-size: var(--textfield-txt-large);
+        padding: var(--textfield-p-large);
+    }
+    &.medium {
+        height: var(--textfield-size-medium);
+        font-size: var(--textfield-txt-medium);
+        padding: var(--textfield-p-medium);
+    }
+    &.small {
+        height: var(--textfield-size-small);
+        font-size: var(--textfield-txt-small);
+        padding: var(--textfield-p-small);
+    }
+    &.extraSmall {
+        height: var(--textfield-size-extraSmall);
+        font-size: var(--textfield-txt-extraSmall);
+        padding: var(--textfield-p-extraSmall);
+    }
+    
+    // radius
+    &.round {
+        border-radius: 100rem;
+    }
+    &.rect {
+        border-radius: 0rem;
+    }
+}

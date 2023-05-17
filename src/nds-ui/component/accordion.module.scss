@@ -1,0 +1,68 @@
+@import "../css/variable";
+@import "../css/mixin";
+
+.accordion {
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        border: var(--accordion-otl);
+        border-radius: var(--radius);
+    }
+    &-summary {
+        height: var(--accordion-h);
+        font-size: var(--accordion-font-size);
+        color: var(--accordion-color);
+        padding: var(--accordion-p);
+        display: flex;
+        gap: var(--accordion-gap);
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.5s;
+        &:hover {
+            background-color: var(--accordion-hover);
+        }
+        &.icon-left {
+            justify-content: start;
+        }
+        &>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            &.deg90 {
+                transform: rotate(90deg);
+            }
+            &.deg180 {
+                transform: rotate(180deg);
+            }
+            &.deg270 {
+                transform: rotate(270deg);
+            }
+            &>.arrow {
+                @include mask('arrow-down.svg');
+                width: 20rem !important;
+                height: 20rem !important;
+                background-color: var(--gray6);
+                transition: 0.5s;
+            }
+        }
+    }
+    &-detail {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: max-height 1s ease-out;
+        max-height: 100vh;
+        font-size: var(--accordion-font-size);
+        &.close {
+            max-height: 0;
+            transition: max-height 0.3s ease-out;
+            transition-delay: 0s;
+        }
+    }
+}

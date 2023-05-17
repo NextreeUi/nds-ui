@@ -1,3 +1,13 @@
 :root {
   --home-content-width : 1400rem;
 }
+
+html {
+  font-size: 1px;
+}
+
+@media (max-width : 1600px) {  
+  html {
+    font-size: 0.9px;
+  }
+}

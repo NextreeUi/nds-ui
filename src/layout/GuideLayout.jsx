@@ -3,7 +3,7 @@ import { Route, Routes, useLocation, useParams } from "react-router-dom";
 
 // components
 import Contents from "@/layout/components/Contents";
-import Loading from "@/layout/components/Loading";
+import LoadingPage from "@/layout/components/LoadingPage";
 
 function GuideLayout() {
   return (
@@ -11,7 +11,7 @@ function GuideLayout() {
       <Routes>
         <Route path={`:type/:id`} element={<Contents />} />
       </Routes>
-      <Loading />
+      <LoadingPage />
     </>
   );
 }

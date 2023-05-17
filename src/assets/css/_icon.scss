@@ -1,6 +1,7 @@
 $iconsList :
   'arrow-right',
   'check',
+  'search',
 ;
 
 .i {
@@ -14,28 +15,20 @@ $iconsList :
       }
     }
   }
-  &-logo {
-    background-image: url('@/assets/images/logo.png') ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 106rem !important;
-    height: 44.5rem !important;
-  }
   
   &-gitlab {
-    @include image("gitlab.png");
-    width: 45rem;
-    height: 45rem;
+    @include image("gitlab.svg");
+    width: 43rem;
+    height: 43rem;
   }
   &-github {
-    @include image("github.png");
-    width: 45rem;
-    height: 45rem;
+    @include image("github.svg");
+    width: 43rem;
+    height: 43rem;
   }
   &-figma {
-    @include image("figma.png");
-    width: 45rem;
-    height: 45rem;
+    @include image("figma.svg");
+    width: 43rem;
+    height: 43rem;
   }
 }

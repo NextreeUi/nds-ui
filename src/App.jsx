@@ -1,29 +1,42 @@
 import * as React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-// nds-ui
-import { Button } from 'nds-ui/component';
-
 // layout
 import DefaultLayout from "@/layout/DefaultLayout";
 import GuideLayout from "@/layout/GuideLayout";
 import NoLayout from "@/layout/NoLayout";
+import LoadingPage from "@/layout/components/LoadingPage";
+
+// nds-ui
+import { Button, Popup } from '@/nds-ui/component';
+
+// component
+import { Logo } from '@/component';
+
+//img
+import homeBg from '@/assets/images/home-bg.svg';
 
 // style
-import "nds-ui/css/style.scss";
+import "@/nds-ui/css/style.scss";
 import "@/assets/css/style.scss";
 
 const Home = () => {
+  const Copy = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (error) {
+    }
+  };
   return (
     <>
       <div className="vw100 vh100 flexColumn">
-        <div className='vw100 h70 flexCenter bgc-white_80p blur52 otlb-grayc'>
+        <div className='vw100 h70 flexCenter bgc-white_80p blur-back52 otlb-grayc'>
           <div className='home-content-width flexBetween alignCenter'>
-            <a href='/' className='flex w175'>
-              <i className='i-logo'/>
-            </a>
+            <div className='flex w175' >
+              <Logo />
+            </div>
             <div className='flex gap20 alignCenter'>
-              <Button size='large' variant='outlined' radius='round'>User Guide</Button>
+              <a href='/nds-ui/DefaultLayout/UserGuide/Overview'> <Button size='large' variant='outlined' radius='round'>User Guide</Button> </a>
               <Button size='large' variant='outlined' radius='round'>Components</Button>
             </div>
             <div className='width175 flex alignCenter gap20'>
@@ -39,8 +52,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='vh17' />
-        <div className='vw100 flexCenter'>
+        <div className='vw100 vh100-128 flexCenter'>
           <div className='home-content-width flexColumn gap40'>
             <div className='flexColumn'>
               <p className='size60 b txt-black'>For Nextrian</p>
@@ -64,11 +76,10 @@ const Home = () => {
                   <i className='i-arrow-right w20 h20 bgc-white'/>
                   NDS UI
                 </div>
-                
               </Button>
-              <Button size='large' variant='outlined'>
-                <div className='flexCenter gap10'>
-                  npm install nds-ui@latest
+              <Button size='large' variant='outlined' onClick={() => Copy('npm i nds-ui@latest sass')}>
+                <div className='flexCenter gap10' >
+                  npm i nds-ui sass
                   <i className='i-check bgc-primary' />
                 </div>
               </Button>
@@ -80,13 +91,19 @@ const Home = () => {
             copyright made by Nextree, All right reserved.
           </div>
         </div>
-        <div className='home-bg'/>
+        <div className='home-bg'>
+          <img src={homeBg} />
+        </div>
       </div>
+      <div className='fixed width100 hegith100 bgc-black_10p'></div>
+
+      <LoadingPage />
     </>
   )
 }
 
 function App() {
+
   React.useEffect(()=> {
     document.documentElement.setAttribute("data-theme", "light");
   }, [])
@@ -94,10 +111,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/*' element={<Home/>} />
-          <Route path='/DefaultLayout/*' element={<DefaultLayout />} />
-          <Route path='/GuideLayout/*' element={<GuideLayout />} />
-          <Route path='/NoLayout/*' element={<NoLayout />} />
+          <Route path='/nds-ui/*' element={<Home/>} />
+          <Route path='/nds-ui/DefaultLayout/:type/:id' element={<DefaultLayout />} />
+          <Route path='/nds-ui/GuideLayout/*' element={<GuideLayout />} />
+          <Route path='/nds-ui/NoLayout/*' element={<NoLayout />} />
         </Routes>
       </BrowserRouter>
     </>

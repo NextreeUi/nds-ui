@@ -1,0 +1,235 @@
+// width height
+@for $i from 1 to 1001 {
+  .w#{$i} {
+    width: #{$i}rem !important;
+  }
+  .h#{$i} {
+    height: #{$i}rem !important;
+  }
+  .minw#{$i} {
+    min-width: #{$i}rem !important;
+  }
+  .minh#{$i} {
+    min-height: #{$i}rem !important;
+  }
+  .vh#{$i} {
+    height: #{$i}vh !important;
+  }
+  .vw#{$i} {
+    width: #{$i}vw !important;
+  }
+  .vw100-#{$i} {
+    width: calc(100vw - #{$i}rem);
+  }
+  .vh100-#{$i} {
+    height: calc(100vh - #{$i}rem);
+  }
+}
+
+.width100 {
+    width: 100% !important;
+  }
+.height100 {
+    height: 100% !important;
+}
+
+// lineHeight
+@for $i from 60 to 200 {
+    .lh#{$i} {line-height: calc(#{$i} * 1%);}
+}
+// letterSpacing
+@for $i from 1 to 100 {
+    .ls#{$i} {letter-spacing: #{$i}rem;}
+}
+
+// margin/padding
+@for $i from 1 to 301 {
+    .m#{$i} {
+        margin: #{$i}rem !important;
+    }
+    .mx#{$i} {
+        margin-right: #{$i}rem !important;
+        margin-left: #{$i}rem !important;
+    }
+    .my#{$i} {
+        margin-top: #{$i}rem !important;
+        margin-bottom: #{$i}rem !important;
+    }
+    .mt#{$i} {
+        margin-top: #{$i}rem !important;
+    }
+    .mb#{$i} {
+        margin-bottom: #{$i}rem !important;
+    }
+    .ml#{$i} {
+        margin-left: #{$i}rem !important;
+    }
+    .ml-#{$i} {
+        margin-left: -#{$i}rem !important;
+    }
+    .mr#{$i} {
+        margin-right: #{$i}rem !important;
+    }
+    .mr-#{$i} {
+        margin-right: -#{$i}rem !important;
+    }
+    .p#{$i} {
+        padding: #{$i}rem !important;
+    }
+    .px#{$i} {
+        padding-right: #{$i}rem !important;
+        padding-left: #{$i}rem !important;
+    }
+    .py#{$i} {
+        padding-top: #{$i}rem !important;
+        padding-bottom: #{$i}rem !important;
+    }
+    .pt#{$i} {
+        padding-top: #{$i}rem !important;
+    }
+    .pb#{$i} {
+        padding-bottom: #{$i}rem !important;
+    }
+    .pl#{$i} {
+        padding-left: #{$i}rem !important;
+    }
+    .pr#{$i} {
+        padding-right: #{$i}rem !important;
+    }
+}
+
+// flex
+.flex {
+    display: flex;
+}
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+.flexBetween {
+    display: flex;
+    justify-content: space-between;
+}
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.justifyStart {
+    display: flex;
+    justify-content: flex-start;
+}
+.justifyCenter {
+    display: flex;
+    justify-content: center;
+}
+.justifyEnd {
+    display: flex;
+    justify-content: flex-end;
+}
+.alignStart {
+    display: flex;
+    align-items: flex-start;
+}
+.alignCenter {
+    display: flex;
+    align-items: center;
+}
+.alignEnd {
+    display: flex;
+    align-items: flex-end;
+}
+.flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.txtCenter {
+    text-align: center;
+}
+.flex-none {
+    flex: none;
+}
+@for $i from 1 to 10 {
+    .flex#{$i} {
+        flex-grow: #{$i};
+    }
+}
+
+//radius
+.radius {
+  border-radius: var(--radius);
+}
+@for $i from 1 to 50 {
+  .r#{$i} {
+    border-radius: #{$i}rem;
+  }
+}
+
+// gap
+@for $i from 1 to 101 {
+    .gap#{$i} {
+        gap: #{$i}rem ;
+    }
+}
+// backdrop-filter
+@for $i from 1 to 100 {
+    .blur-back#{$i} {
+      backdrop-filter: blur(#{$i}rem);
+    }
+    .blur#{$i} {
+        filter: blur(#{$i}rem);
+    }
+}
+  
+// overflow
+.scroll {
+  overflow: scroll;
+}
+.scrollY {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &Auto {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+.overHidden {
+    overflow: hidden;
+}
+
+// display / visibility
+.displayNone {display: none;}
+.hidden  {visibility: hidden; }
+.visible {visibility: visible;}
+
+// position
+.relative {position: relative;}
+.absolute {position: absolute;}
+.fixed    {position: fixed;   }
+.t0 {top: 0;   }
+.b0 {bottom: 0;}
+.l0 {left: 0;  }
+.r0 {right: 0; }
+
+// cursor
+.cursor {
+    cursor: pointer;
+}
+
+// ellipsis
+@for $i from 1 to 5 {
+    .ellipsis#{$i} {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+         -webkit-line-clamp: #{$i};
+         -webkit-box-orient: vertical;
+    }
+}
+
+// test
+.test {
+    border: 1px solid red;
+}

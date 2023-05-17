@@ -1,0 +1,114 @@
+@import "../css/variable";
+@import "../css/mixin";
+
+.radio {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    &::after {
+        content: '';
+        @include mask("radio.svg");
+        background-color: var(--radio);
+    }
+    &:checked::after {
+        @include mask("radio-checked.svg");
+    }
+    
+    &::before {
+        content: '';
+        @include noMask;
+        position: absolute;
+        border-radius: 100%;
+        
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    
+
+    // color
+    @each $semantic, $color in $colors {
+        &.color-#{$semantic} {
+            &:checked::after {
+                background-color: $color;
+            }
+        }
+    }
+
+    &:disabled {
+        &::after,
+        &:checked::after {
+            background-color: var(--radio-disabled);
+        }
+    }
+
+    // ripple
+    @each $semantic, $color in $main {
+        &.ripple-#{$semantic} {
+            &::before {
+                background-color: rgb($color, 0.3);
+            }
+        }
+    }
+
+    // size
+    &.large {
+        width: var(--radio-size-large);
+        height: var(--radio-size-large);
+        &::after {
+            width: var(--radio-size-large);
+            height: var(--radio-size-large);
+        }
+        &::before {
+            width: var(--radio-ripple-size-large);
+            height: var(--radio-ripple-size-large);
+        }
+    }
+    &.medium {
+        width: var(--radio-size-medium);
+        height: var(--radio-size-medium);
+        &::after {
+            width: var(--radio-size-medium);
+            height: var(--radio-size-medium);
+        }
+        &::before {
+            width: var(--radio-ripple-size-medium);
+            height: var(--radio-ripple-size-medium);
+        }
+    }
+    &.small {
+        width: var(--radio-size-small);
+        height: var(--radio-size-small);
+        &::after {
+            width: var(--radio-size-small);
+            height: var(--radio-size-small);
+        }
+        &::before {
+            width: var(--radio-ripple-size-small);
+            height: var(--radio-ripple-size-small);
+        }
+    }
+    &.extraSmall {
+        width: var(--radio-size-extraSmall);
+        height: var(--radio-size-extraSmall);
+        &::after {
+            width: var(--radio-size-extraSmall);
+            height: var(--radio-size-extraSmall);
+        }
+        &::before {
+            width: var(--radio-ripple-size-extraSmall);
+            height: var(--radio-ripple-size-extraSmall);
+        }
+    }
+
+    &:active::before {
+        opacity: 1;
+        width: 0rem;
+        height: 0rem;
+        transition: 0s;
+    }
+    &:disabled::before {
+        display: none;
+    }
+}
