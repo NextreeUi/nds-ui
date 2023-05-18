@@ -5,7 +5,7 @@ import { Button, TextField } from "@/nds-ui/component";
 function Header() {
   return (
     <>
-      <div className="flex width100 justifyEnd px40 alignCenter h70 otlb-grayc">
+      <div className="flex flex1 justifyEnd px40 alignCenter h70 otlb-grayc">
         <div className="flex mr14 alignCenter">
           <TextField className='mr-48 pl20 pr48 size12 w300' radius='round' size='large' placeholder='Search Bar'/>
           <Button className='' square radius='round' size='medium' theme='grayc'> <i className="i-search w20 h20 bgc-gray6" /></Button>

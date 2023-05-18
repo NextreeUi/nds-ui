@@ -14,7 +14,9 @@ function DefaultLayout() {
     <>
       <div className='fixed flex width100 height100'>
         {/* Lnb */}
-        <Lnb address1={type} address2={id}/>
+        <div className="w340">
+          <Lnb address1={type} address2={id}/>
+        </div>
         <div className="flexColumn flex1">
           {/* Header  */}
           <Header />
