@@ -1,0 +1,19 @@
+@import "../css/variable";
+@import "../css/mixin";
+
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+    border: 1px solid var(--grayc);
+    border-radius: var(--radius);
+    height: 44rem;
+    width: 300rem;
+    &-wrap {
+
+    }
+    &-option {
+
+    }
+}

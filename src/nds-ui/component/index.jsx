@@ -15,3 +15,4 @@ export { default as Loading } from "./Loading";
 export { default as Location } from "./Location";
 export { default as Pagination } from "./Pagination";
 export { default as Hidden } from "./Hidden";
+export { default as Select } from "./Select";
