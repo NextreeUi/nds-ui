@@ -8,7 +8,7 @@
     justify-content: space-between;
     color: var(--gray9);
     border: 1px solid var(--grayc);
-    width: 300rem;
+    width: var(--select-width);
     background-color: var(--white);
     cursor: pointer;
 
@@ -72,7 +72,7 @@
         background-color: var(--white);
         width: 100%;
         z-index: 100;
-        max-height: 300rem;
+        max-height: var(--select-option-max-h);
         overflow-y: auto;
         &>.option {
             font-size: 14rem;

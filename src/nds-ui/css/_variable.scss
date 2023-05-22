@@ -26,6 +26,7 @@ html {
     --notification: rgb(237,46,46);
     --success: rgb(14,218,108);
     --warning: rgb(252,166,0);
+
   } 
   &[data-theme = "dark"] {
     background-color: rgb(0,0,0,0.8);
@@ -86,6 +87,36 @@ html {
   --shadow: 0 0 8rem 0 var(--grayc);
   --backdrop : var(--gray9);
 
+  --avatar1 : rgb(208, 23, 57);
+  --avatar2 : rgb(235, 104, 9);
+  --avatar3 : rgb(244, 180, 15);
+  --avatar4 : rgb(22, 206, 41);
+  --avatar5 : rgb(22, 170, 126);
+  --avatar6 : rgb(11, 167, 217);
+  --avatar7 : rgb(22, 63, 206);
+  --avatar8 : rgb(108, 27, 210);
+  --avatar9 : rgb(217, 11, 209);
+  --avatar10 : rgb(128, 128, 128);
+
+  // accordion
+  --accordion-otl: 1px solid var(--grayc);
+  --accordion-h : 36rem;
+  --accordion-font-size: 14rem;
+  --accordion-color : var(--gray6);
+  --accordion-p: 0rem 10rem;
+  --accordion-gap: 10rem;
+  --accordion-hover: var(--grayd);
+
+  // avatar
+  --avatar-size-large: 44rem;
+  --avatar-size-medium: 34rem;
+  --avatar-size-small: 28rem;
+  --avatar-size-extraSmall: 24rem;
+  
+  // badge
+  --badge-size: 16rem;
+  --badge-size-dot: 10rem;
+
   // btn
   --btn-size-large: 44rem;
   --btn-size-medium: 34rem;
@@ -100,6 +131,80 @@ html {
   --btn-p-small: 0 10rem;
   --btn-p-extraSmall: 0 5rem;
   --btn-shadow : var(--shadow);
+  
+  // checkbox
+  --checkbox: var(--gray6);
+  --checkbox-disabled : var(--gray9);
+  --checkbox-size-large: 24rem;
+  --checkbox-size-medium: 20rem;
+  --checkbox-size-small: 16rem;
+  --checkbox-size-extraSmall: 14rem;
+  --checkbox-ripple-size-large: calc(var(--checkbox-size-large) * 2);
+  --checkbox-ripple-size-medium: calc(var(--checkbox-size-medium) * 2);
+  --checkbox-ripple-size-small: calc(var(--checkbox-size-small) * 2);
+  --checkbox-ripple-size-extraSmall: calc(var(--checkbox-size-extraSmall) * 2);
+  
+  // chip
+  --chip-p-large : 15rem;
+  --chip-p-medium : 10rem;
+  --chip-p-small : 5rem;
+  --chip-p-extraSmall : 5rem;
+  --chip-btnp-large : 7rem;
+  --chip-btnp-medium : 5rem;
+  --chip-btnp-small : 5rem;
+  --chip-btnp-extraSmall : 3rem;
+
+  // location
+  --location-gap : 5rem;
+  --location-font-size: 12rem;
+  --location-light: var(--gray9);
+  --location-light-hover: var(--gray6);
+  --location-bold: var(--black);
+
+  // popover
+  --popover-bg : var(--white);
+  --popover-otl : 1px solid var(--grayc);
+  --popover-z: 100;
+  --popover-shadow : var(--shadow);
+
+  // radio
+  --radio: var(--gray6);
+  --radio-disabled : var(--gray9);
+  --radio-size-large: 24rem;
+  --radio-size-medium: 20rem;
+  --radio-size-small: 16rem;
+  --radio-size-extraSmall: 14rem;
+  --radio-ripple-size-large: calc(var(--radio-size-large) * 2);
+  --radio-ripple-size-medium: calc(var(--radio-size-medium) * 2);
+  --radio-ripple-size-small: calc(var(--radio-size-small) * 2);
+  --radio-ripple-size-extraSmall: calc(var(--radio-size-extraSmall) * 2);
+
+  // select 
+  --select-size-large: 44rem;
+  --select-size-medium: 34rem;
+  --select-size-small: 28rem;
+  --select-size-extraSmall: 24rem;
+  --select-txt-large:  14rem;
+  --select-txt-medium:  13rem;
+  --select-txt-small:  12rem;
+  --select-txt-extraSmall:  12rem;
+  --select-p-large: 0 15rem;
+  --select-p-medium: 0 13rem;
+  --select-p-small: 0 11rem;
+  --select-p-extraSmall: 0 9rem;
+  --select-width: 300rem;
+
+  --select-option-max-h: 300rem;
+
+  // switch
+  --switch-width: 24rem;
+  --switch-height: 14rem;
+  --switch-btn-width: 10rem;
+  --switch-btn-height: 10rem;
+  --switch-padding: calc((var(--switch-height) - var(--switch-btn-height)) / 2);
+  --switch-ml: calc(var(--switch-width) - (var(--switch-padding) * 2) - var(--switch-btn-width));
+  --switch-unchecked : var(--gray9);
+  --switch-disabled : var(--grayc);
 
   // textfield
   --textfield-size-large: 44rem;
@@ -128,80 +233,7 @@ html {
   --textarea-focus-otl: var(--gray6);
   --textarea-font-size: 12rem;
   --textarea-p: 12rem 12rem;
-
-  // select 
-  --select-size-large: 44rem;
-  --select-size-medium: 34rem;
-  --select-size-small: 28rem;
-  --select-size-extraSmall: 24rem;
-  --select-txt-large:  14rem;
-  --select-txt-medium:  13rem;
-  --select-txt-small:  12rem;
-  --select-txt-extraSmall:  12rem;
-  --select-p-large: 0 15rem;
-  --select-p-medium: 0 13rem;
-  --select-p-small: 0 11rem;
-  --select-p-extraSmall: 0 9rem;
-  --select-width: 300rem;
-
-  --select-option-max-h: 300rem;
-  // checkbox
-  --checkbox: var(--gray6);
-  --checkbox-disabled : var(--gray9);
-  --checkbox-size-large: 24rem;
-  --checkbox-size-medium: 20rem;
-  --checkbox-size-small: 16rem;
-  --checkbox-size-extraSmall: 14rem;
-  --checkbox-ripple-size-large: calc(var(--checkbox-size-large) * 2);
-  --checkbox-ripple-size-medium: calc(var(--checkbox-size-medium) * 2);
-  --checkbox-ripple-size-small: calc(var(--checkbox-size-small) * 2);
-  --checkbox-ripple-size-extraSmall: calc(var(--checkbox-size-extraSmall) * 2);
   
-  // checkbox
-  --radio: var(--gray6);
-  --radio-disabled : var(--gray9);
-  --radio-size-large: 24rem;
-  --radio-size-medium: 20rem;
-  --radio-size-small: 16rem;
-  --radio-size-extraSmall: 14rem;
-  --radio-ripple-size-large: calc(var(--radio-size-large) * 2);
-  --radio-ripple-size-medium: calc(var(--radio-size-medium) * 2);
-  --radio-ripple-size-small: calc(var(--radio-size-small) * 2);
-  --radio-ripple-size-extraSmall: calc(var(--radio-size-extraSmall) * 2);
-
-  // switch
-  --switch-width: 24rem;
-  --switch-height: 14rem;
-  --switch-btn-width: 10rem;
-  --switch-btn-height: 10rem;
-  --switch-padding: calc((var(--switch-height) - var(--switch-btn-height)) / 2);
-  --switch-ml: calc(var(--switch-width) - (var(--switch-padding) * 2) - var(--switch-btn-width));
-  --switch-unchecked : var(--gray9);
-  --switch-disabled : var(--grayc);
-
-  // badge
-  --badge-size: 16rem;
-  --badge-size-dot: 10rem;
-
-  // chip
-  --chip-p-large : 15rem;
-  --chip-p-medium : 10rem;
-  --chip-p-small : 5rem;
-  --chip-p-extraSmall : 5rem;
-  --chip-btnp-large : 7rem;
-  --chip-btnp-medium : 5rem;
-  --chip-btnp-small : 5rem;
-  --chip-btnp-extraSmall : 3rem;
-
-  // accordion
-  --accordion-otl: 1px solid var(--grayc);
-  --accordion-h : 36rem;
-  --accordion-font-size: 14rem;
-  --accordion-color : var(--gray6);
-  --accordion-p: 0rem 10rem;
-  --accordion-gap: 10rem;
-  --accordion-hover: var(--grayd);
-
   // tree
   --tree-h : 36rem;
   --tree-font-size: 14rem;
@@ -220,18 +252,6 @@ html {
   --popup-otl : 1px solid var(--grayc);
   --popup-z: 100;
 
-  // popover
-  --popover-bg : var(--white);
-  --popover-otl : 1px solid var(--grayc);
-  --popover-z: 100;
-  --popover-shadow : var(--shadow);
-
-  // location
-  --location-gap : 5rem;
-  --location-font-size: 12rem;
-  --location-light: var(--gray9);
-  --location-light-hover: var(--gray6);
-  --location-bold: var(--black);
 }
 
 $colors: (

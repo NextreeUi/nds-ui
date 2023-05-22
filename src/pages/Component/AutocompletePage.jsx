@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // nds-ui
-import { Button, Popup, Hidden, Select } from '@/nds-ui/component';
+import { Button, Popup, Hidden, Avatar } from '@/nds-ui/component';
 
 const AutocompletePage = () => {
   const ItemList = [
@@ -16,35 +16,12 @@ const AutocompletePage = () => {
         </div>
       </Hidden>
       <div className='flex gap10'>
-        <Select size='large'  />
-        <Select size='large' defaultValue={1} list={ItemList} radius='rect'/>
-        <Select size='large' defaultValue={1} list={ItemList} radius='round'/>
+        <Avatar number={3} radius='rect' name='choiwonho'/><Avatar radius='normal'/><Avatar /><Avatar /><Avatar />
+        <Avatar size='large' name='lee'/>
+        <Avatar size='small'/>
+        <Avatar size='extraSmall'/>
+        <Button>asd</Button>
       </div>
-      <div className='flex gap10'>
-        <Select defaultValue={1} list={ItemList}/>
-        <Select defaultValue={1} list={ItemList} radius='rect'/>
-        <Select defaultValue={1} list={ItemList} radius='round'/>
-      </div>
-      <div className='flex gap10'>
-        <Select size='small' defaultValue={1} list={ItemList}/>
-        <Select size='small' defaultValue={1} list={ItemList} radius='rect'/>
-        <Select size='small' defaultValue={1} list={ItemList} radius='round'/>
-      </div>
-      <div className='flex gap10'>
-        <Select size='extraSmall' defaultValue={1} list={ItemList}/>
-        <Select size='extraSmall' defaultValue={1} list={ItemList} radius='rect'/>
-        <Select size='extraSmall' defaultValue={1} list={ItemList} radius='round'/>
-      </div>
-      
-      <p className='size24'>Autocomplete 페이지입니다.</p>
-      <select>
-        <option>asd</option>
-        <option>asd</option>
-        <option>asd</option>
-        <option>asd</option>
-        <option>asd</option>
-        <option>asd</option>
-      </select>
     </>
   )
 }

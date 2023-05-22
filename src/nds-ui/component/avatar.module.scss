@@ -1,0 +1,83 @@
+@import "../css/variable";
+@import "../css/mixin";
+
+.avatar {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    overflow: hidden;
+    position: relative;
+    user-select:none;
+    cursor: pointer;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        border-radius: 100rem;
+        width: 100rem;
+        height: 100rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+        background-color: rgb(var(--set-black), 0.3);
+    }
+    &:active::before {
+        width: 0rem;
+        height: 0rem;
+        opacity: 1;
+        visibility: visible;
+        transition: 0s;
+    }
+    &.size {
+        &-large {
+            width: var(--avatar-size-large);
+            height: var(--avatar-size-large);
+            font-size: 20rem;
+        }
+        &-medium {
+            width: var(--avatar-size-medium);
+            height: var(--avatar-size-medium);
+            font-size: 18rem;
+        }
+        &-small {
+            width: var(--avatar-size-small);
+            height: var(--avatar-size-small);
+            font-size: 16rem;
+        }
+        &-extraSmall {
+            width: var(--avatar-size-extraSmall);
+            height: var(--avatar-size-extraSmall);
+            font-size: 14rem;
+        }
+    }
+    &.color {
+        &-1 {background-color: var(--avatar1);}
+        &-2 {background-color: var(--avatar2);}
+        &-3 {background-color: var(--avatar3);}
+        &-4 {background-color: var(--avatar4);}
+        &-5 {background-color: var(--avatar5);}
+        &-6 {background-color: var(--avatar6);}
+        &-7 {background-color: var(--avatar7);}
+        &-8 {background-color: var(--avatar8);}
+        &-9 {background-color: var(--avatar9);}
+        &-10 {background-color: var(--avatar10);}
+        @each $semantic, $color in $colors {
+            &-#{$semantic} {
+                background-color: $color;
+            }
+        }
+    }
+    &.radius {
+        &-rect {
+            border-radius: 0;
+        }
+        &-normal {
+            border-radius: var(--radius);
+        }
+        &-round {
+            border-radius: 100rem;
+        }
+    }
+}
