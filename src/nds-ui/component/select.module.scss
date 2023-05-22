@@ -3,17 +3,154 @@
 
 .select {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10rem;
+    color: var(--gray9);
     border: 1px solid var(--grayc);
-    border-radius: var(--radius);
-    height: 44rem;
     width: 300rem;
-    &-wrap {
+    background-color: var(--white);
+    cursor: pointer;
 
+    &:hover {
+        border: 1px solid var(--gray6);
+        color: var(--gray6);
+        &>.select-icon {
+            &>i {
+                background-color: var(--gray6);
+            }
+        }
+    }
+    &.focus {
+        border: 1px solid var(--primary);
+        outline: 1px solid var(--primary);
+        color: var(--gray6);
+        &>.select-icon {
+            &>i {
+                background-color: var(--gray6);
+                transform: rotate(180deg);
+            }
+        }
+        &~ul {
+            display: flex;
+            visibility: visible;
+            opacity: 1;
+        }
+        &~.select-backdrop {
+            display: flex;
+        }
+    }
+    &-icon {
+        width: 24rem;
+        height: 24rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &>i {
+            @include mask('select-arrow-down.svg');
+            background-color: var(--gray9);
+            width: 10rem;
+            height: 5rem;
+        }
+    }
+    &-wrap {
+        width: fit-content;
+        position: relative;
     }
     &-option {
-
+        border: 1px solid var(--grayc);
+        border-radius: var(--radius);
+        padding: 5rem 0;
+        position: absolute;
+        display: flex;
+        visibility: hidden;
+        flex-direction: column;
+        opacity: 0;
+        transition: 0.3s;
+        top: calc(100% + 5rem);
+        left: -1rem;
+        background-color: var(--white);
+        width: 100%;
+        z-index: 100;
+        max-height: 300rem;
+        overflow-y: auto;
+        &>.option {
+            font-size: 14rem;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 0 15rem;
+            cursor: pointer;
+            &>div {
+                height: 44rem;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+            }
+            &:hover {
+                background-color: var(--graye);
+            }
+            &.active {
+                background-color: rgb(var(--set-primary), 0.1);
+            }
+        }
+    }
+    &-backdrop {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        z-index: 99;
+    }
+    &.radius {
+        &-rect {
+            border-radius: 0;
+            &~.select-option {
+                 border-radius: 0;
+            }
+        }
+        &-normal {
+            border-radius: var(--radius);
+        }
+        &-round {
+            border-radius: 100rem;
+        }
+    }
+    &.size {
+        &-large {
+            height: var(--select-size-large);
+            font-size: var(--select-txt-large);
+            padding: var(--select-p-large);
+            &~.select-option>.option>div {
+                height: var(--select-size-large);
+            }
+        }
+        &-medium {
+            height: var(--select-size-medium);
+            font-size: var(--select-txt-medium);
+            padding: var(--select-p-medium);
+            &~.select-option>.option>div {
+                height: var(--select-size-medium);
+            }
+        }
+        &-small {
+            height: var(--select-size-small);
+            font-size: var(--select-txt-small);
+            padding: var(--select-p-small);
+            &~.select-option>.option>div {
+                height: var(--select-size-small);
+            }
+        }
+        &-extraSmall {
+            height: var(--select-size-extraSmall);
+            font-size: var(--select-txt-extraSmall);
+            padding: var(--select-p-extraSmall);
+            &~.select-option>.option>div {
+                height: var(--select-size-extraSmall);
+            }
+        }
     }
 }

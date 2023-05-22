@@ -129,6 +129,22 @@ html {
   --textarea-font-size: 12rem;
   --textarea-p: 12rem 12rem;
 
+  // select 
+  --select-size-large: 44rem;
+  --select-size-medium: 34rem;
+  --select-size-small: 28rem;
+  --select-size-extraSmall: 24rem;
+  --select-txt-large:  14rem;
+  --select-txt-medium:  13rem;
+  --select-txt-small:  12rem;
+  --select-txt-extraSmall:  12rem;
+  --select-p-large: 0 15rem;
+  --select-p-medium: 0 13rem;
+  --select-p-small: 0 11rem;
+  --select-p-extraSmall: 0 9rem;
+  --select-width: 300rem;
+
+  --select-option-max-h: 300rem;
   // checkbox
   --checkbox: var(--gray6);
   --checkbox-disabled : var(--gray9);
