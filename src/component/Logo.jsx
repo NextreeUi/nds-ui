@@ -7,7 +7,7 @@ const Logo = () => {
   return (
     <>
       <Link to='/'> 
-        <img src={LogoImg} className='w106 h45' />
+        <p className='size36 b txt-primary'> NDS</p>
       </Link>
     </>
   )

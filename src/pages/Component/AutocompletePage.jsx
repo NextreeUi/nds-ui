@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // nds-ui
-import { Button, Popup, Hidden, Avatar } from '@/nds-ui/component';
+import { Button, Popup, Hidden, Avatar, Tooltip } from '@/nds-ui/component';
 
 const AutocompletePage = () => {
   const ItemList = [
@@ -16,11 +16,10 @@ const AutocompletePage = () => {
         </div>
       </Hidden>
       <div className='flex gap10'>
-        <Avatar number={3} radius='rect' name='choiwonho'/><Avatar radius='normal'/><Avatar /><Avatar /><Avatar />
-        <Avatar size='large' name='lee'/>
-        <Avatar size='small'/>
-        <Avatar size='extraSmall'/>
-        <Button>asd</Button>
+        <Tooltip title='tooltip' bg='gray9' size='large'      > <Button variant='outlined' size='large'> asd </Button> </Tooltip>
+        <Tooltip title='tooltip' size='medium'     > <Button variant='outlined' size='large'> asd </Button> </Tooltip>
+        <Tooltip title='tooltip' size='small'      > <Button variant='outlined' size='large'> asd </Button> </Tooltip>
+        <Tooltip title='tooltip' size='extraSmall' > <Button variant='outlined' size='large'> asd </Button> </Tooltip>
       </div>
     </>
   )

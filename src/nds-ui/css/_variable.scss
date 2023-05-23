@@ -9,93 +9,112 @@ html {
 :root {
   // mode
   &[data-theme = "light"] {
-    --set-black: 0,0,0;
-    --set-white: 255,255,255;
-    --set-primary: 63,70,243;
+    --set-black    : 0,0,0             ;
+    --set-white    : 255,255,255       ;
+    --set-primary  : 63,70,243         ;
     --primary_light: rgb(121,126,252);
-    --primary_deep: rgb(10,19,225);
+    --primary_deep : rgb(10,19,225)  ;
     
+    --set-secondary  : 225,20,81        ;
     --secondary_light: rgb(244,63,118);
-    --secondary_deep: rgb(198,1,60);
-    --set-secondary : 225,20,81;
+    --secondary_deep : rgb(198,1,60)  ;
     
+    --set-tertiary  : 18,170,161       ;
     --tertiary_light: rgb(10,142,135);
-    --tertiary_deep: rgb(38,206,196);
-    --set-tertiary : 18,170,161;
+    --tertiary_deep : rgb(38,206,196);
 
-    --notification: rgb(237,46,46);
-    --success: rgb(14,218,108);
-    --warning: rgb(252,166,0);
+    --notification: rgb(237,46,46) ;
+    --success     : rgb(14,218,108);
+    --warning     : rgb(252,166,0) ;
 
   } 
   &[data-theme = "dark"] {
-    background-color: rgb(0,0,0,0.8);
-    --set-black: 255,255,255;
-    --set-white: 0,0,0;
-    --set-primary: 108,114,254;
-    --primary_light: rgb(60,67,238);
-    --primary_deep: rgb(137,142,255);
+    background-color: rgb(0,0,0,0.8)  ;
+    --set-black     : 255,255,255       ;
+    --set-white     : 0,0,0             ;
+    --set-primary   : 108,114,254       ;
+    --primary_light : rgb(60,67,238)  ;
+    --primary_deep  : rgb(137,142,255);
     
-    --set-secondary : 245,62,117;
-    --secondary_light: rgb(226,29,88);
-    --secondary_deep: rgb(243,122,158);
+    --set-secondary  : 245,62,117        ;
+    --secondary_light: rgb(226,29,88)  ;
+    --secondary_deep : rgb(243,122,158);
     
-    --set-tertiary : 56,227,217;
-    --tertiary_light: rgb(15,176,167);
-    --tertiary_deep: rgb(149,255,249);
+    --set-tertiary  : 56,227,217        ;
+    --tertiary_light: rgb(15,176,167) ;
+    --tertiary_deep : rgb(149,255,249);
 
-    --notification: rgb(250,84,84);
-    --success: rgb(70,233,145);
-    --warning: rgb(255,184,46);
+    --notification: rgb(250,84,84) ;
+    --success     : rgb(70,233,145);
+    --warning     : rgb(255,184,46);
   }
   // font
   --font: 'Inter', sans-serif;
   // radius
   --radius: 5rem;
   // color
-  --black: rgb(var(--set-black));
-  --white: rgb(var(--set-white));
-  --primary: rgb(var(--set-primary));
+  --black    : rgb(var(--set-black))    ;
+  --white    : rgb(var(--set-white))    ;
+  --primary  : rgb(var(--set-primary))  ;
   --secondary: rgb(var(--set-secondary));
-  --tertiary: rgb(var(--set-tertiary));
+  --tertiary : rgb(var(--set-tertiary)) ;
 
-  --disabled : var(--grayc);
+  --disabled      : var(--grayc);
   --disabled_deep : var(--graya);
 
-  --gray1: rgb(var(--set-black), 0.933);
-  --gray2: rgb(var(--set-black), 0.866);
-  --gray3: rgb(var(--set-black), 0.8);
-  --gray4: rgb(var(--set-black), 0.733);
-  --gray5: rgb(var(--set-black), 0.666);
-  --gray6: rgb(var(--set-black), 0.6);
-  --gray7: rgb(var(--set-black), 0.533);
-  --gray8: rgb(var(--set-black), 0.466);
-  --gray9: rgb(var(--set-black), 0.4);
-  --graya: rgb(var(--set-black), 0.333);
-  --grayb: rgb(var(--set-black), 0.266);
-  --grayc: rgb(var(--set-black), 0.2);
-  --grayd: rgb(var(--set-black), 0.133);
-  --graye: rgb(var(--set-black), 0.066);
-  --grayf5: rgb(var(--set-black), 0.04);
+  --gray1:  rgb(var(--set-black), 0.933);
+  --gray2:  rgb(var(--set-black), 0.866);
+  --gray3:  rgb(var(--set-black), 0.8  );
+  --gray4:  rgb(var(--set-black), 0.733);
+  --gray5:  rgb(var(--set-black), 0.666);
+  --gray6:  rgb(var(--set-black), 0.6  );
+  --gray7:  rgb(var(--set-black), 0.533);
+  --gray8:  rgb(var(--set-black), 0.466);
+  --gray9:  rgb(var(--set-black), 0.4  );
+  --graya:  rgb(var(--set-black), 0.333);
+  --grayb:  rgb(var(--set-black), 0.266);
+  --grayc:  rgb(var(--set-black), 0.2  );
+  --grayd:  rgb(var(--set-black), 0.133);
+  --graye:  rgb(var(--set-black), 0.066);
+  --grayf5: rgb(var(--set-black), 0.04 );
   --grayf8: rgb(var(--set-black), 0.027);
-  --transparent: rgb(var(--set-black), 0);
-  --white3: rgb(var(--set-white), 0.8);
-  --white6: rgb(var(--set-white), 0.6);
-  --white9: rgb(var(--set-white), 0.4);
-  --whitec: rgb(var(--set-white), 0.2);
+  
+  --gray1-100 : #111   ;
+  --gray2-100 : #222   ;
+  --gray3-100 : #333   ;
+  --gray4-100 : #444   ;
+  --gray5-100 : #555   ;
+  --gray6-100 : #666   ;
+  --gray7-100 : #777   ;
+  --gray8-100 : #888   ;
+  --gray9-100 : #999   ;
+  --graya-100 : #aaa   ;
+  --grayb-100 : #bbb   ;
+  --grayc-100 : #ccc   ;
+  --grayd-100 : #ddd   ;
+  --graye-100 : #eee   ;
+  --grayf5-100: #f5f5f5;
+  --grayf8-100: #f8f8f8;
+
+  --transparent: rgb(var(--set-black), 0)  ;
+  --white3     : rgb(var(--set-white), 0.8);
+  --white6     : rgb(var(--set-white), 0.6);
+  --white9     : rgb(var(--set-white), 0.4);
+  --whitec     : rgb(var(--set-white), 0.2);
 
   --shadow: 0 0 8rem 0 var(--grayc);
+
   --backdrop : var(--gray9);
 
-  --avatar1 : rgb(208, 23, 57);
-  --avatar2 : rgb(235, 104, 9);
-  --avatar3 : rgb(244, 180, 15);
-  --avatar4 : rgb(22, 206, 41);
-  --avatar5 : rgb(22, 170, 126);
-  --avatar6 : rgb(11, 167, 217);
-  --avatar7 : rgb(22, 63, 206);
-  --avatar8 : rgb(108, 27, 210);
-  --avatar9 : rgb(217, 11, 209);
+  --avatar1  : rgb(208, 23, 57)  ;
+  --avatar2  : rgb(235, 104, 9)  ;
+  --avatar3  : rgb(244, 180, 15) ;
+  --avatar4  : rgb(22, 206, 41)  ;
+  --avatar5  : rgb(22, 170, 126) ;
+  --avatar6  : rgb(11, 167, 217) ;
+  --avatar7  : rgb(22, 63, 206)  ;
+  --avatar8  : rgb(108, 27, 210) ;
+  --avatar9  : rgb(217, 11, 209) ;
   --avatar10 : rgb(128, 128, 128);
 
   // accordion
@@ -108,9 +127,9 @@ html {
   --accordion-hover: var(--grayd);
 
   // avatar
-  --avatar-size-large: 44rem;
-  --avatar-size-medium: 34rem;
-  --avatar-size-small: 28rem;
+  --avatar-size-large     : 44rem;
+  --avatar-size-medium    : 34rem;
+  --avatar-size-small     : 28rem;
   --avatar-size-extraSmall: 24rem;
   
   // badge
@@ -118,40 +137,40 @@ html {
   --badge-size-dot: 10rem;
 
   // btn
-  --btn-size-large: 44rem;
-  --btn-size-medium: 34rem;
-  --btn-size-small: 28rem;
+  --btn-size-large     : 44rem;
+  --btn-size-medium    : 34rem;
+  --btn-size-small     : 28rem;
   --btn-size-extraSmall: 24rem;
-  --btn-txt-large:  14rem;
-  --btn-txt-medium:  13rem;
-  --btn-txt-small:  12rem;
-  --btn-txt-extraSmall:  12rem;
-  --btn-p-large: 0 30rem;
-  --btn-p-medium: 0 20rem;
-  --btn-p-small: 0 10rem;
-  --btn-p-extraSmall: 0 5rem;
+  --btn-txt-large     : 14rem;
+  --btn-txt-medium    : 13rem;
+  --btn-txt-small     : 12rem;
+  --btn-txt-extraSmall: 12rem;
+  --btn-p-large     : 0 30rem;
+  --btn-p-medium    : 0 20rem;
+  --btn-p-small     : 0 10rem;
+  --btn-p-extraSmall: 0 5rem ;
   --btn-shadow : var(--shadow);
   
   // checkbox
   --checkbox: var(--gray6);
   --checkbox-disabled : var(--gray9);
-  --checkbox-size-large: 24rem;
-  --checkbox-size-medium: 20rem;
-  --checkbox-size-small: 16rem;
+  --checkbox-size-large     : 24rem;
+  --checkbox-size-medium    : 20rem;
+  --checkbox-size-small     : 16rem;
   --checkbox-size-extraSmall: 14rem;
-  --checkbox-ripple-size-large: calc(var(--checkbox-size-large) * 2);
-  --checkbox-ripple-size-medium: calc(var(--checkbox-size-medium) * 2);
-  --checkbox-ripple-size-small: calc(var(--checkbox-size-small) * 2);
+  --checkbox-ripple-size-large     : calc(var(--checkbox-size-large) * 2)     ;
+  --checkbox-ripple-size-medium    : calc(var(--checkbox-size-medium) * 2)    ;
+  --checkbox-ripple-size-small     : calc(var(--checkbox-size-small) * 2)     ;
   --checkbox-ripple-size-extraSmall: calc(var(--checkbox-size-extraSmall) * 2);
   
   // chip
-  --chip-p-large : 15rem;
-  --chip-p-medium : 10rem;
-  --chip-p-small : 5rem;
-  --chip-p-extraSmall : 5rem;
-  --chip-btnp-large : 7rem;
-  --chip-btnp-medium : 5rem;
-  --chip-btnp-small : 5rem;
+  --chip-p-large      : 15rem;
+  --chip-p-medium     : 10rem;
+  --chip-p-small      : 5rem ;
+  --chip-p-extraSmall : 5rem ;
+  --chip-btnp-large      : 7rem;
+  --chip-btnp-medium     : 5rem;
+  --chip-btnp-small      : 5rem;
   --chip-btnp-extraSmall : 3rem;
 
   // location
@@ -170,28 +189,28 @@ html {
   // radio
   --radio: var(--gray6);
   --radio-disabled : var(--gray9);
-  --radio-size-large: 24rem;
-  --radio-size-medium: 20rem;
-  --radio-size-small: 16rem;
+  --radio-size-large     : 24rem;
+  --radio-size-medium    : 20rem;
+  --radio-size-small     : 16rem;
   --radio-size-extraSmall: 14rem;
-  --radio-ripple-size-large: calc(var(--radio-size-large) * 2);
-  --radio-ripple-size-medium: calc(var(--radio-size-medium) * 2);
-  --radio-ripple-size-small: calc(var(--radio-size-small) * 2);
+  --radio-ripple-size-large     : calc(var(--radio-size-large) * 2)     ;
+  --radio-ripple-size-medium    : calc(var(--radio-size-medium) * 2)    ;
+  --radio-ripple-size-small     : calc(var(--radio-size-small) * 2)     ;
   --radio-ripple-size-extraSmall: calc(var(--radio-size-extraSmall) * 2);
 
   // select 
-  --select-size-large: 44rem;
-  --select-size-medium: 34rem;
-  --select-size-small: 28rem;
+  --select-size-large     : 44rem;
+  --select-size-medium    : 34rem;
+  --select-size-small     : 28rem;
   --select-size-extraSmall: 24rem;
-  --select-txt-large:  14rem;
-  --select-txt-medium:  13rem;
-  --select-txt-small:  12rem;
+  --select-txt-large     :  14rem;
+  --select-txt-medium    :  13rem;
+  --select-txt-small     :  12rem;
   --select-txt-extraSmall:  12rem;
-  --select-p-large: 0 15rem;
-  --select-p-medium: 0 13rem;
-  --select-p-small: 0 11rem;
-  --select-p-extraSmall: 0 9rem;
+  --select-p-large     : 0 15rem;
+  --select-p-medium    : 0 13rem;
+  --select-p-small     : 0 11rem;
+  --select-p-extraSmall: 0 9rem ;
   --select-width: 300rem;
 
   --select-option-max-h: 300rem;
@@ -207,18 +226,18 @@ html {
   --switch-disabled : var(--grayc);
 
   // textfield
-  --textfield-size-large: 44rem;
-  --textfield-size-medium: 34rem;
-  --textfield-size-small: 28rem;
+  --textfield-size-large     : 44rem;
+  --textfield-size-medium    : 34rem;
+  --textfield-size-small     : 28rem;
   --textfield-size-extraSmall: 24rem;
-  --textfield-txt-large:  14rem;
-  --textfield-txt-medium:  13rem;
-  --textfield-txt-small:  12rem;
+  --textfield-txt-large     :  14rem;
+  --textfield-txt-medium    :  13rem;
+  --textfield-txt-small     :  12rem;
   --textfield-txt-extraSmall:  12rem;
-  --textfield-p-large: 0 15rem;
-  --textfield-p-medium: 0 13rem;
-  --textfield-p-small: 0 11rem;
-  --textfield-p-extraSmall: 0 9rem;
+  --textfield-p-large     : 0 15rem;
+  --textfield-p-medium    : 0 13rem;
+  --textfield-p-small     : 0 11rem;
+  --textfield-p-extraSmall: 0 9rem ;
   --textfield-color: var(--gray9);
   --textfield-focus-color: var(--gray6);
   --textfield-otl: var(--grayc);
@@ -234,6 +253,17 @@ html {
   --textarea-font-size: 12rem;
   --textarea-p: 12rem 12rem;
   
+  // tooltip
+  --tooltip-margin : 5rem;
+  --tooltip-size-large      : 8rem 15rem;
+  --tooltip-size-medium     : 5rem 10rem;
+  --tooltip-size-small      : 3rem 7rem;
+  --tooltip-size-extraSmall : 2rem 5rem;
+  --tooltip-font-size-large      : 13rem;
+  --tooltip-font-size-medium     : 12rem;
+  --tooltip-font-size-small      : 11rem;
+  --tooltip-font-size-extraSmall : 10rem;
+
   // tree
   --tree-h : 36rem;
   --tree-font-size: 14rem;
@@ -254,6 +284,27 @@ html {
 
 }
 
+$grays: (
+  "black"  : var(--black)     ,
+  "white"  : var(--white)     ,
+  "gray1"  : var(--gray1-100) ,
+  "gray2"  : var(--gray2-100) ,
+  "gray3"  : var(--gray3-100) ,
+  "gray4"  : var(--gray4-100) ,
+  "gray5"  : var(--gray5-100) ,
+  "gray6"  : var(--gray6-100) ,
+  "gray7"  : var(--gray7-100) ,
+  "gray8"  : var(--gray8-100) ,
+  "gray9"  : var(--gray9-100) ,
+  "graya"  : var(--graya-100) ,
+  "grayb"  : var(--grayb-100) ,
+  "grayc"  : var(--grayc-100) ,
+  "grayd"  : var(--grayd-100) ,
+  "graye"  : var(--graye-100) ,
+  "grayf5" : var(--grayf5-100),
+  "grayf8" : var(--grayf8-100),
+);
+
 $colors: (
   "primary" : var(--primary),
   "primary_light" : var(--primary_light),
@@ -268,23 +319,23 @@ $colors: (
   "success": var(--success),
   "warning": var(--warning),
   "black" : var(--black),
-  "gray1" : var(--gray1),
-  "gray2" : var(--gray2),
-  "gray3" : var(--gray3),
-  "gray4" : var(--gray4),
-  "gray5" : var(--gray5),
-  "gray6" : var(--gray6),
-  "gray7" : var(--gray7),
-  "gray8" : var(--gray8),
-  "gray9" : var(--gray9),
-  "graya" : var(--graya),
-  "grayb" : var(--grayb),
-  "grayc" : var(--grayc),
-  "grayd" : var(--grayd),
-  "graye" : var(--graye),
+  "gray1"  : var(--gray1) ,
+  "gray2"  : var(--gray2) ,
+  "gray3"  : var(--gray3) ,
+  "gray4"  : var(--gray4) ,
+  "gray5"  : var(--gray5) ,
+  "gray6"  : var(--gray6) ,
+  "gray7"  : var(--gray7) ,
+  "gray8"  : var(--gray8) ,
+  "gray9"  : var(--gray9) ,
+  "graya"  : var(--graya) ,
+  "grayb"  : var(--grayb) ,
+  "grayc"  : var(--grayc) ,
+  "grayd"  : var(--grayd) ,
+  "graye"  : var(--graye) ,
   "grayf5" : var(--grayf5),
   "grayf8" : var(--grayf8),
-  "white" : var(--white),
+  "white"  : var(--white) ,
   "white3" : var(--white3),
   "white6" : var(--white6),
   "white9" : var(--white9),
