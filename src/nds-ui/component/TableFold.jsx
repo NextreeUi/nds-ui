@@ -1,10 +1,11 @@
 import * as React from "react";
 import styles from './table.module.scss';
-import { Button } from "../component";
+import { Button } from ".";
+
 //img
 import ArrowDown from './image/arrow-down.svg';
-const TRFolding = ({
-    className,
+
+const TableFold = ({
     children,
     parent,
   }) => {
@@ -14,7 +15,7 @@ const TRFolding = ({
     <tr>
       <td style={{textAlign: 'center'}}>
         <div style={{ display: 'flex', justifyContent: 'center'}}>
-        <Button theme="grayc" variant="outlined" square size="small" radius="round" onClick={()=>{setState(!state)}}>
+        <Button className={styles['table-fold'] + ' ' + (state ? styles.open : '')} theme="grayc" variant="outlined" square size="small" radius="round" onClick={()=>{setState(!state)}}>
           <img src={ArrowDown} />
         </Button>
         </div>
@@ -33,4 +34,4 @@ const TRFolding = ({
   );
 }
 
-export default TRFolding;
+export default TableFold;

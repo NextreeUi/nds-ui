@@ -1,0 +1,26 @@
+@import "../css/variable";
+
+.tab {
+    display: flex;
+    align-items: center;
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    &-btn-wrap {
+        position: relative;
+        width: fit-content;
+    }
+    &-custom {
+        position: absolute;
+        transition: 0.5s;
+        visibility: visible;
+        opacity: 1;
+        z-index: 99;
+        &.close {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+}

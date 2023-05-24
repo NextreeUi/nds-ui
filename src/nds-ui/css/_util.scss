@@ -297,6 +297,11 @@ tbody {
         gap: #{$i}rem ;
     }
 }
+.gap-1 {
+    &>div:not(:first-child) {
+        margin-left: -1px;
+    }
+}
 // backdrop-filter
 @for $i from 1 to 100 {
     .blur-back#{$i} {
