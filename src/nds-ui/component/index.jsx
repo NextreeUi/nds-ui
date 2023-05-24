@@ -13,6 +13,7 @@ export { default as Popover    } from "./Popover"   ;
 export { default as Popup      } from "./Popup"     ;
 export { default as Radio      } from "./Radio"     ;
 export { default as Select     } from "./Select"    ;
+export { default as Slide      } from "./Slide"     ;
 export { default as Switch     } from "./Switch"    ;
 export { default as Tab        } from "./Tab"       ;
 export { default as Table      } from "./Table"     ;

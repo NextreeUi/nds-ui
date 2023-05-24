@@ -1,14 +1,6 @@
 import * as React from "react";
 import styles from './select.module.scss';
 
-const Option = ({ value, onClick, OptionClick }) => {
-  return (
-    <>
-      
-    </>
-  );
-};
-
 const Select = ({
   size = 'medium',
   radius = 'normal',
