@@ -1,37 +1,47 @@
 // width height
-@for $i from 1 to 1001 {
-  .w#{$i} {
-    width: #{$i}rem !important;
-  }
-  .h#{$i} {
-    height: #{$i}rem !important;
-  }
-  .minw#{$i} {
-    min-width: #{$i}rem !important;
-  }
-  .minh#{$i} {
-    min-height: #{$i}rem !important;
-  }
-  .vh#{$i} {
-    height: #{$i}vh !important;
-  }
-  .vw#{$i} {
-    width: #{$i}vw !important;
-  }
-  .vw100-#{$i} {
-    width: calc(100vw - #{$i}rem);
-  }
-  .vh100-#{$i} {
-    height: calc(100vh - #{$i}rem);
-  }
+@for $i from 1 to 3001 {
+    .w#{$i} {
+        width: #{$i}rem !important;
+    }
+    .h#{$i} {
+        height: #{$i}rem !important;
+    }
+    .width#{$i} {
+        width: calc(#{$i} * 1%) !important;
+    }
+    .height#{$i} {
+        height: calc(#{$i} * 1%) !important;
+    }
+    .minw#{$i} {
+        min-width: #{$i}rem !important;
+    }
+    .minh#{$i} {
+        min-height: #{$i}rem !important;
+    }
+    .maxw#{$i} {
+        max-width: #{$i}rem !important;
+    }
+    .maxh#{$i} {
+        max-height: #{$i}rem !important;
+    }
+    .vh#{$i} {
+        height: #{$i}vh !important;
+    }
+    .vw#{$i} {
+        width: #{$i}vw !important;
+    }
+    .vw100-#{$i} {
+        width: calc(100vw - #{$i}rem);
+    }
+    .vh100-#{$i} {
+        height: calc(100vh - #{$i}rem);
+    }
+}
+.fitContent {
+    width: fit-content;
+    height: fit-content;
 }
 
-.width100 {
-    width: 100% !important;
-  }
-.height100 {
-    height: 100% !important;
-}
 
 // lineHeight
 @for $i from 60 to 200 {
@@ -154,6 +164,120 @@
 @for $i from 1 to 10 {
     .flex#{$i} {
         flex-grow: #{$i};
+    }
+}
+
+// table
+tbody {
+    @for $i from 1 to 100 {
+        &.col#{$i} {
+            &-align {
+                &-start {
+                    &>tr>td:nth-child(#{$i}) {
+                        text-align: start;
+                        &>div {
+                            justify-content: start !important;
+                        }
+                    }
+                }
+                &-center {
+                    &>tr>td:nth-child(#{$i}) {
+                        text-align: center;
+                        &>div {
+                            justify-content: center !important;
+                        }
+                    }
+                }
+                &-end {
+                    &>tr>td:nth-child(#{$i}) {
+                        text-align: end;
+                        &>div {
+                            justify-content: end !important;
+                        }
+                    }
+                }
+            }
+            &-vertical {
+                &-top {
+                    &>tr>td:nth-child(#{$i}) {
+                        vertical-align: top;
+                        &>div {
+                            align-items: start !important;
+                        }
+                    }
+                }
+                &-middle {
+                    &>tr>td:nth-child(#{$i}) {
+                        vertical-align: middle;
+                        &>div {
+                            align-items: center !important;
+                        }
+                    }
+                }
+                &-bottom {
+                    &>tr>td:nth-child(#{$i}) {
+                        vertical-align: bottom;
+                        &>div {
+                            align-items: end !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.col-last {
+        &-align {
+            &-start {
+                &>tr>td:last-child {
+                    text-align: start;
+                    &>div {
+                        justify-content: start !important;
+                    }
+                }
+            }
+            &-center {
+                &>tr>td:last-child {
+                    text-align: center;
+                    &>div {
+                        justify-content: center !important;
+                    }
+                }
+            }
+            &-end {
+                &>tr>td:last-child {
+                    text-align: end;
+                    &>div {
+                        justify-content: end !important;
+                    }
+                }
+            }
+        }
+        &-vertical {
+            &-top {
+                &>tr>td:last-child {
+                    vertical-align: top;
+                    &>div {
+                        align-items: start !important;
+                    }
+                }
+            }
+            &-middle {
+                &>tr>td:last-child {
+                    vertical-align: middle;
+                    &>div {
+                        align-items: center !important;
+                    }
+                }
+            }
+            &-bottom {
+                &>tr>td:last-child {
+                    vertical-align: bottom;
+                    &>div {
+                        align-items: end !important;
+                    }
+                }
+            }
+        }
     }
 }
 

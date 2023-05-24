@@ -39,7 +39,7 @@ const Home = () => {
               <Link to='/DefaultLayout/UserGuide/Overview'> <Button size='large' variant='outlined' radius='round'>User Guide</Button> </Link>
               <Link to='/DefaultLayout/Component/AutocompletePage'> <Button size='large' variant='outlined' radius='round'>Components</Button> </Link>
             </div>
-            <div className='width175 flex alignCenter gap20'>
+            <div className='w175 flex alignCenter gap20'>
               <Button className='minw45 h45' square theme='grayc'>
                 <i className='i-gitlab' />
               </Button>
