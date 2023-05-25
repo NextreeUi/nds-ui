@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from './avatar.module.scss';
+import styles from './style.module.scss';
 
 const Avatar = ({
     size = 'medium',

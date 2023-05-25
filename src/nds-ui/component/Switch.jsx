@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from './switch.module.scss';
+import styles from './style.module.scss';
 
 const Switch = ({
                 size='medium',

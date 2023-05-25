@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from './backdrop.module.scss';
+import styles from './style.module.scss';
 
 const Backdrop = ({
     open,

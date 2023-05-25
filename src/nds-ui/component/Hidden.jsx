@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from './hidden.module.scss';
+import styles from './style.module.scss';
 
 const Hidden = ({
     max=9999,

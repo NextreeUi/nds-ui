@@ -276,6 +276,10 @@ html {
   --textfield-disabled-bg: var(--grayc);
   --textfield-disabled-otl: var(--transparent);
 
+  --textfield-wrap-gap : 5rem;
+
+  --textfield-helpertext-color: var(--gray9);
+
   --textarea-otl: var(--grayc);
   --textarea-focus-otl: var(--gray6);
   --textarea-font-size: 12rem;

@@ -1,24 +1,16 @@
 import * as React from 'react';
 
 // nds-ui
-import { Tab, Slide } from '@/nds-ui/component';
+import { Tab, Slide, TextField, TextArea } from '@/nds-ui/component';
 
 const AutocompletePage = () => {
   return (
     <>
       <p className='size24'>Autocomplete 페이지입니다.</p>
       <div className='flexColumn gap10'>
-        <Slide
-          classSlide='h300'
-          classBtn='w500'
-          content= {[
-            <div key={0} className='width100 height100 size32 txt-white b flexCenter bgc-black_30p'>
-              안녕하세요 </div>,
-            <div key={1} className='width100 height100 bgc-primary'/>,
-            <div key={2} className='width100 height100 bgc-secondary'/>,
-            <div key={3} className='width100 height100 bgc-tertiary'/>
-          ]}
-        />
+        <TextField error helperText='이것은 도움말입니다.'/>
+        <TextField helperText='이것은 도움말입니다.'/>
+        <TextArea />
       </div>
     </>
   )
@@ -51,5 +43,22 @@ const TabExample = () => {
       : <></>
     }
     </Tab>  
+  )
+}
+
+const SlideExample = () => {
+  return (
+    <Slide
+      classSlide='h300'
+      classBtn='w500'
+      delay={1000}
+      content= {[
+        <div key={0} className='width100 height100 size32 txt-white b flexCenter bgc-black_30p'>
+          안녕하세요 </div>,
+        <div key={1} className='width100 height100 bgc-primary'/>,
+        <div key={2} className='width100 height100 bgc-secondary'/>,
+        <div key={3} className='width100 height100 bgc-tertiary'/>,
+      ]}
+    />
   )
 }

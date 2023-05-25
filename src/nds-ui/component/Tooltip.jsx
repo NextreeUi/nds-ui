@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from './tooltip.module.scss';
+import styles from './style.module.scss';
 
 const Tooltip = ({
     placement='bottom',

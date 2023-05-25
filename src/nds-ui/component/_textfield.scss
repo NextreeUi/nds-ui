@@ -1,5 +1,3 @@
-@import "../css/variable";
-
 @mixin textfield {
     font-family: var(--font);
     border-radius: var(--radius);
@@ -28,6 +26,11 @@
 }
 
 .textfield {
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: var(--textfield-wrap-gap);
+    }
     @include textfield;
     //size
     &.large {
@@ -50,7 +53,10 @@
         font-size: var(--textfield-txt-extraSmall);
         padding: var(--textfield-p-extraSmall);
     }
-    
+    &.error {
+        border: 1px solid var(--notification);
+        color: var(--textfield-focus-color);
+    }
     // radius
     &.round {
         border-radius: 100rem;
@@ -58,4 +64,23 @@
     &.rect {
         border-radius: 0rem;
     }
+    &-helper-text {
+        color: var(--textfield-helpertext-color);
+        &.large {
+            font-size: calc(var(--textfield-txt-large) - 2rem);
+        }
+        &.medium {
+            font-size: calc(var(--textfield-txt-medium) - 2rem);
+        }
+        &.small {
+            font-size: calc(var(--textfield-txt-small) - 2rem);
+        }
+        &.extraSmall {
+            font-size: calc(var(--textfield-txt-extraSmall) - 2rem);
+        }
+        &.error {
+            color: var(--notification);
+        }
+    }
 }
+

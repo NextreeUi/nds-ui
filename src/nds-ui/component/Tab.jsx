@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from './tab.module.scss';
+import styles from './style.module.scss';
 
 import {Button} from '../component';
 

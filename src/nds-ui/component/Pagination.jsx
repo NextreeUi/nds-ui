@@ -1,5 +1,6 @@
 import * as React from "react";
-import styles from './pagination.module.scss';
+import styles from './style.module.scss';
+
 import Button from './Button';
 
 const Pagination = ({

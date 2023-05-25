@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from './slide.module.scss';
+import styles from './style.module.scss';
 
 import { Button } from '../component';
 
@@ -30,6 +30,7 @@ const Slide = ({
     pauseIcon,
     playIcon,
     autoSlide = true,
+    delay = 3000,
     noPause,
     classSlide,
     classBtn,
@@ -78,7 +79,6 @@ const Slide = ({
   }
 
   if (slideAuto) {
-    let delay = 3000;
     useInterval(()=>{
       if(state == content.length) {
         setState(1);
@@ -100,7 +100,7 @@ const Slide = ({
           {content}
         </div>
         {/* btn */}
-        <div className={styles['btn-wrap'] + ' ' + (classBtn ? classBtn : '')}>
+        <div className={styles['slide-btn-wrap'] + ' ' + (classBtn ? classBtn : '')}>
           <div onClick={leftBtnClick}>
             {leftBtn  ? leftBtn  : <SlideBtn left />}
           </div>
@@ -113,13 +113,13 @@ const Slide = ({
           noNav ?
           <></>
           :
-          <div className={styles['nav-wrap'] + ' ' + (classNavWrap ? classNavWrap : '')}>
+          <div className={styles['slide-nav-wrap'] + ' ' + (classNavWrap ? classNavWrap : '')}>
             {
               content.map((cont, index)=>{
                 return (
                   <div 
                     key={index} 
-                    className={styles['nav'] + ' ' + (state == index + 1 ? styles['select'] : '') + ' ' + (classNav ? classNav : '')} 
+                    className={styles['slide-nav'] + ' ' + (state == index + 1 ? styles['select'] : '') + ' ' + (classNav ? classNav : '')} 
                     onClick={()=>{setState(index + 1)}}
                   />
                 )
@@ -132,9 +132,9 @@ const Slide = ({
               <div onClick={()=>{setSlideAuto(!slideAuto)}}>
                 {
                   slideAuto ?
-                  pauseIcon ? pauseIcon : <i className={styles['nav-pause']} />
+                  pauseIcon ? pauseIcon : <i className={styles['slide-nav-pause']} />
                   :
-                  playIcon ? playIcon : <i className={styles['nav-play']} />
+                  playIcon ? playIcon : <i className={styles['slide-nav-play']} />
                 }
               </div>
             }

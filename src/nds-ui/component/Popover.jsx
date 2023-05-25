@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from './popover.module.scss';
+import styles from './style.module.scss';
 
 const Popup = ({
     X='left', Y='bottomEnd',
@@ -13,7 +13,7 @@ const Popup = ({
   }
   return (
     <>
-    <div className={styles.backdrop + ' ' + (open ? styles.open : '')} onClick={Close(onClose)}/>
+    <div className={styles['popover-backdrop'] + ' ' + (open ? styles.open : '')} onClick={Close(onClose)}/>
     <div className={
       styles.popover 
       + ' ' + 

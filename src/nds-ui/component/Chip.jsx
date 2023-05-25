@@ -1,5 +1,6 @@
 import * as React from "react";
-import styles from './chip.module.scss';
+import styles from './style.module.scss';
+
 import Button from "./Button";
 
 const Chip = ({
@@ -127,7 +128,7 @@ const Chip = ({
             (variant == 'outlined' ? 'outlined' : 'normal')
           } 
           className={
-            styles.btn
+            styles[`chip-btn`]
             + ' ' +
             (size == 'large' ? styles['size-large'] :
             size == 'medium' ? styles['size-medium'] :
@@ -163,7 +164,7 @@ const Chip = ({
             (variant == 'outlined' ? 'outlined' : 'normal')
           } 
           className={
-            styles.btn
+            styles['chip-btn']
             + ' ' +
             (size == 'large' ? styles['size-large'] :
             size == 'medium' ? styles['size-medium'] :

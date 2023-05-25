@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from './popup.module.scss';
+import styles from './style.module.scss';
 
 const Popup = ({
     open,
@@ -11,7 +11,7 @@ const Popup = ({
   return (
     <>
     <div className={styles['popup-wrap'] + ' ' + (open ? styles.open : '')}>
-      <div className={styles.backdrop} onClick={onClose}/>
+      <div className={styles['popup-backdrop']} onClick={onClose}/>
       <div className={styles.popup + ' ' + (className ? className : '')}>
         {children}
       </div>

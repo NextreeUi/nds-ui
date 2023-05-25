@@ -1,21 +1,68 @@
 import * as React from 'react';
-import styles from './textfield.module.scss';
+import styles from './style.module.scss';
 
 
 const TextField = ({
-                  size,
+                  size = 'medium',
                   radius,
                   disabled,
                   readOnly,
                   placeholder,
                   defaultValue,
+                  helperText,
                   onClick,
                   onFocus,
                   onKeyDown,
-                  className
+                  className,
+                  classHelper,
+                  error,
                   }) => {
   return (
     <>
+    {
+      helperText ?
+      <div className={styles['textfield-wrap']}>
+        <input type='text'
+          className={
+            styles.textfield
+            + ' ' + 
+            (size == 'extraSmall' ? styles.extraSmall :
+            size == 'small' ? styles.small :
+            size == 'medium' ? styles.medium :
+            size == 'large' ? styles.large : '')
+            + ' ' + 
+            (radius == 'round' ? styles.round : 
+            radius == 'rect' ? styles.rect : '')
+            + ' ' +
+            (error ? styles.error : '')
+            + ' ' + 
+            (className ? className : '')
+          }
+          disabled={disabled}
+          readOnly={readOnly}
+          placeholder={placeholder}
+          defaultValue={defaultValue}
+          onClick={onClick}
+          onFocus={onFocus}
+          onKeyDown={onKeyDown}
+        />
+        <p 
+          className={
+            styles['textfield-helper-text'] 
+            + ' ' + 
+            (size == 'extraSmall' ? styles.extraSmall :
+            size == 'small' ? styles.small :
+            size == 'medium' ? styles.medium :
+            size == 'large' ? styles.large : '')
+            + ' ' + 
+            (error ? styles.error : '')
+            + ' ' +
+            (classHelper ? classHelper : '')
+            }>
+          {helperText}
+        </p>
+      </div>
+      :
       <input type='text'
       className={
         styles.textfield
@@ -38,6 +85,8 @@ const TextField = ({
       onFocus={onFocus}
       onKeyDown={onKeyDown}
       />
+    }
+      
     </>
   )
 }

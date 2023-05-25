@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from './location.module.scss';
+import styles from './style.module.scss';
 
 const Location = ({
     number=2,

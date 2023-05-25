@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from './accordion.module.scss';
+import styles from './style.module.scss';
 
 const Accordion = ({
     wrap,
@@ -9,7 +9,6 @@ const Accordion = ({
     children,
     title,
     id,
-    onClick,
     className,
   }) => {
   const [open, setOpen] = React.useState(false);
