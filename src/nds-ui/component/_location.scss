@@ -7,6 +7,7 @@
     &-light {
         font-size: var(--location-font-size);
         color: var(--location-light);
+        cursor: pointer;
         &:hover {
             color: var(--location-light-hover);
         }
@@ -14,6 +15,7 @@
     &-bold {
         font-size: var(--location-font-size);
         color: var(--location-bold);
+        cursor: pointer;
     }
     &-arrow {
         @include mask('arrow-right.svg');

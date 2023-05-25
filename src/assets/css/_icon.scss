@@ -15,7 +15,11 @@ $iconsList :
       }
     }
   }
-  
+  &-location-arrow {
+    @include mask('icons/location-arrow.svg');
+    width: 5rem;
+    height: 8rem;
+  }
   &-gitlab {
     @include image("gitlab.svg");
     width: 43rem;

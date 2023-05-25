@@ -31,7 +31,7 @@ const Home = () => {
     <>
       <div className="vw100 vh100 flexColumn">
         <div className='vw100 h70 flexCenter bgc-white_80p blur-back52 otlb-grayc'>
-          <div className='home-content-width flexBetween alignCenter'>
+          <div className='content-width-home flexBetween alignCenter'>
             <div className='flex w175' >
               <Logo />
             </div>
@@ -53,7 +53,7 @@ const Home = () => {
           </div>
         </div>
         <div className='vw100 vh100-128 flexCenter'>
-          <div className='home-content-width flexColumn gap40'>
+          <div className='content-width-home flexColumn gap40'>
             <div className='flexColumn'>
               <p className='size60 b txt-black'>For Nextrian</p>
               <p className='size80 b txt-primary'>Design System</p>

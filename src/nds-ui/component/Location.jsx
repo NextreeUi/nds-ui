@@ -1,13 +1,15 @@
 import * as React from "react";
 import styles from './style.module.scss';
 
+import { Link } from "react-router-dom";
+
 const Location = ({
     number=2,
-    href1,
-    href2,
-    href3,
-    href4,
-    hrefLast,
+    link1,
+    link2,
+    link3,
+    link4,
+    linkLast,
     depth1='Home',
     depth2='Depth2',
     depth3='Depth3',
@@ -23,30 +25,30 @@ const Location = ({
       <div className={styles['location-wrap'] + ' ' + (className ? className : '')}
         id={id}
       >
-        <a href={href1} className={styles['location-light']}> {depth1} </a>
+        <Link to={link1} className={styles['location-light']}> {depth1} </Link>
         {icon ? icon : <i className={styles['location-arrow']} />}
         {number > 2 ? 
           <>
-            <a href={href2} className={styles['location-light']}> {depth2} </a>
+            <Link to={link2} className={styles['location-light']}> {depth2} </Link>
             {icon ? icon : <i className={styles['location-arrow']} />}
           </>
           : <></>
         } 
         {number > 3 ? 
           <>
-            <a href={href3} className={styles['location-light']}> {depth3} </a>
+            <Link to={link3} className={styles['location-light']}> {depth3} </Link>
             {icon ? icon : <i className={styles['location-arrow']} />}
           </>
           : <></>
         } 
         {number > 4 ? 
           <>
-            <a href={href4} className={styles['location-light']}> {depth4} </a>
+            <Link to={link4} className={styles['location-light']}> {depth4} </Link>
             {icon ? icon : <i className={styles['location-arrow']} />}
           </>
           : <></>
         } 
-        <a href={hrefLast} className={styles['location-bold']}> {last} </a>
+        <Link to={linkLast} className={styles['location-bold']}> {last} </Link>
       </div>
     </>
   );

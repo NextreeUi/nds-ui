@@ -8,6 +8,88 @@
   }
 }
 
+
+.content-width {
+  width: 1000rem;
+  &-home {
+    width: 1400rem;
+  }
+}
+.codeMirror {
+  padding: var(--radius);
+  border-radius: var(--radius);
+  max-height: 500rem;
+  overflow-x: auto;
+  overflow-y: auto;
+  background-color: #282c34;
+  &::-webkit-scrollbar-track {
+    border: 0;
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background: rgba(255,255,255, 0.2);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(255,255,255, 0.4);
+  }
+  &>div {
+    font-size: 14rem !important;
+  }
+}
+.layout {
+  &-all {
+    display: flex;
+    flex-direction: column;
+    gap: 40rem;
+    padding: 50rem 0;
+  }
+  &-title {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  &-small {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
+  &-example {
+    border-radius: var(--radius);
+    border: 1px solid var(--grayc);
+    padding: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+  }
+}
+
+h1 {
+  font-size: 60rem;
+  font-weight: 800;
+  color: var(--black);
+}
+h2 {
+  font-size: 30rem;
+  font-weight: 700;
+  color: var(--black);
+}
+h3 {
+  font-size: 24rem;
+  font-weight: 700;
+  color: var(--black);
+}
+.description {
+  font-size: 16rem;
+  font-weight: 400;
+  color: var(--gray6);
+}
+
 .loading-wrap {
   position: fixed;
   width: 100%;

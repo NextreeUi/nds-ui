@@ -225,6 +225,8 @@ const Button = ({
         size == 'small' ? styles.small :
         size == 'extraSmall' ? styles.extraSmall : '')
         + ' ' +
+        (disabled ? styles['disabled'] : '')
+        + ' ' +
         (className ? className : '' )
       }
         onClick={onClick}
