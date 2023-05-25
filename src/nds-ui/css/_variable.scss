@@ -82,7 +82,10 @@ html {
     --grayf8-100: #f8f8f8;
   }
   // font
-  --font: 'Inter', sans-serif;
+  // --font: 'Noto Sans KR', sans-serif;
+  --font: InterNoto, sans-serif;
+  // --font: 'Pretendard-Regular';
+
   // radius
   --radius: 5rem;
   // color

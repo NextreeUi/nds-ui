@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // nds-ui
-import { Tab, Slide, TextField, TextArea } from '@/nds-ui/component';
+import { Tab, Slide, TextField, TextArea, Button } from '@/nds-ui/component';
 
 const AutocompletePage = () => {
   return (
@@ -11,6 +11,8 @@ const AutocompletePage = () => {
         <TextField error helperText='이것은 도움말입니다.'/>
         <TextField helperText='이것은 도움말입니다.'/>
         <TextArea />
+        <p className='t size14'>안녕하세요</p>
+        <Button variant='contained'> 안녕하세요 !@#$%</Button>
       </div>
     </>
   )
