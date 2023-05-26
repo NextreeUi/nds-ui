@@ -15,7 +15,6 @@ const Button = ({
     hoverBg,
     hoverOtl,
     hoverColor,
-    hoverRadius,
     disabled, 
     className,
     onClick, 
@@ -215,10 +214,6 @@ const Button = ({
         (hoverOtlStyle(hoverOtl))
         + ' ' +
         (hoverColorStyle(hoverColor))
-        + ' ' +
-        (hoverRadius == 'round' ? styles['hover-radius-round'] : 
-        hoverRadius == 'rect' ? styles['hover-radius-rect'] : 
-        hoverRadius == 'normal' ? styles['hover-radius-normal'] : '')
         + ' ' +
         (size == 'large' ? styles.large :
         size == 'medium' ? styles.medium :

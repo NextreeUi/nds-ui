@@ -14,23 +14,25 @@
         padding-right: 4px;
         &>tr {
             &>th {
+                height: 50rem !important;
                 position: sticky;
                 z-index: 99;
                 background-color: var(--table-th-bg);
                 top: 0;
                 font-size: 14rem;
-                height: 50rem;  
+                padding: 10rem;
                 color: var(--table-th-color);
             }
         }
     }
     &>tbody {
         &>tr {
-            height: 50rem;
             &:not(:last-child){
                 border-bottom: var(--table-td-otlb) ;
             }
             &>td {
+                height: 50rem;
+                padding: 10rem;
                 font-size: 14rem;
                 color: var(--talbe-td-color);
             }

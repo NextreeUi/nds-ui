@@ -8,50 +8,38 @@
   }
 }
 
-
+// layout
 .content-width {
   width: 1000rem;
   &-home {
     width: 1400rem;
   }
 }
-.codeMirror {
-  padding: var(--radius);
-  border-radius: var(--radius);
-  max-height: 500rem;
-  overflow-x: auto;
-  overflow-y: auto;
-  background-color: #282c34;
-  &::-webkit-scrollbar-track {
-    border: 0;
-    border-radius: 0;
-  }
 
-  &::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-    background: rgba(255,255,255, 0.2);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background: rgba(255,255,255, 0.4);
-  }
-  &>div {
-    font-size: 14rem !important;
-  }
-}
 .layout {
   &-all {
     display: flex;
     flex-direction: column;
-    gap: 40rem;
-    padding: 50rem 0;
+    gap: 50rem;
   }
   &-title {
     display: flex;
     flex-direction: column;
+    position: relative;
     gap: 5rem;
+    &>h2 {
+      margin-bottom: 15rem;
+      &::after {
+        content: '';
+        width: 12rem;
+        height: 12rem;
+        border-radius: var(--radius);
+        position: absolute;
+        top: 0rem;
+        left: -30rem;
+        background-color: var(--primary);
+      }
+    }
   }
   &-small {
     display: flex;
@@ -88,8 +76,40 @@ h3 {
   font-size: 16rem;
   font-weight: 400;
   color: var(--gray6);
+  line-height: 150%
 }
 
+
+// table
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Space+Mono:wght@400;700&display=swap');
+.table {
+  &-props {
+    &-col1 {width: 120rem;}
+    &-col2 {width: 180rem;}
+  }
+}
+tbody.table {
+  &-props {
+    &>tr {
+      &>td:first-child {
+        color: var(--props-color);
+        font-weight: bold;
+        font-family:'Space Mono', monospace;
+        text-align: center;
+      }
+      &>td:nth-child(2) {
+        color: var(--value-color);
+        font-family:'Space Mono', monospace;
+        text-align: start;
+      }
+      &>td:last-child {
+        text-align: start;
+      }
+    }
+  }
+}
+
+// loading
 .loading-wrap {
   position: fixed;
   width: 100%;
@@ -116,5 +136,53 @@ h3 {
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+// codeMirror
+.codeMirror {
+  padding: var(--radius);
+  border-radius: var(--radius);
+  max-height: 500rem;
+  overflow-x: auto;
+  overflow-y: auto;
+  background-color: #282c34;
+  position: relative;
+  &>.btn-wrap {
+    margin-bottom: -29rem;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10rem;
+    padding: 5rem 5rem 0 0;
+    z-index: 100;
+    &>p {
+      font-size: 14rem;
+      color: white;
+    }
+    &>button {
+      position: relative;
+      z-index: 99;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    border: 0;
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background: rgba(255,255,255, 0.2);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(255,255,255, 0.4);
+  }
+  &>div {
+    font-size: 14rem !important;
   }
 }

@@ -19,10 +19,10 @@ function DefaultLayout() {
         </div>
         <div className="flexColumn flex1">
           {/* Header  */}
-          <Header />
+          <Header address1={type} address2={id}/>
           {/* Contents */}
-          <div className='vh100-70 flex1 scrollYAuto flex justifyCenter'>
-            <div className="flexColumn content-width ">
+          <div className='vh100-70 scrollYAuto flexColumn alignCenter'>
+            <div className="flexColumn content-width py70">
               <Contents address1={type} address2={id}/>
             </div>
           </div>

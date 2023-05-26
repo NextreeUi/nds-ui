@@ -64,6 +64,9 @@
         @each $semantic, $color in $colors {
             &-#{$semantic} {
                 color: $color;
+                &>i {
+                    background-color: $color;
+                }
             }
         }
     }
@@ -157,21 +160,10 @@
             @each $semantic, $color in $colors {
                 &-#{$semantic}:hover {
                     color: $color;
+                    &>i {
+                        background-color: $color;
+                    }
                 }
-            }
-        }
-        &-radius {
-            &-round:hover {
-                border-radius: 1000rem;
-                transition: 2s;
-            }
-            &-rect:hover {
-                border-radius: 0rem;
-                transition: 2s;
-            }
-            &-normal:hover {
-                border-radius: var(--radius);
-                transition: 2s;
             }
         }
     }

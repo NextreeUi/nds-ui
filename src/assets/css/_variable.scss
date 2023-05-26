@@ -9,6 +9,11 @@ html {
 }
 
 :root {
+  // color
+  --props-color: #163e81;
+  --value-color: #c86523;
+
+  // location
   --location-font-size: 12rem;
   --location-gap: 10rem;
   --location-light: var(--black);

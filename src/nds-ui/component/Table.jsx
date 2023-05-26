@@ -2,9 +2,9 @@ import * as React from "react";
 import styles from './style.module.scss';
 
 const Table = ({
-    ColGroup,
-    THead,
-    TBody,
+    colGroup,
+    tHead,
+    tBody,
     classWrap,
     classTable,
     classTHead,
@@ -17,13 +17,13 @@ const Table = ({
     <div className={styles['table-wrap'] + ' ' + (classWrap ? classWrap : '')}>
       <table className={styles.table + ' ' + (classTable ? classTable : '')}>
         <colgroup className={classColGroup ? classColGroup : ''}>
-          {ColGroup}
+          {colGroup}
         </colgroup>
         <thead className={classTHead ? classTHead : ''}>
-          {THead}
+          {tHead}
         </thead>
         <tbody className={classTBody ? classTBody : ''}>
-          {TBody}
+          {tBody}
         </tbody>
       </table>
     </div>

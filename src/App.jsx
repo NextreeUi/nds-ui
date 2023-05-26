@@ -37,17 +37,17 @@ const Home = () => {
             </div>
             <div className='flex gap20 alignCenter'>
               <Link to='/DefaultLayout/UserGuide/Overview'> <Button size='large' variant='outlined' radius='round'>User Guide</Button> </Link>
-              <Link to='/DefaultLayout/Component/AutocompletePage'> <Button size='large' variant='outlined' radius='round'>Components</Button> </Link>
+              <Link to='/DefaultLayout/Component/Button'> <Button size='large' variant='outlined' radius='round'>Components</Button> </Link>
             </div>
             <div className='w175 flex alignCenter gap20'>
               <Button className='minw45 h45' square theme='grayc'>
-                <i className='i-gitlab' />
+                <p className='i-gitlab' />
               </Button>
               <Button className='minw45 h45' square theme='grayc'>
-                <i className='i-github' />
+                <p className='i-github' />
               </Button>
               <Button className='minw45 h45' square theme='grayc'>
-                <i className='i-figma' />
+                <p className='i-figma' />
               </Button>
             </div>
           </div>
