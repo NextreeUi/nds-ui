@@ -391,6 +391,28 @@ export default Example;`}/>
                 </tr>
                 
                 <tr>
+                  <td>defaultValue</td>
+                  <td>
+                    number
+                  </td>
+                  <td>
+                    기본 값을 설정해주는 속성으로 숫자(number) 타입입니다. <br/>
+                    0부터 순서대로 값을 입력하면 됩니다.
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>list</td>
+                  <td>
+                    array
+                  </td>
+                  <td>
+                    옵션 값을 설정하는 속성으로 배열(array)를 넣습니다. <br/>
+                    배열 안의 갯수만큼 옵션이 생성됩니다.
+                  </td>
+                </tr>
+
+                <tr>
                   <td>disabled</td>
                   <td>
                     boolean

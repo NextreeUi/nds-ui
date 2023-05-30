@@ -6,6 +6,7 @@
     background-color: var(--switch-unchecked);
     padding: var(--switch-padding);
     transition: 0.3s;
+    cursor: pointer;
     &:checked {
         &::after {
             margin-left: var(--switch-ml);
@@ -56,6 +57,7 @@
         &:checked {
             background-color: var(--switch-disabled);
         }
+        cursor: default;
     }
 
     &::before {

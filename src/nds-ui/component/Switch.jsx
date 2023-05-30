@@ -2,7 +2,6 @@ import * as React from "react";
 import styles from './style.module.scss';
 
 const Switch = ({
-                size='medium',
                 color='primary',
                 radius='round',
                 defaultChecked,
@@ -23,11 +22,6 @@ const Switch = ({
           styles.switch
           + ' ' +
           (colorStyle(color))
-          + ' ' +
-          (size == 'large' ? styles.large :
-          size == 'medium' ? styles.medium :
-          size == 'small' ? styles.small :
-          size == 'extraSmall' ? styles.extraSmall : '')
           + ' ' +
           (radius == 'rect' ? styles['radius-rect'] :
           radius == 'normal' ? styles['radius-normal'] :

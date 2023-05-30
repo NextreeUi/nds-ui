@@ -24,6 +24,10 @@ const RadioPage = () => {
   const RippleCodeClick = () => {
     setRippleCode(!RippleCode)
   }
+  const [DefaultCheckedCode, setDefaultCheckedCode] = React.useState(false);
+  const DefaultCheckedCodeClick = () => {
+    setDefaultCheckedCode(!DefaultCheckedCode)
+  }
   const [DisabledCode, setDisabledCode] = React.useState(false);
   const DisabledCodeClick = () => {
     setDisabledCode(!DisabledCode)
@@ -298,6 +302,57 @@ export default Example;`}/>
           </div>
         </div>
 
+        {/* DefaultChecked */}
+        <div className='layout-small'>
+          <div className='layout-title'>
+            <h3>DefaultChecked</h3>
+            <p className='description'>
+              defaultChecked 속성으로 라디오박스를 기본체크 할 수 있습니다. 
+            </p>
+          </div>
+          <div className='layout-example'>
+            <Radio />
+            <Radio defaultChecked />
+          </div>
+          <div className='codeMirror'>
+            <div className='btn-wrap'>
+              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={DefaultCheckedCodeClick}>
+                <i className='i-code w14 h14'/>
+              </Button>
+            </div>
+            {
+              DefaultCheckedCode ?
+              <CodeMirror
+              theme='dark'
+              extensions={[javascript({ jsx: true })]}
+              value=
+{`import * as React from 'react';
+import { Radio } from 'nds-ui/component';
+import 'nds-ui/css/style.scss';
+
+const Example = () => {
+  return (
+    <div className='flex gap10'>
+      <Radio />
+      <Radio defaultChecked />
+    </div>
+  )
+}
+
+export default Example;`}/>
+              :
+              <CodeMirror
+              theme='dark'
+              extensions={[javascript({ jsx: true })]}
+              value=
+{`<>
+<Radio />
+<Radio defaultChecked />
+</>`}/>
+            }
+          </div>
+        </div>
+
         {/* Disabled */}
         <div className='layout-small'>
           <div className='layout-title'>
@@ -437,6 +492,16 @@ export default Example;`}/>
                   <td>
                     클릭 시 인터렉션 색을 조절하는 속성입니다. <br/>
                     Variable의 $colors 값을 넣을 수 있습니다. 
+                  </td>
+                </tr>
+                <tr>
+                  <td>defaultChecked</td>
+                  <td>
+                    boolean
+                  </td>
+                  <td>
+                    기본체크 속성으로 불리언(Boolean) 타입입니다. <br/>
+                    속성값은 따로 없고, 속성을 추가할 시 기본값인 false에서 true로 바뀝니다.
                   </td>
                 </tr>
                 <tr>
