@@ -37,6 +37,30 @@
             display: flex;
         }
     }
+    &.disabled {
+        background-color: var(--select-disabled-bg);
+        outline: 1px solid var(--select-disabled-otl);
+        cursor: default;
+        &:hover {
+            border: 1px solid var(--grayc);
+            color: var(--gray9);
+            &>.select-icon {
+                &>i {
+                    background-color: var(--gray9);
+                }
+            }
+        }
+        &.focus {
+            outline: 1px solid var(--select-disabled-otl);
+            background-color: var(--select-disabled-bg);
+            color: var(--gray9);
+            &>.select-icon {
+                &>i {
+                    background-color: var(--gray9);
+                }
+            }
+        }
+    }
     &-icon {
         width: 24rem;
         height: 24rem;
@@ -68,7 +92,7 @@
         left: -1rem;
         background-color: var(--white);
         width: 100%;
-        z-index: 100;
+        z-index: 999;
         max-height: var(--select-option-max-h);
         overflow-y: auto;
         &>.option {

@@ -6,6 +6,7 @@ const Select = ({
   radius = 'normal',
   defaultValue = 0,
   list= ['데이터를 입력해주세요'],
+  disabled = false,
   className
 }) => {
   const lists = list;
@@ -14,7 +15,9 @@ const Select = ({
   const [state, setState] = React.useState(false);
 
   const BtnClick = () => {
-    setState(true);
+    if (disabled == false) {
+      setState(true);
+    }
   }
   const ListClick = (index) => {
     setContentIndex(index)
@@ -40,6 +43,8 @@ const Select = ({
             size == 'medium' ? styles['size-medium'] :
             size == 'small' ? styles['size-small'] :
             size == 'extraSmall' ? styles['size-extraSmall'] : '')
+            + ' ' +
+            (disabled ? styles['disabled'] : '')
           } 
           onClick={BtnClick}
         >

@@ -65,7 +65,7 @@ import Checkbox from 'nds-ui/component/Checkbox';`}/>
             <p className='description'>
               Checkbox 컴포넌트 안에는 다양한 속성들이 있습니다. <br/>
               theme / size / color / ripple / 
-              id / name / value / disabled 등 다양한 속성들이 있는데,
+              defaultChecked / id / name / value / disabled 등 다양한 속성들이 있는데,
               그 사용법을 알아보겠습니다.
             </p>
           </div>
