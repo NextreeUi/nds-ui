@@ -288,7 +288,7 @@ tbody {
 .radius {
   border-radius: var(--radius);
 }
-@for $i from 1 to 50 {
+@for $i from 1 to 300 {
   .r#{$i} {
     border-radius: #{$i}rem;
   }

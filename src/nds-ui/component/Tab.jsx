@@ -15,7 +15,6 @@ const Tab = ({
     hoverBg,
     hoverOtl,
     hoverColor,
-    hoverRadius,
     variant = 'contained',
     size = 'large',
     children,
@@ -52,7 +51,6 @@ const Tab = ({
                     hoverBg={hoverBg}
                     hoverOtl={hoverOtl}
                     hoverColor={hoverColor}
-                    hoverRadius={hoverRadius}
                     variant={state == index ? variant : 'normal'}
                     onClick={() => { setState(index) }}
                   > 

@@ -5,6 +5,10 @@ import { html } from '@codemirror/lang-html';
 import { Button, Table } from '@/nds-ui/component';
 
 const ButtonPage = () => {
+  const ImportRef = React.useRef();
+  const PropertyRef = React.useRef();
+  const CustomExampleRef = React.useRef();
+  const APIRef = React.useRef();
   const [BasicCode, setBasicCode] = React.useState(false);
   const BasicCodeClick = () => {
     setBasicCode(!BasicCode)
@@ -84,7 +88,7 @@ const ButtonPage = () => {
       {/* Import */}
       <div className='layout-small'>
         <div className='layout-title'>
-          <h2>Import</h2>
+          <h2 ref={ImportRef}>Import</h2>
           <div className='codeMirror'>
             <CodeMirror
               theme='dark'
@@ -106,7 +110,7 @@ import Button from 'nds-ui/component/Button';`}/>
       {/* Property */}
       <div className='layout-small'>
         <div className='layout-title'>
-          <h2>Property</h2>
+          <h2 ref={PropertyRef}>Property</h2>
           <p className='description'>
             Button 컴포넌트 안에는 다양한 속성들이 있습니다. <br/>
             variant / theme / size / radius / square / shadow / bg / otl / color / ripple / 
@@ -493,10 +497,10 @@ export default Example;`}/>
       {/* Custom */}
       <div className='layout-small'>
         <div className='layout-title'>
-          <h2> Custom Example </h2>
+          <h2 ref={CustomExampleRef}> Custom Example </h2>
           <p className='description'>
             여러가지 속성을 사용하여 버튼을 원하시는대로 커스텀할 수 있습니다. <br/>
-            bg / otl / color / ripple / hoverBg / hoverOtl / hoverColor / hoverRadius 등이 있습니다. <br/>
+            bg / otl / color / ripple / hoverBg / hoverOtl / hoverColor 등이 있습니다. <br/>
             이 중 bg / otl / color / ripple / hoverBg 속성은 theme 속성을 통해 동시에 컨트롤 가능하지만, 더 세부적인 컨트롤을 원하실 경우 사용하시면 됩니다.
           </p>
         </div>
@@ -1033,27 +1037,27 @@ export default Example;`}/>
         </div>
       </div>
 
-    </div>
-  )
-}
-
-export default ButtonPage;
-
-const Example = () => {
-  return(
-    <Table 
+      {/* API */}
+      <div className='layout-small'>
+        <div className='layout-title'>
+          <h2 ref={APIRef}> API </h2>
+          <p className='description'>
+            속성들을 정리한 테이블입니다.
+          </p>
+        </div>
+        <Table 
           classWrap='table-props'
           colGroup={
             <>
-              <col className='w120' />
-              <col className='w180' />
+              <col className='table-props-col1' />
+              <col className='table-props-col2' />
             </>
           }
           tHead={
             <>
               <tr>
                 <th>props</th>
-                <th>value</th>
+                <th><div className='table-props-value'>value</div></th>
                 <th>description</th>
               </tr>
             </>
@@ -1062,39 +1066,181 @@ const Example = () => {
           tBody= {
             <>
               <tr>
-                <td>theme</td>
+                <td>variant</td>
                 <td>
-                  <p className='b'>'primary'</p>
-                  'secondary' <br/>
-                  'tertiary' <br/>
-                  'black' <br/>
-                  'gray1' <br/>
-                  'gray2' <br/>
-                  'gray3' <br/>
-                  'gray4' <br/>
-                  'gray5' <br/>
-                  'gray6' <br/>
-                  'gray7' <br/>
-                  'gray8' <br/>
-                  'gray9' <br/>
-                  'graya' <br/>
-                  'grayb' <br/>
-                  'grayc' <br/>
-                  'grayd' <br/>
-                  'graye' <br/>
-                  'grayf5' <br/>
-                  'grayf8' <br/>
-                  'white'
-
+                  <p className='b'>'noarmal'</p>
+                  'outlined' <br/>
+                  'contained'
                 </td>
                 <td>
                   'normal' : 외곽선과 배경색이 없는 버튼입니다. <br/>
-                  'outlined' : 외곽선은 있고 배경색이 없는 버튼입니다. <br/>
-                  'contained' : 외곽선은 없고 배경색이 있는 버튼입니다.
+                  'outlined' : 외곽선은 있고 배경색은 없는 버튼입니다. <br/>
+                  'contained' : 외곽선은 없고 배경색은 있는 버튼입니다.
+                </td>
+              </tr>
+              <tr>
+                <td>theme</td>
+                <td>
+                  <p className='b'>'primary'</p>
+                  $colors
+                </td>
+                <td>
+                  theme 속성은 bg, color, otl, ripple, hoverBg 5가지 속성에 영향을 미칩니다. <br/>
+                  더 상세한 커스텀을 원할 경우 theme 대신 위 5가지 속성을 조절하시면 됩니다. <br/>
+                  Variable의 $colors 값을 넣을 수 있습니다. 
+                </td>
+              </tr>
+              <tr>
+                <td>size</td>
+                <td>
+                  'large' <br/>
+                  <p className='b'>'medium'</p>
+                  'small'
+                  'extraSmall'
+                </td>
+                <td>
+                  크기를 조절하는 값입니다.
+                </td>
+              </tr>
+              <tr>
+                <td>raidus</td>
+                <td>
+                  'rect' <br/>
+                  <p className='b'>'normal'</p>
+                  'round'
+                </td>
+                <td>
+                  굴곡을 조절하는 값입니다.
+                </td>
+              </tr>
+              <tr>
+                <td>square</td>
+                <td>
+                  boolean
+                </td>
+                <td>
+                  너비값을 높이와 같게 정사각형으로 만드는 속성으로 불리언(Boolean) 타입입니다. <br/>
+                  속성값은 따로 없고, 속성을 추가할 시 기본값인 false에서 true로 바뀝니다.
+                </td>
+              </tr>
+              <tr>
+                <td>shadow</td>
+                <td>
+                  boolean
+                </td>
+                <td>
+                  그림자를 추가하는 속성으로 불리언(Boolean) 타입입니다. <br/>
+                  속성값은 따로 없고, 속성을 추가할 시 기본값인 false에서 true로 바뀝니다.
+                </td>
+              </tr>
+              <tr>
+                <td>disabled</td>
+                <td>
+                  boolean
+                </td>
+                <td>
+                  비활성화 속성으로 불리언(Boolean) 타입입니다. <br/>
+                  속성값은 따로 없고, 속성을 추가할 시 기본값인 false에서 true로 바뀝니다.
+                </td>
+              </tr>
+              <tr>
+                <td>bg</td>
+                <td>
+                  <p className='b'>'primary'</p>
+                  <p className='b'>'transparent'</p>
+                  $colors
+                </td>
+                <td>
+                  배경색을 조절하는 속성입니다. <br/>
+                  기본 값은 variant 속성에 따라 달라집니다. <br/>
+                  Variable의 $colors 값을 넣을 수 있습니다. 
+                </td>
+              </tr>
+              <tr>
+                <td>otl</td>
+                <td>
+                  <p className='b'>'primary'</p>
+                  <p className='b'>'transparent'</p>
+                  $colors
+                </td>
+                <td>
+                  외곽선 색을 조절하는 속성입니다. <br/>
+                  기본 값은 variant 속성에 따라 달라집니다. <br/>
+                  Variable의 $colors 값을 넣을 수 있습니다. 
+                </td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td>
+                  <p className='b'>'primary'</p>
+                  <p className='b'>'white'</p>
+                  $colors
+                </td>
+                <td>
+                  글자색을 조절하는 속성입니다. <br/>
+                  기본 값은 variant 속성에 따라 달라집니다. <br/>
+                  Variable의 $colors 값을 넣을 수 있습니다. 
+                </td>
+              </tr>
+              <tr>
+                <td>ripple</td>
+                <td>
+                  <p className='b'>'primary'</p>
+                  <p className='b'>'white'</p>
+                  $colors
+                </td>
+                <td>
+                  클릭시 인터렉션 색을 조절하는 속성입니다. <br/>
+                  기본 값은 variant 속성에 따라 달라집니다. <br/>
+                  Variable의 $colors 값을 넣을 수 있습니다. 
+                </td>
+              </tr>
+              <tr>
+                <td>hoverBg</td>
+                <td>
+                  <p className='b'>'primary_light'</p>
+                  <p className='b'>'primary_15p'</p>
+                  $colors
+                </td>
+                <td>
+                  호버시 배경색을 조절하는 속성입니다. <br/>
+                  기본 값은 variant 속성에 따라 달라집니다. <br/>
+                  Variable의 $colors 값을 넣을 수 있습니다. 
+                </td>
+              </tr>
+              <tr>
+                <td>hoverOtl</td>
+                <td>
+                  $colors
+                </td>
+                <td>
+                  호버시 외곽선 색을 조절하는 속성입니다. <br/>
+                  Variable의 $colors 값을 넣을 수 있습니다. 
+                </td>
+              </tr>
+              <tr>
+                <td>hoverColor</td>
+                <td>
+                  $colors
+                </td>
+                <td>
+                  호버시 글자색을 조절하는 속성입니다. <br/>
+                  Variable의 $colors 값을 넣을 수 있습니다. 
                 </td>
               </tr>
             </>
           }
         />
+      </div>
+      <div className='layout-scroll'>
+        <p>Content</p>
+        <a onClick={()=>{ImportRef.current.scrollIntoView()}}> Import</a>
+        <a onClick={()=>{PropertyRef.current.scrollIntoView()}}> Property</a>
+        <a onClick={()=>{CustomExampleRef.current.scrollIntoView()}}> Custom Example</a>
+        <a onClick={()=>{APIRef.current.scrollIntoView()}}> API</a>
+      </div>
+    </div>
   )
 }
+
+export default ButtonPage;
