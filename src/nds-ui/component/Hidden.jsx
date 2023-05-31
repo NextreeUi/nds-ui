@@ -26,11 +26,13 @@ const Hidden = ({
   
   return (
     <>
-      <div className={styles.hidden + ' ' + (className ? className : '')}>
         {
-          on ? children : <></>
+          on ? 
+          <div className={styles.hidden + ' ' + (className ? className : '')}>
+          {children}
+          </div>
+          : <></>
         }
-      </div>
     </>
   );
 }

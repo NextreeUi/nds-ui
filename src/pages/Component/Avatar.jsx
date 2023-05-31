@@ -370,8 +370,8 @@ export default Example;`}/>
           </div>
         </div>
 
-{/* API */}
-<div className='layout-small'>
+        {/* API */}
+        <div className='layout-small'>
           <div className='layout-title'>
             <h2 ref={APIRef}> API </h2>
             <p className='description'>

@@ -2,10 +2,10 @@ import * as React from "react";
 import styles from './style.module.scss';
 
 const Avatar = ({
+    name = 'avatar',
     size = 'medium',
     radius = 'round',
     number = Math.floor(Math.random() * 10) + 1,
-    name = 'avatar',
     color,
     className,
   }) => {
