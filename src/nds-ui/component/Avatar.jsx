@@ -4,10 +4,10 @@ import styles from './style.module.scss';
 const Avatar = ({
     size = 'medium',
     radius = 'round',
+    number = Math.floor(Math.random() * 10) + 1,
     name = 'avatar',
     color,
     className,
-    number = Math.floor(Math.random() * 10) + 1,
   }) => {
   const numberStyles = (number) => {
     return number ? styles[`color-${number}`] : ''
