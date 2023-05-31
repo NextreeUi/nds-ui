@@ -4,18 +4,18 @@ import styles from './style.module.scss';
 
 const TextField = ({
                   size = 'medium',
-                  radius,
-                  disabled,
-                  readOnly,
-                  placeholder,
+                  radius = 'normal',
                   defaultValue,
+                  placeholder,
                   helperText,
+                  error,
+                  readOnly,
+                  disabled,
                   onClick,
                   onFocus,
                   onKeyDown,
-                  className,
                   classHelper,
-                  error,
+                  className,
                   }) => {
   return (
     <>
@@ -32,6 +32,7 @@ const TextField = ({
             size == 'large' ? styles.large : '')
             + ' ' + 
             (radius == 'round' ? styles.round : 
+            radius == 'normal' ? styles.normal : 
             radius == 'rect' ? styles.rect : '')
             + ' ' +
             (error ? styles.error : '')

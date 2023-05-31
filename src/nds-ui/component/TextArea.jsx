@@ -4,6 +4,7 @@ import styles from './style.module.scss';
 const TextArea = ({
                 rect,
                 defaultValue,
+                placeholder,
                 rows,
                 maxLength,
                 readOnly,
@@ -25,6 +26,7 @@ const TextArea = ({
           (rect ? styles.rect : '')
         }
         defaultValue={defaultValue} 
+        placeholder={placeholder}
         maxLength={maxLength}
         rows={rows}
         readOnly={readOnly}
