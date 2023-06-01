@@ -3,11 +3,11 @@ import styles from './style.module.scss';
 
 const Accordion = ({
     wrap,
+    title,
     icon,
     iconLocation='right',
     iconRotate,
     children,
-    title,
     id,
     className,
   }) => {

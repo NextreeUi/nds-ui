@@ -2,10 +2,10 @@ import * as React from "react";
 import styles from './style.module.scss';
 
 const Tree = ({
+    title,
+    item,
     icon,
     iconRotate,
-    item,
-    title,
     children,
     id,
     onClick,
