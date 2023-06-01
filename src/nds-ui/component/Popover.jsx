@@ -1,7 +1,7 @@
 import * as React from "react";
 import styles from './style.module.scss';
 
-const Popup = ({
+const Popover = ({
     X='left', Y='bottomEnd',
     open,
     onClose,
@@ -41,4 +41,4 @@ const Popup = ({
   );
 }
 
-export default Popup;
+export default Popover;
