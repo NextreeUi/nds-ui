@@ -2,8 +2,8 @@ import * as React from "react";
 import styles from './style.module.scss';
 
 const Tooltip = ({
+    content,
     placement='bottom',
-    title,
     bg = 'grayc',
     color,
     radius = 'normal',
@@ -73,7 +73,7 @@ const Tooltip = ({
           (className ? className : '')
           }
         >
-          {title}
+          {content}
         </div>
       </div>
     </>
