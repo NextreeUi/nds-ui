@@ -6,19 +6,19 @@ import {Button} from '../component';
 const Tab = ({
     state,
     setState,
+    tabName = ['탭을 입력해주세요'],
+    variant = 'contained',
+    radius = 'rect',
+    size = 'large',
     theme = 'primary',
     bg,
     otl,
     color,
-    radius = 'rect',
     ripple = 'ripple',
     hoverBg,
     hoverOtl,
     hoverColor,
-    variant = 'contained',
-    size = 'large',
     children,
-    tabName = ['탭을 입력해주세요'],
     classTabWrap,
     classTab,
     classBtnWrap,
@@ -56,7 +56,7 @@ const Tab = ({
                   > 
                     {list}
                   </Button>
-                  <div className={styles['tab-custom'] + ' ' + (classCustom ? classCustom : '') + ' ' + (state == index ? '' : styles['close'])} />
+                  <div className={styles['tab-custom'] + ' ' + (classCustom ? classCustom : '') + ' ' + (state == index ? '' : styles['close']) + ' ' + (state == index ? '' : 'close')} />
                 </div>
               )
             })

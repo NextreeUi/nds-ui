@@ -1095,7 +1095,7 @@ export default Example;`}/>
                 <td>
                   'large' <br/>
                   <p className='b'>'medium'</p>
-                  'small'
+                  'small' <br/>
                   'extraSmall'
                 </td>
                 <td>

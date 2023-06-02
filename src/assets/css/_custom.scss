@@ -20,3 +20,17 @@
     transition: 0.5s;
   }
 }
+
+.tab-custom {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: var(--primary);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  &.close {
+    width: 0;
+  }
+}

@@ -6,19 +6,19 @@ import { Button } from '../component';
 const SlideBtn = ({left}) => {
   return (
     <Button
-      className={styles['btn'] + ' ' + (left ? styles['left'] : '')}
+      className={styles['slide-btn'] + ' ' + (left ? styles['left'] : '')}
       square 
       size='large' 
       variant="contained"
       bg='white' 
       color='black' 
-      hoverBg='gray6-100' 
+      hoverBg='grayc-100' 
       hoverColor='white'
       ripple='white'
       radius="round"
       shadow
     >
-      <i />
+      <p />
     </Button>
   )
 }
@@ -39,6 +39,7 @@ const Slide = ({
     
   }) => {
   const [ state, setState ] = React.useState(1);
+  const slide = React.useRef();
 
   const leftBtnClick = () => {
     if(state == 1) {
@@ -55,11 +56,12 @@ const Slide = ({
     }
   }
   React.useEffect(()=>{
-    document.documentElement.style.setProperty("--slide-margin-left", `${100 - state * 100}%`);
-    document.documentElement.style.setProperty("--slide-width", `${content.length * 100}%`);
+    // document.documentElement.style.setProperty("--slide-margin-left", `${100 - state * 100}%`);
+    // document.documentElement.style.setProperty("--slide-width", `${content.length * 100}%`);
+    slide.current.style.marginLeft = `${100 - state * 100}%`
+    slide.current.style.width = `${content.length * 100}%`
   })  
 
-  // 자동 슬라이드 기능
   const [slideAuto, setSlideAuto] = React.useState(autoSlide);
   function useInterval(callback, delay) {
     const savedCallback = React.useRef();
@@ -96,7 +98,7 @@ const Slide = ({
     <>
       <div className={styles['slide-wrap'] + ' ' + (classSlide ? classSlide : '')}>
         {/* slide content */}
-        <div className={styles['slide']}>
+        <div ref={slide} className={styles['slide']}>
           {content}
         </div>
         {/* btn */}
