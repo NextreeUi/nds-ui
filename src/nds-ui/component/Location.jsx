@@ -14,7 +14,7 @@ const Location = ({
     depth2='Depth2',
     depth3='Depth3',
     depth4='Depth4',
-    last='Last',
+    depthLast='Last',
     icon,
 
     id,
@@ -48,7 +48,7 @@ const Location = ({
           </>
           : <></>
         } 
-        <Link to={linkLast} className={styles['location-bold']}> {last} </Link>
+        <Link to={linkLast} className={styles['location-bold']}> {depthLast} </Link>
       </div>
     </>
   );

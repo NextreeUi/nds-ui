@@ -44,11 +44,11 @@
         }
     }
     &-btn {
-        &.color {
+        &.pagination-color {
             @each $semantic, $color in $main {
                 &-#{$semantic} {
                     &.active {
-                        background-color: rgb($color, 0.3);
+                        background-color: rgb($color, 0.3) ;
                         &:hover {
                             background-color: rgb($color, 0.5);
                         }

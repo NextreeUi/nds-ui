@@ -5,9 +5,9 @@ import Button from './Button';
 
 const Pagination = ({
     color='primary',
+    size='large',
     max=5,
     endBtn=true,
-    size='large',
     className,
   }) => {
   const [number, setNumber] = React.useState(1);
@@ -197,33 +197,33 @@ const Pagination = ({
   }
 
   const colorStyle = (color) => {
-    return color ? styles[`color-${color}`] : '';
+    return color ? styles[`pagination-color-${color}`] : '';
   }
   return (
     <>
       <div className={styles['pagination-wrap'] + ' ' + (className ? className : '')}>
         {endBtn ? 
         <Button theme="grayc" square radius="round" size={size} hoverBg='graye' className={styles['pagination-btn']} onClick={FirstBtn} disabled={(page == 1 ? true : false)}>
-          <i className={styles['pagination-left-end'] + ' ' + (page == 1 ? styles.disabled : '')} />
+          <p className={styles['pagination-left-end'] + ' ' + (page == 1 ? styles.disabled : '')} />
         </Button>
         : 
         <></>}
         <Button theme="grayc" square radius="round" size={size} hoverBg='graye' className={styles['pagination-btn']} onClick={MinusBtn} disabled={(page == 1 ? true : false)}>
-          <i className={styles['pagination-left'] + ' ' + (page == 1 ? styles.disabled : '')} />
+          <p className={styles['pagination-left'] + ' ' + (page == 1 ? styles.disabled : '')} />
         </Button>
         
-        <Button theme="grayc" square radius="round" size={size} color='black' hoverBg='graye' className={styles['pagination-btn'] + ' ' + (colorStyle(color)) + ' ' + (order == 1 ? styles.active : '')} onClick={Btn1}> {number} </Button>
-        {max > 1 ? <Button theme="grayc" square radius="round" size={size} color='black' hoverBg='graye' className={styles['pagination-btn'] + ' ' + (colorStyle(color)) + ' ' + (order == 2 ? styles.active : '')} onClick={Btn2}> {number + 1} </Button> : <></>}
-        {max > 2 ? <Button theme="grayc" square radius="round" size={size} color='black' hoverBg='graye' className={styles['pagination-btn'] + ' ' + (colorStyle(color)) + ' ' + (order == 3 ? styles.active : '')} onClick={Btn3}> {number + 2} </Button> : <></>}
-        {max > 3 ? <Button theme="grayc" square radius="round" size={size} color='black' hoverBg='graye' className={styles['pagination-btn'] + ' ' + (colorStyle(color)) + ' ' + (order == 4 ? styles.active : '')} onClick={Btn4}> {number + 3} </Button> : <></>}
-        {max > 4 ? <Button theme="grayc" square radius="round" size={size} color='black' hoverBg='graye' className={styles['pagination-btn'] + ' ' + (colorStyle(color)) + ' ' + (order == 5 ? styles.active : '')} onClick={Btn5}> {number + 4} </Button> : <></>}
+                   <Button theme="grayc" square radius="round" size={size} color={'black'} hoverBg='graye' className={styles['pagination-btn'] + ' ' + (colorStyle(color)) + ' ' + (order == 1 ? styles.active : '')} onClick={Btn1}> {number} </Button>
+        {max > 1 ? <Button theme="grayc" square radius="round" size={size} color={'black'} hoverBg='graye' className={styles['pagination-btn'] + ' ' + (colorStyle(color)) + ' ' + (order == 2 ? styles.active : '')} onClick={Btn2}> {number + 1} </Button> : <></>}
+        {max > 2 ? <Button theme="grayc" square radius="round" size={size} color={'black'} hoverBg='graye' className={styles['pagination-btn'] + ' ' + (colorStyle(color)) + ' ' + (order == 3 ? styles.active : '')} onClick={Btn3}> {number + 2} </Button> : <></>}
+        {max > 3 ? <Button theme="grayc" square radius="round" size={size} color={'black'} hoverBg='graye' className={styles['pagination-btn'] + ' ' + (colorStyle(color)) + ' ' + (order == 4 ? styles.active : '')} onClick={Btn4}> {number + 3} </Button> : <></>}
+        {max > 4 ? <Button theme="grayc" square radius="round" size={size} color={'black'} hoverBg='graye' className={styles['pagination-btn'] + ' ' + (colorStyle(color)) + ' ' + (order == 5 ? styles.active : '')} onClick={Btn5}> {number + 4} </Button> : <></>}
 
         <Button theme="grayc" square radius="round" size={size} hoverBg='graye' className={styles['pagination-btn']} onClick={PlusBtn} disabled={(page == max ? true : false)}>
-          <i className={styles['pagination-right'] + ' ' + (page == max ? styles.disabled : '')} />
+          <p className={styles['pagination-right'] + ' ' + (page == max ? styles.disabled : '')} />
         </Button>
         {endBtn ? 
         <Button theme="grayc" square radius="round" size={size} hoverBg='graye' className={styles['pagination-btn']} onClick={LastBtn} disabled={(page == max ? true : false)}>
-          <i className={styles['pagination-right-end'] + ' ' + (page == max ? styles.disabled : '')} />
+          <p className={styles['pagination-right-end'] + ' ' + (page == max ? styles.disabled : '')} />
         </Button>
         : 
         <></>}

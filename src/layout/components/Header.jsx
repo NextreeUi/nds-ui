@@ -45,12 +45,12 @@ function Header({address1, address2}) {
   address2 == 'Tree' ) {
     middle = 'SURFACE'
     middleAddress = 'Accordion'
-  } else if ( address2 == 'Loading' ||
+  } else if ( address2 == 'Location' ||
   address2 == 'Pagination' ||
   address2 == 'Slide' ||
   address2 == 'Tab' ) {
-    middle = 'Navigation'
-    middleAddress = 'Loading'
+    middle = 'NAVIGATION'
+    middleAddress = 'Location'
   } 
   
   return (
@@ -64,7 +64,7 @@ function Header({address1, address2}) {
           <Location
             depth1={<p className='bb'> {address1} </p>}
             link1={`/DefaultLayout/${address1}/${address2Default}`}
-            last={<p className=''>{middle}</p>}
+            depthLast={<p className=''>{middle}</p>}
             linkLast={`/DefaultLayout/${address1}/${middleAddress}`}
             icon={<i className='i-location-arrow bgc-gray6'/>}
           />
