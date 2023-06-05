@@ -52,7 +52,6 @@ function Header({address1, address2}) {
     middle = 'NAVIGATION'
     middleAddress = 'Location'
   } 
-  
   return (
     <>
       <div className="flexBetween flex1 px40 alignCenter h70 otlb-grayc">

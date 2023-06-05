@@ -90,7 +90,7 @@ import Tree from 'nds-ui/component/Tree';`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={BasicCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={BasicCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -186,7 +186,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={IconCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={IconCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -242,7 +242,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={IconRotateCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={IconRotateCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>

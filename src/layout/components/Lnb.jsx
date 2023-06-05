@@ -5,19 +5,41 @@ import { Logo } from "@/component";
 import { Button } from "@/nds-ui/component";
 
 function Lnb({address1, address2}) {
+  const [mode, setMode] = React.useState(true);
+  const LightClick = () => {
+    document.documentElement.setAttribute("data-theme", 'light');
+    setMode(true)
+  }
+  const DarkClick = () => {
+    document.documentElement.setAttribute("data-theme", 'dark');
+    setMode(false)
+  }
   return (
     <>
       <div className="flexColumn w340 otlr-grayc">
-        <div className="width100 h70 px40 flex alignCenter otlb-grayc">
+        <div className="width100 h70 px40 flexBetween alignCenter otlb-grayc">
           <Logo />
+          <div className="flex">
+            {
+              mode ?
+              <Button className='minw30 h30' square theme='grayc' onClick={DarkClick}>
+                <p className='i-darkmode' />
+              </Button>
+              :
+              <Button className='minw30 h30' square theme='grayc' onClick={LightClick}>
+                <p className='i-lightmode' />
+              </Button>
+            }
+          </div>
+          
         </div>
         <div className="width100 vh100-70 scrollYAuto p40 flexColumn gap40">
           <div className="flex gap10">
-            <Link to='/DefaultLayout/UserGuide/Overview'> 
-              <Button className='px20' size="small" radius='round' variant={address1 == 'UserGuide' ? 'contained' : 'outlined'}>User Guide</Button>
+            <Link className="width100" to='/DefaultLayout/UserGuide/Overview'> 
+              <Button className='px20 width100' size="small" radius='round' variant={address1 == 'UserGuide' ? 'contained' : 'outlined'}>User Guide</Button>
             </Link>
-            <Link to='/DefaultLayout/Component/Button'> 
-              <Button className='px20' size="small" radius='round' variant={address1 == 'Component' ? 'contained' : 'outlined'}>Components</Button>
+            <Link className="width100" to='/DefaultLayout/Component/Button'> 
+              <Button className='px20 width100' size="small" radius='round' variant={address1 == 'Component' ? 'contained' : 'outlined'}>Components</Button>
             </Link>
           </div>
           <div className="flexColumn">

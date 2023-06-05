@@ -79,7 +79,7 @@ import Hidden from 'nds-ui/component/Hidden';`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={MaxCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={MaxCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -134,7 +134,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={MinCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={MinCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>

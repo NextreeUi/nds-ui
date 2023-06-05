@@ -62,7 +62,7 @@ export default Example;`}/>
 <Button variant='contained'> Contained </Button>
 </>`}/>
           }
-          <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={BasicCodeClick}>
+          <Button square radius='round' variant='outlined' size='extraSmall'  onClick={BasicCodeClick}>
             <i className='i-code w14 h14'/>
           </Button>
         </div>

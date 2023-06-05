@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <>
       <div className="vw100 vh100 flexColumn">
-        <div className='vw100 h70 flexCenter bgc-white_80p blur-back52 otlb-grayc'>
+        <div className='vw100 h70 flexCenter bgc-white_30p blur-back52 otlb-grayc'>
           <div className='content-width-home flexBetween alignCenter'>
             <div className='flex w175' >
               <Logo />
@@ -85,7 +85,7 @@ const Home = () => {
                   </div>
                 </Button>
               </Link>
-              <Button size='large' variant='outlined' onClick={() => Copy('npm i nds-ui@latest sass')}>
+              <Button size='large' variant='outlined' onClick={() => Copy('npm i nds-ui sass')}>
                 <div className='flexCenter gap10' >
                   npm i nds-ui sass
                   <i className='i-check bgc-primary' />
@@ -111,7 +111,6 @@ const Home = () => {
 }
 
 function App() {
-
   React.useEffect(()=> {
     document.documentElement.setAttribute("data-theme", "light");
   }, [])

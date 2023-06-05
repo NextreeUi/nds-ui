@@ -204,6 +204,28 @@ tbody.table {
     gap: 10rem;
     padding: 5rem 5rem 0 0;
     z-index: 100;
+    &>button {
+      background-color: transparent;
+      border: 1px solid white;
+      &>i {
+        background-color: white;
+      }
+      &:hover {
+        background-color: white;
+        &>i {
+          background-color: black;
+        }
+      }
+    }
+    &.shell {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      padding: 0;
+      right: 7rem;
+      height: 100%;
+    }
     &>p {
       font-size: 14rem;
       color: white;
@@ -221,14 +243,37 @@ tbody.table {
   &::-webkit-scrollbar {
     width: 4px;
     height: 4px;
-    background: rgba(255,255,255, 0.2);
+    background: rgba(var(--white), 0.2);
   }
 
   &::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background: rgba(255,255,255, 0.4);
+    background: rgba(var(--white), 0.4);
   }
   &>div {
     font-size: 14rem !important;
+  }
+}
+
+//copyclick
+.copyclick {
+  padding: 20rem;
+  border-radius: var(--radius);
+  position: fixed;
+  width: 300rem;
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+  z-index: 999;
+  bottom: 50rem;
+  right: 50rem;
+  color: var(--primary);
+  // font-weight: bold;
+  font-size: 14rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  &.open {
+    visibility: visible;
+    opacity: 1;
   }
 }

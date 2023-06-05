@@ -1,3 +1,10 @@
 .scroll-fast {
   scroll-behavior: unset;
 }
+
+.link {
+  font-size: 14rem;
+  color: var(--primary);
+  cursor: pointer;
+  text-decoration: underline;
+}
