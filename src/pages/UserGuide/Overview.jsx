@@ -42,29 +42,29 @@ const Overview = () => {
         <div className='flexColumn gap30'>
           <div className='flexColumn flexCenter gap10'>
             <div className='flex gap10 alignCenter'>
-              <div className='flexColumn gap10 width100 w250 h250 r150 flexCenter bgc-primary_10p txt-black size24 b'>
+              <div className='flexColumn gap10 w250 h250 r150 flexCenter bgc-primary_10p txt-black size24 b'>
                 문제점 감소
                 <p className='size16 txt-black t'>퍼블 소스 적용 문제 해결</p>
               </div>
-              <div className='flexColumn gap10 width100 w250 h250 r150 flexCenter bgc-primary_70p txt-white size24 b'>
+              <div className='flexColumn gap10 w250 h250 r150 flexCenter bgc-primary_70p txt-white size24 b'>
                 만족도 향상
                 <p className='size16 txt-white t'>클라이언트 요구 반영</p>
               </div>
-              <div className='flexColumn gap10 width100 w250 h250 r150 flexCenter bgc-primary_10p txt-black size24 b'>
+              <div className='flexColumn gap10 w250 h250 r150 flexCenter bgc-primary_10p txt-black size24 b'>
                 통합된 체계
                 <p className='size16 txt-black t'>통합적인 업무 프로세스</p>
               </div>
             </div>
             <div className='flex gap10 alignCenter'>
-              <div className='flexColumn gap10 width100 w250 h250 r150 flexCenter bgc-primary_70p txt-white size24 b'>
+              <div className='flexColumn gap10 w250 h250 r150 flexCenter bgc-primary_70p txt-white size24 b'>
                 혼선 감소
                 <p className='size16 txt-white t'>업무 과정의 간소화</p>
               </div>
-              <div className='flexColumn gap10 width100 w250 h250 r150 flexCenter bgc-primary_10p txt-black size24 b'>
+              <div className='flexColumn gap10 w250 h250 r150 flexCenter bgc-primary_10p txt-black size24 b'>
                 MUI 탈피
                 <p className='size16 txt-black t'>외부 라이브러리로부터 탈피</p>
               </div>
-              <div className='flexColumn gap10 width100 w250 h250 r150 flexCenter bgc-primary_70p txt-white size24 b'>
+              <div className='flexColumn gap10 w250 h250 r150 flexCenter bgc-primary_70p txt-white size24 b'>
                 디자인/기획 시스템
                 <p className='size16 txt-white t'>디자인 자율도 향상</p>
               </div>
