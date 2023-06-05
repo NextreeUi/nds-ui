@@ -18,6 +18,9 @@ import homeBg from '@/assets/images/home-bg.svg';
 
 // style
 import "@/nds-ui/css/style.scss";
+
+import "nds-ui/css/style.scss";
+
 import "@/assets/css/style.scss";
 
 const Home = () => {
@@ -27,19 +30,31 @@ const Home = () => {
     } catch (error) {
     }
   };
+  const [CopyClickState, setCopyClickState] = React.useState(false);
+  const CopyClick = () => {
+    setCopyClickState(true);
+    setTimeout(()=>{
+      setCopyClickState(false)
+    }, 2000)
+  }
+
   return (
     <>
+      {/* CopyClick */}
+      <div className={`copyclick ${CopyClickState ? 'open' : ''}`}>
+        복사되었습니다.
+      </div>
       <div className="vw100 vh100 flexColumn">
-        <div className='vw100 h70 flexCenter bgc-white_30p blur-back52 otlb-grayc'>
+        <div className='vw100 h70 flexCenter bgc-white_80p blur-back52 otlb-grayc'>
           <div className='content-width-home flexBetween alignCenter'>
-            <div className='flex w175' >
+            <div className='flex gap10 alignCenter w175' >
               <Logo />
             </div>
             <div className='flex gap20 alignCenter'>
               <Link to='/DefaultLayout/UserGuide/Overview'> <Button size='large' variant='outlined' radius='round'>User Guide</Button> </Link>
               <Link to='/DefaultLayout/Component/Button'> <Button size='large' variant='outlined' radius='round'>Components</Button> </Link>
             </div>
-            <div className='w175 flex alignCenter gap20'>
+            <div className='w175 flex justifyEnd alignCenter gap20'>
               <a target="_blank" href='https://gitlab.com/nextree3/DesignSystem'>
                 <Button className='minw45 h45' square theme='grayc'>
                   <p className='i-gitlab' />
@@ -85,7 +100,10 @@ const Home = () => {
                   </div>
                 </Button>
               </Link>
-              <Button size='large' variant='outlined' onClick={() => Copy('npm i nds-ui sass')}>
+              <Button size='large' variant='outlined' onClick={() => {
+                Copy('npm i nds-ui sass')
+                CopyClick()
+              }}>
                 <div className='flexCenter gap10' >
                   npm i nds-ui sass
                   <i className='i-check bgc-primary' />

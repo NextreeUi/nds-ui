@@ -261,12 +261,12 @@ tbody.table {
   border-radius: var(--radius);
   position: fixed;
   width: 300rem;
-  background-color: var(--white);
-  border: 1px solid var(--primary);
+  background-color: var(--primary_light);
+  // border: 1px solid var(--primary);
   z-index: 999;
   bottom: 50rem;
   right: 50rem;
-  color: var(--primary);
+  color: var(--white);
   // font-weight: bold;
   font-size: 14rem;
   visibility: hidden;
