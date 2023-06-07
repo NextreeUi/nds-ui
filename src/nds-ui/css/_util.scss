@@ -1,3 +1,10 @@
+// font size
+@for $i from 1 to 100 {
+    .size#{$i} {
+        font-size: #{$i}rem !important;
+    }
+}
+
 // width height
 @for $i from 1 to 3001 {
     .w#{$i} {

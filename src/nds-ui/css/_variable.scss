@@ -459,8 +459,4 @@ $main : (
         border-bottom: 1px dashed rgb($color, calc(#{$i} * 0.01));
     }
   }
-  
-  .size#{$i} {
-      font-size: #{$i}rem !important;
-  }
 }

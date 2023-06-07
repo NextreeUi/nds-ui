@@ -23,6 +23,8 @@ const Util = () => {
   const PositionRef = React.useRef();
   const CursorRef = React.useRef();
   const EllipsisRef = React.useRef();
+  const ColorRef = React.useRef();
+  const SizeRef = React.useRef();
 
   const Copy = async (text) => {
     try {
@@ -152,6 +154,45 @@ const Util = () => {
               어떤 클래스를 사용하는지 알아보겠습니다. <br/>
               (소스코드는 'nds-ui/css/_util.scss'를 참고하세요)
             </p>
+          </div>
+        </div>
+
+        {/* Size  */}
+        <div className='layout-small'>
+          <div className='layout-title'>
+            <h3 ref={SizeRef}> Size </h3>
+            <p className='description'>
+              폰트 크기와 관련된 유틸리티 클래스입니다.
+            </p>
+            <Table 
+              classWrap='table-css'
+              colGroup={
+                <>
+                  <col className='table-css-col1' />
+                </>
+              }
+              tHead={
+                <>
+                  <tr>
+                    <th>classes</th>
+                    <th>description</th>
+                  </tr>
+                </>
+              }
+              classTBody='table-css'
+              tBody= {
+                <>
+                  <tr>
+                    <td>
+                      size1 ~ size100
+                    </td>
+                    <td>
+                      폰트 사이즈를 1 ~ 100 만큼 줌
+                    </td>
+                  </tr>
+                </>
+              }
+            />
           </div>
         </div>
 
@@ -1128,8 +1169,151 @@ const Util = () => {
           </div>
         </div>
 
+        {/* Color  */}
+        <div className='layout-small'>
+          <div className='layout-title'>
+            <h3 ref={ColorRef}> Color </h3>
+            <p className='description'>
+              색상과 관련된 유틸리티 클래스입니다.
+              (색상관련 유틸은 _variable.scss 에 있습니다.)
+            </p>
+            <Table 
+              classWrap='table-css'
+              colGroup={
+                <>
+                  <col className='table-css-col1' />
+                </>
+              }
+              tHead={
+                <>
+                  <tr>
+                    <th>classes</th>
+                    <th>description</th>
+                  </tr>
+                </>
+              }
+              classTBody='table-css'
+              tBody= {
+                <>
+                  <tr>
+                    <td>
+                      bgc-$colors
+                    </td>
+                    <td>
+                      배경색을 Variable의 $colors로 색상으로 변경 <br/>
+                      (ex: bgc-primary_light = 배경색을 primary_light로 변경)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      txt-$colors
+                    </td>
+                    <td>
+                      글자색을 Variable의 $colors로 색상으로 변경 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      otl-$colors
+                    </td>
+                    <td>
+                      외곽선 색을 Variable의 $colors로 색상으로 변경 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      otlt-$colors <br/>
+                      otlt-$colors-dashed
+                    </td>
+                    <td>
+                      외곽선 윗부분만 색을 Variable의 $colors로 색상으로 변경 <br/>
+                      (-dahsed 추가시 : 점선으로 변경)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      otlr-$colors <br/>
+                      otlr-$colors-dashed
+                    </td>
+                    <td>
+                      외곽선 오른쪽 부분만 색을 Variable의 $colors로 색상으로 변경 <br/>
+                      (-dahsed 추가시 : 점선으로 변경)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      otlb-$colors <br/>
+                      otlb-$colors-dashed
+                    </td>
+                    <td>
+                      외곽선 아랫부분만 색을 Variable의 $colors로 색상으로 변경 <br/>
+                      (-dahsed 추가시 : 점선으로 변경)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      otlb(n)-$colors
+                    </td>
+                    <td>
+                      외곽선 아랫부분만 색을 Variable의 $colors로 색상으로 변경하고, 두께를 (n)만큼 줌(단위 : px / 최대 10px)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      otll-$colors <br/>
+                      otll-$colors-dashed
+                    </td>
+                    <td>
+                      외곽선 왼쪽 부분만 색을 Variable의 $colors로 색상으로 변경 <br/>
+                      (-dahsed 추가시 : 점선으로 변경)
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>
+                      bgc-$main_(n)p
+                    </td>
+                    <td>
+                      배경색을 Variable의 $main으로 변경하고 투명도를 (n)% 만큼 줌 <br/>
+                      (ex: bgc-primary_10p : 배경색 primary 컬러 10%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      txt-$main_(n)p
+                    </td>
+                    <td>
+                      글자색을 Variable의 $main으로 변경하고 투명도를 (n)% 만큼 줌
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      otl-$main_(n)p
+                    </td>
+                    <td>
+                      외곽선 색을 Variable의 $main으로 변경하고 투명도를 (n)% 만큼 줌
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      otlb-$main_(n)p <br/>
+                      otlb-$main_(n)p-dashed
+                    </td>
+                    <td>
+                      외곽선 아랫부분 색을 Variable의 $main으로 변경하고 투명도를 (n)% 만큼 줌 <br/>
+                      (-dahsed 추가시 : 점선으로 변경)
+                    </td>
+                  </tr>
+                </>
+              }
+            />
+          </div>
+        </div>
+
+
         <div className='layout-scroll'>
           <p>Classes</p>
+          <a onClick={()=>{SizeRef.current.scrollIntoView()}}> Size</a>
           <a onClick={()=>{WHRef.current.scrollIntoView()}}> Width / Height</a>
           <a onClick={()=>{LHRef.current.scrollIntoView()}}> Line Height</a>
           <a onClick={()=>{LSRef.current.scrollIntoView()}}> Letter Sapcing</a>
@@ -1144,6 +1328,7 @@ const Util = () => {
           <a onClick={()=>{PositionRef.current.scrollIntoView()}}> Position</a>
           <a onClick={()=>{CursorRef.current.scrollIntoView()}}> Cursor</a>
           <a onClick={()=>{EllipsisRef.current.scrollIntoView()}}> Ellipsis</a>
+          <a onClick={()=>{ColorRef.current.scrollIntoView()}}> Color</a>
         </div>
 
       </div>

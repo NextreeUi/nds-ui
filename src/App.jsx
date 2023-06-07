@@ -83,7 +83,7 @@ const Home = () => {
             <div className='flexColumn gap15'>
               <div className='flexColumn'>
                 <p className='size14 txt-black'>Version 1</p>
-                <p className='size14 txt-black'>2023. 05. 15 배포되었습니다.</p>
+                <p className='size14 txt-black'>2023. 06. 07 배포되었습니다.</p>
               </div>
               <div className='size14 txt-gray6'>
                 Welcome! 넥스트리안이시라면 누구에게나 열려있는 디자인 시스템으로 구축 업무를 보다 효율적으로 <br/>
