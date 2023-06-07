@@ -31,8 +31,8 @@ const Variable = () => {
             <p className='description'>
               scss파일을 하나 만들어줍니다. <br/>
               'nds-ui/css/_variable.scss'에 보시면 :root 부분이 있을겁니다. <br/>
-              이 :root 부분을 전체 복사해서 가져옵니다. 수정하고 싶은 부분을 수정하면 반영이됩니다. <br/>
-              (수정하지 않는 부분은 평소에 )
+              이 :root 부분을 전체 복사해서 가져옵니다. 수정하고 싶은 부분을 수정하면 반영됩니다. <br/>
+              (수정하지 않는 부분은 평소에 주석처리 해주세요)
             </p>
             <div className='codeMirror'>
               <CodeMirror
