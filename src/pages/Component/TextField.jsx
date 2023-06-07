@@ -101,7 +101,7 @@ import TextField from 'nds-ui/component/TextField';`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={BasicCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={BasicCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -153,7 +153,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={SizeCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={SizeCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -210,7 +210,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={RadiusCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={RadiusCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -262,7 +262,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={DefaultValueCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={DefaultValueCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -310,7 +310,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={PlaceholderCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={PlaceholderCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -358,7 +358,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={HelperTextCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={HelperTextCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -406,7 +406,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={ErrorCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={ErrorCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -455,7 +455,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={ReadOnlyCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={ReadOnlyCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -506,7 +506,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={DisabledCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={DisabledCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -543,8 +543,8 @@ export default Example;`}/>
           </div>
         </div>
 
-{/* API */}
-<div className='layout-small'>
+        {/* API */}
+        <div className='layout-small'>
           <div className='layout-title'>
             <h2 ref={APIRef}> API </h2>
             <p className='description'>

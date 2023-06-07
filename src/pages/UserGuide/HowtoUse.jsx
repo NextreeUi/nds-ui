@@ -10,8 +10,8 @@ import { Button, Popup } from '@/nds-ui/component';
 import ReactImg from '@/assets/images/react.png';
 
 const HowtoUse = () => {
-  const InstallRef = React.useRef();
   const FrameworkRef = React.useRef();
+  const InstallRef = React.useRef();
   const SettingRef = React.useRef();
 
   const Copy = async (text) => {
@@ -29,7 +29,6 @@ const HowtoUse = () => {
     }, 2000)
   }
   
-
   return (
     <>
       {/* CopyClick */}
@@ -138,7 +137,8 @@ const HowtoUse = () => {
             <h3>Theme</h3>
             <p className='description'>
               NDS-UI를 사용하기 전에 먼저 Theme 설정이 필요합니다. <br/>
-              가장 상위 JSX 파일에 data-theme 속성의 값을 ligth나 dark로 설정해줍니다.
+              가장 상위 JSX 파일에 data-theme 속성의 값을 ligth나 dark로 설정해줍니다. <br/>
+              (Theme 설정을 안해놓으면 색상이 나타나지 않습니다.)
             </p>
             <div className='codeMirror'>
               <CodeMirror
@@ -170,7 +170,7 @@ export default App;`}/>
             <p className='description'>
               컴포넌트 임포트 방법은 단순합니다.<br/>
               여러 개를 한번에 임포트하려면 중괄호로 감싸주시면 되고, 임포트 주소는 폴더까지만 입력합니다. <br/>
-              한 개만 임포트하려면 중괄호로 감쌀 필요없고, 임포트 주소는 폴더 내부 컴포넌트 파일까지 입력한니다. <br/>
+              한 개만 임포트하려면 중괄호로 감쌀 필요없고, 임포트 주소는 폴더 내부 컴포넌트 파일까지 입력합니다. <br/>
               (매 파일마다 컴포넌트 사용시 <b>'매 번'</b> 임포트가 필요합니다.)
             </p>
             <div className='codeMirror'>
@@ -219,8 +219,8 @@ import Button from 'nds-ui/component/Button';`}/>
 
         <div className='layout-scroll'>
           <p>Content</p>
-          <a onClick={()=>{InstallRef.current.scrollIntoView()}}> Install</a>
           <a onClick={()=>{FrameworkRef.current.scrollIntoView()}}> Framework</a>
+          <a onClick={()=>{InstallRef.current.scrollIntoView()}}> Install</a>
           <a onClick={()=>{SettingRef.current.scrollIntoView()}}> Setting</a>
         </div>
       </div>

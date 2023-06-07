@@ -155,6 +155,31 @@ tbody.table {
   }
 }
 
+.table {
+  &-css {
+    &-col1 {width: 250rem;}
+  }
+}
+tbody.table {
+  &-css {
+    &>tr {
+      &>td:first-child {
+        color: var(--props-color);
+        font-weight: bold;
+        text-align: start;
+      }
+      &>td:last-child {
+        text-align: start;
+        font-size: 14rem;
+        font-weight: 300;
+        color: var(--gray3);
+        line-height: 150%;
+        letter-spacing: 0.5rem;
+      }
+    }
+  }
+}
+
 // loading
 .loading-wrap {
   position: fixed;

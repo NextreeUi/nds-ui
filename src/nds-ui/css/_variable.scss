@@ -82,9 +82,7 @@ html {
     --grayf8-100: #f8f8f8;
   }
   // font
-  // --font: 'Noto Sans KR', sans-serif;
-  --font: InterNoto, sans-serif;
-  // --font: 'Pretendard-Regular';
+  --font: Pretendard, sans-serif;
 
   // radius
   --radius: 5rem;
@@ -315,29 +313,7 @@ html {
   --popup-bg : var(--white);
   --popup-otl : 1px solid var(--grayc);
   --popup-z: 100;
-
 }
-
-$grays: (
-  "black"  : var(--black)     ,
-  "white"  : var(--white)     ,
-  "gray1"  : var(--gray1-100) ,
-  "gray2"  : var(--gray2-100) ,
-  "gray3"  : var(--gray3-100) ,
-  "gray4"  : var(--gray4-100) ,
-  "gray5"  : var(--gray5-100) ,
-  "gray6"  : var(--gray6-100) ,
-  "gray7"  : var(--gray7-100) ,
-  "gray8"  : var(--gray8-100) ,
-  "gray9"  : var(--gray9-100) ,
-  "graya"  : var(--graya-100) ,
-  "grayb"  : var(--grayb-100) ,
-  "grayc"  : var(--grayc-100) ,
-  "grayd"  : var(--grayd-100) ,
-  "graye"  : var(--graye-100) ,
-  "grayf5" : var(--grayf5-100),
-  "grayf8" : var(--grayf8-100),
-);
 
 $colors: (
   "primary" : var(--primary),
@@ -395,6 +371,35 @@ $colors: (
   "disabled_deep" : var(--disabled_deep),
 );
 
+$grays: (
+  "black"  : var(--black)     ,
+  "white"  : var(--white)     ,
+  "gray1"  : var(--gray1-100) ,
+  "gray2"  : var(--gray2-100) ,
+  "gray3"  : var(--gray3-100) ,
+  "gray4"  : var(--gray4-100) ,
+  "gray5"  : var(--gray5-100) ,
+  "gray6"  : var(--gray6-100) ,
+  "gray7"  : var(--gray7-100) ,
+  "gray8"  : var(--gray8-100) ,
+  "gray9"  : var(--gray9-100) ,
+  "graya"  : var(--graya-100) ,
+  "grayb"  : var(--grayb-100) ,
+  "grayc"  : var(--grayc-100) ,
+  "grayd"  : var(--grayd-100) ,
+  "graye"  : var(--graye-100) ,
+  "grayf5" : var(--grayf5-100),
+  "grayf8" : var(--grayf8-100),
+);
+
+$main : (
+  "primary" : var(--set-primary),
+  "secondary" : var(--set-secondary),
+  "tertiary" : var(--set-tertiary),
+  "black" : var(--set-black),
+  "white" : var(--set-white),
+);
+
 @each $semantic, $color in $colors {
   .bgc-#{$semantic} {
     background-color: $color;
@@ -435,14 +440,6 @@ $colors: (
     border-right: 1px dashed $color;
   }
 }
-
-$main : (
-  "primary" : var(--set-primary),
-  "secondary" : var(--set-secondary),
-  "tertiary" : var(--set-tertiary),
-  "black" : var(--set-black),
-  "white" : var(--set-white),
-);
 
 @for $i from 1 to 99 {
   @each $semantic, $color in $main {

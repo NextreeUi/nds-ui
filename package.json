@@ -17,6 +17,7 @@
     "@codemirror/lang-html": "^6.4.3",
     "@codemirror/lang-javascript": "^6.1.8",
     "@codemirror/lang-markdown": "^6.1.1",
+    "@codemirror/lang-sass": "^6.0.2",
     "@codemirror/language": "^6.7.0",
     "@loadable/component": "^5.15.3",
     "@uiw/react-codemirror": "^4.20.2",

@@ -99,7 +99,7 @@ import TextArea from 'nds-ui/component/TextArea';`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={BasicCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={BasicCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -147,7 +147,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={RectCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={RectCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -195,7 +195,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={DefaultValueCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={DefaultValueCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -243,7 +243,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={PlaceholderCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={PlaceholderCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -291,7 +291,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={RowsCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={RowsCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -339,7 +339,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={MaxLengthCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={MaxLengthCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -388,7 +388,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={ReadOnlyCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={ReadOnlyCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
@@ -439,7 +439,7 @@ export default Example;`}/>
           </div>
           <div className='codeMirror'>
             <div className='btn-wrap'>
-              <Button square radius='round' variant='outlined' size='extraSmall' hoverBg='white' hoverColor='black' theme='white' onClick={DisabledCodeClick}>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={DisabledCodeClick}>
                 <i className='i-code w14 h14'/>
               </Button>
             </div>
