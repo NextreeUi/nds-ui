@@ -58,6 +58,12 @@ function Lnb({address1, address2}) {
                 <Link to='/DefaultLayout/UserGuide/Util'>
                   <Button bg={address2 == 'Util' ? 'graye' : ''} className='r5 px10 width100' size='medium' ripple='black' hoverBg='grayc'><p className="flex flex1 size14 txt-black justifyStart">_util.scss</p></Button>
                 </Link>
+                <a target="_blank" className="mt30" href='https://nextreeui.github.io/Mockup1/'>
+                  <Button className='btn-site' variant='outlined' radius='rect' size='medium' ripple='black' >
+                    <p className="flex1 size14 alignStart">MockUp Skin</p>
+                    <i className="i-site w20 h20"/>
+                  </Button>
+                </a>
               </>
               : address1 == 'Component' ?
               <>

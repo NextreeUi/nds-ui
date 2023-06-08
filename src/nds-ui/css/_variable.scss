@@ -416,7 +416,7 @@ $main : (
   .otlb-#{$semantic} {
     border-bottom: 1px solid $color;
   }
-  @for $i from 1 to 10 {
+  @for $i from 1 to 11 {
     .otlb#{$i}-#{$semantic} {
       border-bottom: #{$i}px solid $color;
     }
@@ -441,7 +441,7 @@ $main : (
   }
 }
 
-@for $i from 1 to 99 {
+@for $i from 1 to 101 {
   @each $semantic, $color in $main {
     .bgc-#{$semantic}_#{$i}p {
         background-color: rgb($color, calc(#{$i} * 0.01));
@@ -457,6 +457,23 @@ $main : (
     }
     .otlb-#{$semantic}_#{$i}p-dashed {
         border-bottom: 1px dashed rgb($color, calc(#{$i} * 0.01));
+    }
+    .hover {
+      &-bgc-#{$semantic}_#{$i}p {
+        &:hover {
+          background-color: rgb($color, calc(#{$i} * 0.01));
+        }
+      }
+      &-txt-#{$semantic}_#{$i}p {
+        &:hover {
+          color: rgb($color, calc(#{$i} * 0.01));
+        }
+      }
+      &-otl-#{$semantic}_#{$i}p {
+        &:hover {
+          border: 1px solid rgb($color, calc(#{$i} * 0.01));
+        }
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 // font size
-@for $i from 1 to 100 {
+@for $i from 1 to 101 {
     .size#{$i} {
         font-size: #{$i}rem !important;
     }
@@ -51,11 +51,11 @@
 
 
 // lineHeight
-@for $i from 60 to 200 {
+@for $i from 60 to 201 {
     .lh#{$i} {line-height: calc(#{$i} * 1%);}
 }
 // letterSpacing
-@for $i from 1 to 100 {
+@for $i from 1 to 101 {
     .ls#{$i} {letter-spacing: #{$i}rem;}
 }
 
@@ -179,7 +179,7 @@
 
 // table
 tbody {
-    @for $i from 1 to 100 {
+    @for $i from 1 to 101 {
         &.col#{$i} {
             &-align {
                 &-start {
@@ -295,7 +295,7 @@ tbody {
 .radius {
   border-radius: var(--radius);
 }
-@for $i from 1 to 300 {
+@for $i from 1 to 301 {
   .r#{$i} {
     border-radius: #{$i}rem;
   }
@@ -313,7 +313,7 @@ tbody {
     }
 }
 // backdrop-filter
-@for $i from 1 to 100 {
+@for $i from 1 to 101 {
     .blur-back#{$i} {
       backdrop-filter: blur(#{$i}rem);
     }
@@ -347,7 +347,7 @@ tbody {
 .relative {position: relative;}
 .absolute {position: absolute;}
 .fixed    {position: fixed;   }
-@for $i from 1 to 100 {
+@for $i from 1 to 101 {
     .t#{$i} {
         top: #{$i}rem;
     }
@@ -384,14 +384,14 @@ tbody {
 }
 
 //transition
-@for $i from 1 to 30 {
+@for $i from 1 to 31 {
     .transition#{$i} {
         transition: calc(#{$i} * 0.1)s;
     }
 }
 
 // ellipsis
-@for $i from 1 to 5 {
+@for $i from 1 to 11 {
     .ellipsis#{$i} {
         overflow: hidden;
         text-overflow: ellipsis;

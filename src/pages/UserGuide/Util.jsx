@@ -1422,9 +1422,11 @@ const Util = () => {
                   <tr>
                     <td>
                       hover-bgc-$colors
+                      hover-bgc-$colors_(n)p
                     </td>
                     <td>
                       호버시 배경색을 Variable의 $colors로 변경<br/>
+                      _(n)p 추가시 투명도 (1~99)% 
                     </td>
                   </tr>
                   <tr>
@@ -1433,6 +1435,7 @@ const Util = () => {
                     </td>
                     <td>
                       호버시 글자색을 Variable의 $colors로 변경<br/>
+                      _(n)p 추가시 투명도 (1~99)%
                     </td>
                   </tr>
                   <tr>
@@ -1441,6 +1444,7 @@ const Util = () => {
                     </td>
                     <td>
                       호버시 외곽선 색을 Variable의 $colors로 변경<br/>
+                      _(n)p 추가시 투명도 (1~99)%
                     </td>
                   </tr>
                 </>
