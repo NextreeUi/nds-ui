@@ -35,7 +35,11 @@ const Tab = ({
               return (
                 <div className={styles['tab-btn-wrap'] + ' ' + (classBtnWrap ?  classBtnWrap : '')} key={index}>
                   <Button 
-                    className={(classBtn ? classBtn : '')}
+                    className={
+                      (classBtn ? classBtn : '')
+                      + ' ' +
+                      (state == index ? 'select' : '')
+                    }
                     size={
                       size == 'large' ? 'large':
                       size == 'medium' ? 'medium':

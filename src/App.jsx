@@ -19,7 +19,7 @@ import homeBg from '@/assets/images/home-bg.svg';
 // style
 import "@/nds-ui/css/style.scss";
 
-import "nds-ui/css/style.scss";
+// import "nds-ui/css/style.scss";
 
 import "@/assets/css/style.scss";
 

@@ -121,7 +121,7 @@ const Slide = ({
                 return (
                   <div 
                     key={index} 
-                    className={styles['slide-nav'] + ' ' + (state == index + 1 ? styles['select'] : '') + ' ' + (classNav ? classNav : '')} 
+                    className={styles['slide-nav'] + ' ' + (state == index + 1 ? styles['select'] : '') + ' ' + (state == index + 1 ? 'select' : '') + ' ' + (classNav ? classNav : '')} 
                     onClick={()=>{setState(index + 1)}}
                   />
                 )

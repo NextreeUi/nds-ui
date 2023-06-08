@@ -460,3 +460,23 @@ $main : (
     }
   }
 }
+
+@each $semantic, $color in $colors {
+  .hover {
+    &-bgc-#{$semantic} {
+      &:hover {
+        background-color: $color;
+      }
+    }
+    &-txt-#{$semantic} {
+      &:hover {
+        color: $color;
+      }
+    }
+    &-otl-#{$semantic} {
+      &:hover {
+        border: 1px solid $color;
+      }
+    }
+  }
+}

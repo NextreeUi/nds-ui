@@ -9,6 +9,7 @@ import { javascript } from '@codemirror/lang-javascript';
 import { Button, Table } from '@/nds-ui/component';
 
 const Util = () => {
+  const SizeRef = React.useRef();
   const WHRef = React.useRef();
   const LHRef = React.useRef();
   const LSRef = React.useRef();
@@ -21,10 +22,11 @@ const Util = () => {
   const ScrollRef = React.useRef();
   const DisplayRef = React.useRef();
   const PositionRef = React.useRef();
+  const TransitionRef = React.useRef();
   const CursorRef = React.useRef();
   const EllipsisRef = React.useRef();
   const ColorRef = React.useRef();
-  const SizeRef = React.useRef();
+  const HoverColorRef = React.useRef();
 
   const Copy = async (text) => {
     try {
@@ -1084,6 +1086,87 @@ const Util = () => {
                       left: 0
                     </td>
                   </tr>
+                  
+                  <tr>
+                    <td>
+                      t(n) <br/>
+                      t-(n)
+                    </td>
+                    <td>
+                      top: (n)rem (1~100까지) <br/>
+                      top: -(n)rem (1~100까지)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      r(n) <br/>
+                      r-(n)
+                    </td>
+                    <td>
+                      right: (n)rem (1~100까지) <br/>
+                      right: -(n)rem (1~100까지)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      b(n) <br/>
+                      b-(n)
+                    </td>
+                    <td>
+                      bottom: (n)rem (1~100까지) <br/>
+                      bottom: -(n)rem (1~100까지)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      l(n) <br/>
+                      l-(n)
+                    </td>
+                    <td>
+                      left: (n)rem (1~100까지) <br/>
+                      left: -(n)rem (1~100까지)
+                    </td>
+                  </tr>
+                </>
+              }
+            />
+          </div>
+        </div>
+
+        {/* Transition  */}
+        <div className='layout-small'>
+          <div className='layout-title'>
+            <h3 ref={TransitionRef}> Transition </h3>
+            <p className='description'>
+              트렌지션과 관련된 유틸리티 클래스입니다.
+            </p>
+            
+            <Table 
+              classWrap='table-css'
+              colGroup={
+                <>
+                  <col className='table-css-col1' />
+                </>
+              }
+              tHead={
+                <>
+                  <tr>
+                    <th>classes</th>
+                    <th>description</th>
+                  </tr>
+                </>
+              }
+              classTBody='table-css'
+              tBody= {
+                <>
+                  <tr>
+                    <td>
+                      trnasition(n)
+                    </td>
+                    <td>
+                      transition: 0.(n)s (0.1초부터 3초까지)
+                    </td>
+                  </tr>
                 </>
               }
             />
@@ -1310,6 +1393,62 @@ const Util = () => {
           </div>
         </div>
 
+        {/* Hover Color  */}
+        <div className='layout-small'>
+          <div className='layout-title'>
+            <h3 ref={HoverColorRef}> Hover Color </h3>
+            <p className='description'>
+              호버 색상과 관련된 유틸리티 클래스입니다.
+              (색상관련 유틸은 _variable.scss 에 있습니다.)
+            </p>
+            <Table 
+              classWrap='table-css'
+              colGroup={
+                <>
+                  <col className='table-css-col1' />
+                </>
+              }
+              tHead={
+                <>
+                  <tr>
+                    <th>classes</th>
+                    <th>description</th>
+                  </tr>
+                </>
+              }
+              classTBody='table-css'
+              tBody= {
+                <>
+                  <tr>
+                    <td>
+                      hover-bgc-$colors
+                    </td>
+                    <td>
+                      호버시 배경색을 Variable의 $colors로 변경<br/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      hover-txt-$colors
+                    </td>
+                    <td>
+                      호버시 글자색을 Variable의 $colors로 변경<br/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      hover-otl-$colors
+                    </td>
+                    <td>
+                      호버시 외곽선 색을 Variable의 $colors로 변경<br/>
+                    </td>
+                  </tr>
+                </>
+              }
+            />
+          </div>
+        </div>
+
 
         <div className='layout-scroll'>
           <p>Classes</p>
@@ -1326,9 +1465,11 @@ const Util = () => {
           <a onClick={()=>{ScrollRef.current.scrollIntoView()}}> Scroll</a>
           <a onClick={()=>{DisplayRef.current.scrollIntoView()}}> Display</a>
           <a onClick={()=>{PositionRef.current.scrollIntoView()}}> Position</a>
+          <a onClick={()=>{TransitionRef.current.scrollIntoView()}}> Transition</a>
           <a onClick={()=>{CursorRef.current.scrollIntoView()}}> Cursor</a>
           <a onClick={()=>{EllipsisRef.current.scrollIntoView()}}> Ellipsis</a>
           <a onClick={()=>{ColorRef.current.scrollIntoView()}}> Color</a>
+          <a onClick={()=>{HoverColorRef.current.scrollIntoView()}}> Hover Color</a>
         </div>
 
       </div>

@@ -347,6 +347,32 @@ tbody {
 .relative {position: relative;}
 .absolute {position: absolute;}
 .fixed    {position: fixed;   }
+@for $i from 1 to 100 {
+    .t#{$i} {
+        top: #{$i}rem;
+    }
+    .t-#{$i} {
+        top: -#{$i}rem;
+    }
+    .l#{$i} {
+        top: #{$i}rem;
+    }
+    .l-#{$i} {
+        top: -#{$i}rem;
+    }
+    .b#{$i} {
+        top: #{$i}rem;
+    }
+    .b-#{$i} {
+        top: -#{$i}rem;
+    }
+    .r#{$i} {
+        top: #{$i}rem;
+    }
+    .r-#{$i} {
+        top: -#{$i}rem;
+    }
+}
 .t0 {top: 0;   }
 .b0 {bottom: 0;}
 .l0 {left: 0;  }
@@ -355,6 +381,13 @@ tbody {
 // cursor
 .cursor {
     cursor: pointer;
+}
+
+//transition
+@for $i from 1 to 30 {
+    .transition#{$i} {
+        transition: calc(#{$i} * 0.1)s;
+    }
 }
 
 // ellipsis

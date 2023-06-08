@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 const Location = ({
     number=2,
-    link1,
-    link2,
-    link3,
-    link4,
-    linkLast,
+    link1='/',
+    link2='/',
+    link3='/',
+    link4='/',
+    linkLast='/',
     depth1='Home',
     depth2='Depth2',
     depth3='Depth3',
