@@ -355,22 +355,22 @@ tbody {
         top: -#{$i}rem;
     }
     .l#{$i} {
-        top: #{$i}rem;
+        left: #{$i}rem;
     }
     .l-#{$i} {
-        top: -#{$i}rem;
+        left: -#{$i}rem;
     }
     .b#{$i} {
-        top: #{$i}rem;
+        bottom: #{$i}rem;
     }
     .b-#{$i} {
-        top: -#{$i}rem;
+        bottom: -#{$i}rem;
     }
     .r#{$i} {
-        top: #{$i}rem;
+        right: #{$i}rem;
     }
     .r-#{$i} {
-        top: -#{$i}rem;
+        right: -#{$i}rem;
     }
 }
 .t0 {top: 0;   }
