@@ -22,11 +22,11 @@ function Lnb({address1, address2}) {
           <div className="flex">
             {
               mode ?
-              <Button className='minw30 h30' square theme='grayc' onClick={DarkClick}>
+              <Button className='minw30 h30' square theme='black' onClick={DarkClick}>
                 <p className='i-darkmode' />
               </Button>
               :
-              <Button className='minw30 h30' square theme='grayc' onClick={LightClick}>
+              <Button className='minw30 h30' square theme='black' onClick={LightClick}>
                 <p className='i-lightmode' />
               </Button>
             }

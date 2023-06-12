@@ -56,17 +56,17 @@ const Home = () => {
             </div>
             <div className='w175 flex justifyEnd alignCenter gap20'>
               <a target="_blank" href='https://gitlab.com/nextree3/DesignSystem'>
-                <Button className='minw45 h45' square theme='grayc'>
+                <Button className='minw45 h45' square theme='black'>
                   <p className='i-gitlab' />
                 </Button>
               </a>
               <a target="_blank" href='https://github.com/NextreeUi/nds-ui'>
-                <Button className='minw45 h45' square theme='grayc'>
+                <Button className='minw45 h45' square theme='black'>
                   <p className='i-github' />
                 </Button>
               </a>
               <a target="_blank" href="https://www.figma.com/file/jCBnGvhUAlmTTukGpuFAVX/NDS-Figam?type=design&node-id=0%3A1&t=TpYdfcBFTTYvvVuI-1">
-                <Button className='minw45 h45' square theme='grayc'>
+                <Button className='minw45 h45' square theme='black'>
                   <p className='i-figma' />
                 </Button>
               </a>

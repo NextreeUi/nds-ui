@@ -408,7 +408,7 @@ export default Example;`}/>
                     func
                   </td>
                   <td>
-                    onClick의 속성의 역할을 수행하는 속성으로 클릭시 실행되는 함수가 들어갑니다. 
+                    onClick의 속성의 역할을 수행하는 속성으로 클릭시 실행되는 함수가 들어갑니다.
                   </td>
                 </tr>
               </>
