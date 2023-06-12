@@ -5,13 +5,16 @@ const Tree = ({
     title,
     item,
     icon,
+    closeIcon,
+    openIcon,
     iconRotate,
     children,
     id,
     onClick,
     className,
+    expanded
   }) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(expanded ? true : false);
   const Click = () => {
     setOpen(!open)
   }
@@ -24,7 +27,13 @@ const Tree = ({
         id={id}
         onClick={onClick}
       >
-        <i className={styles.item}/>
+        {
+          closeIcon ?
+          open ? openIcon : closeIcon
+          :
+          icon ? icon :
+          <i className={styles.item}/>
+        }
         {title}
       </div>
       :
@@ -41,6 +50,9 @@ const Tree = ({
         >
           <div className={(open ? styles[`${iconRotate ? iconRotate : icon ? icon : 'deg90'}`] : '')}>
             {
+              closeIcon ?
+              open ? openIcon : closeIcon
+              :
               icon ? icon :
               <i className={styles.arrow}/>
             }

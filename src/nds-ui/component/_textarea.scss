@@ -12,6 +12,9 @@
     &.rect {
         border-radius: 0rem;
     }
+    &::placeholder {
+        color: var(--textarea-placeholder-color);
+    }
     &:focus {
         border: 1px solid var(--textarea-focus-otl);
         outline: none;

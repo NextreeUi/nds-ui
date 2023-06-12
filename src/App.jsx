@@ -112,7 +112,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='absolute vw100 b0 h58 flexCenter'>
+        <div className='absolute vw100 ab0 h58 flexCenter'>
           <div className='home-content-width size14 txt-gray6'>
             copyright made by Nextree, All right reserved.
           </div>

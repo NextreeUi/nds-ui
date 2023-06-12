@@ -10,10 +10,12 @@ const Accordion = ({
     children,
     id,
     className,
+    click,
   }) => {
   const [open, setOpen] = React.useState(false);
   const Click = () => {
     setOpen(!open)
+    click ? click() : ''
   }
   return (
     <>

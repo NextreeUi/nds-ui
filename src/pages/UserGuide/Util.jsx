@@ -1056,7 +1056,7 @@ const Util = () => {
                   </tr>
                   <tr>
                     <td>
-                      t0
+                      at0
                     </td>
                     <td>
                       top: 0
@@ -1064,7 +1064,7 @@ const Util = () => {
                   </tr>
                   <tr>
                     <td>
-                      r0
+                      ar0
                     </td>
                     <td>
                       right: 0
@@ -1072,7 +1072,7 @@ const Util = () => {
                   </tr>
                   <tr>
                     <td>
-                      b0
+                      ab0
                     </td>
                     <td>
                       bottom: 0
@@ -1080,7 +1080,7 @@ const Util = () => {
                   </tr>
                   <tr>
                     <td>
-                      l0
+                      al0
                     </td>
                     <td>
                       left: 0
@@ -1089,8 +1089,8 @@ const Util = () => {
                   
                   <tr>
                     <td>
-                      t(n) <br/>
-                      t-(n)
+                      at(n) <br/>
+                      at-(n)
                     </td>
                     <td>
                       top: (n)rem (1~100까지) <br/>
@@ -1099,8 +1099,8 @@ const Util = () => {
                   </tr>
                   <tr>
                     <td>
-                      r(n) <br/>
-                      r-(n)
+                      ar(n) <br/>
+                      ar-(n)
                     </td>
                     <td>
                       right: (n)rem (1~100까지) <br/>
@@ -1109,8 +1109,8 @@ const Util = () => {
                   </tr>
                   <tr>
                     <td>
-                      b(n) <br/>
-                      b-(n)
+                      ab(n) <br/>
+                      ab-(n)
                     </td>
                     <td>
                       bottom: (n)rem (1~100까지) <br/>
@@ -1119,8 +1119,8 @@ const Util = () => {
                   </tr>
                   <tr>
                     <td>
-                      l(n) <br/>
-                      l-(n)
+                      al(n) <br/>
+                      al-(n)
                     </td>
                     <td>
                       left: (n)rem (1~100까지) <br/>

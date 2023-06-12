@@ -402,6 +402,15 @@ export default Example;`}/>
                     확장 아이콘을 클릭시 회전각도를 설정하는 속성입니다.
                   </td>
                 </tr>
+                <tr>
+                  <td>click</td>
+                  <td>
+                    func
+                  </td>
+                  <td>
+                    onClick의 속성의 역할을 수행하는 속성으로 클릭시 실행되는 함수가 들어갑니다. 
+                  </td>
+                </tr>
               </>
             }
           />

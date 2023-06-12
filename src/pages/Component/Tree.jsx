@@ -12,6 +12,10 @@ const TreePage = () => {
   const BasicCodeClick = () => {
     setBasicCode(!BasicCode)
   }
+  const [ExpandedCode, setExpandedCode] = React.useState(false);
+  const ExpandedCodeClick = () => {
+    setExpandedCode(!ExpandedCode)
+  }
   const [IconCode, setIconCode] = React.useState(false);
   const IconCodeClick = () => {
     setIconCode(!IconCode)
@@ -166,6 +170,70 @@ export default Example;`}/>
             <p className='description'>
               item 속성은 하위 폴더의 내용이 더 이상 없을 경우 붙여줍니다.
             </p>
+          </div>
+        </div>
+
+        {/* Expanded */}
+        <div className='layout-small'>
+          <div className='layout-title'>
+            <h3>Expanded</h3>
+            <p className='description'>
+              expanded 속성은 기본 확장된 상태로 만들어주는 속성입니다.
+            </p>
+          </div>
+          <div className='layout-example'>
+            <Tree title='Tree Depth1' expanded>
+              <Tree title='Tree Depth2' expanded>
+                <Tree item title='Tree Depth3'/>
+                <Tree item title='Tree Depth3'/>
+                <Tree item title='Tree Depth3'/>
+              </Tree>
+            </Tree>
+          </div>
+          <div className='codeMirror'>
+            <div className='btn-wrap'>
+              <Button square radius='round' variant='outlined' size='extraSmall'  onClick={ExpandedCodeClick}>
+                <i className='i-code w14 h14'/>
+              </Button>
+            </div>
+            {
+              ExpandedCode ?
+              <CodeMirror
+              theme='dark'
+              extensions={[javascript({ jsx: true })]}
+              value=
+{`import * as React from 'react';
+import { Tree } from 'nds-ui/component';
+import 'nds-ui/css/style.scss';
+
+const Example = () => {
+  return (
+    <Tree title='Tree Depth1' expanded>
+      <Tree title='Tree Depth2' expanded>
+        <Tree item title='Tree Depth3'/>
+        <Tree item title='Tree Depth3'/>
+        <Tree item title='Tree Depth3'/>
+      </Tree>
+    </Tree>
+  )
+}
+
+export default Example;`}/>
+              :
+              <CodeMirror
+              theme='dark'
+              extensions={[javascript({ jsx: true })]}
+              value=
+{`<>
+<Tree title='Tree Depth1' expanded>
+  <Tree title='Tree Depth2' expanded>
+    <Tree item title='Tree Depth3'/>
+    <Tree item title='Tree Depth3'/>
+    <Tree item title='Tree Depth3'/>
+  </Tree>
+</Tree>
+</>`}/>
+            }
           </div>
         </div>
 
@@ -336,6 +404,34 @@ export default Example;`}/>
                   </td>
                   <td>
                     확장 아이콘을 변경하는 속성으로 html 태그를 넣습니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td>closeIcon</td>
+                  <td>
+                    element
+                  </td>
+                  <td>
+                    닫혔을 때의 확장 아이콘을 변경하는 속성으로 html 태그를 넣습니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td>openIcon</td>
+                  <td>
+                    element
+                  </td>
+                  <td>
+                    열렸을 때의 확장 아이콘을 변경하는 속성으로 html 태그를 넣습니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td>expanded</td>
+                  <td>
+                    boolean
+                  </td>
+                  <td>
+                    기본 확장 상태로 만들어주는 속성으로 불리언(Boolean) 타입입니다. <br/>
+                    속성값은 따로 없고, 속성을 추가할 시 기본값인 false에서 true로 바뀝니다.
                   </td>
                 </tr>
                 <tr>

@@ -75,6 +75,9 @@
     .mt#{$i} {
         margin-top: #{$i}rem !important;
     }
+    .mt-#{$i} {
+        margin-top: -#{$i}rem !important;
+    }
     .mb#{$i} {
         margin-bottom: #{$i}rem !important;
     }
@@ -348,35 +351,35 @@ tbody {
 .absolute {position: absolute;}
 .fixed    {position: fixed;   }
 @for $i from 1 to 101 {
-    .t#{$i} {
+    .at#{$i} {
         top: #{$i}rem;
     }
-    .t-#{$i} {
+    .at-#{$i} {
         top: -#{$i}rem;
     }
-    .l#{$i} {
+    .al#{$i} {
         left: #{$i}rem;
     }
-    .l-#{$i} {
+    .al-#{$i} {
         left: -#{$i}rem;
     }
-    .b#{$i} {
+    .ab#{$i} {
         bottom: #{$i}rem;
     }
-    .b-#{$i} {
+    .ab-#{$i} {
         bottom: -#{$i}rem;
     }
-    .r#{$i} {
+    .ar#{$i} {
         right: #{$i}rem;
     }
-    .r-#{$i} {
+    .ar-#{$i} {
         right: -#{$i}rem;
     }
 }
-.t0 {top: 0;   }
-.b0 {bottom: 0;}
-.l0 {left: 0;  }
-.r0 {right: 0; }
+.at0 {top: 0;   }
+.ab0 {bottom: 0;}
+.al0 {left: 0;  }
+.ar0 {right: 0; }
 
 // cursor
 .cursor {
@@ -386,7 +389,7 @@ tbody {
 //transition
 @for $i from 1 to 31 {
     .transition#{$i} {
-        transition: calc(#{$i} * 0.1)s;
+        transition: calc(#{$i} * 0.1s);
     }
 }
 
