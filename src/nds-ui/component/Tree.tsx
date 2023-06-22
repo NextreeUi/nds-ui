@@ -13,6 +13,18 @@ const Tree = ({
     onClick,
     className,
     expanded
+  }:{
+    title?: string | React.ReactNode,
+    item?: boolean,
+    icon?: React.ReactNode,
+    closeIcon?: React.ReactNode,
+    openIcon?: React.ReactNode,
+    iconRotate?: 'deb90' | 'deb180' | 'deb270',
+    children?: React.ReactNode,
+    id?: string,
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void,
+    className?: string,
+    expanded?: boolean,
   }) => {
   const [open, setOpen] = React.useState(expanded ? true : false);
   const Click = () => {

@@ -1,9 +1,9 @@
 import * as React from "react";
 import styles from './style.module.scss';
 
-import { Button } from '../component';
+import Button from './Button';
 
-const SlideBtn = ({left}) => {
+const SlideBtn = ({left}:{left?:boolean}) => {
   return (
     <Button
       className={styles['slide-btn'] + ' ' + (left ? styles['left'] : '')}
@@ -36,7 +36,20 @@ const Slide = ({
     classBtn,
     classNavWrap,
     classNav,
-    
+  }:{
+    content?: React.ReactNode[],
+    leftBtn?: React.ReactNode,
+    rightBtn?: React.ReactNode,
+    noNav?: boolean,
+    pauseIcon?: React.ReactNode,
+    playIcon?: React.ReactNode,
+    autoSlide: boolean,
+    delay: number,
+    noPause?: boolean,
+    classSlide?: string,
+    classBtn?: string,
+    classNavWrap?: string,
+    classNav?: string,
   }) => {
   const [ state, setState ] = React.useState(1);
   const slide = React.useRef();

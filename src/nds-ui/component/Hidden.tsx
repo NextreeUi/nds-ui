@@ -6,6 +6,11 @@ const Hidden = ({
     min=0,
     children,
     className,
+  }:{
+    max?: number,
+    min?: number,
+    children?: React.ReactNode,
+    className?: string,
   }) => {
     
   const [on, setOn] = React.useState(min <= window.innerWidth && window.innerWidth <= max);

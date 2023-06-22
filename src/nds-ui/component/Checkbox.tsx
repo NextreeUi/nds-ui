@@ -12,6 +12,17 @@ const Checkbox = ({
                 value,
                 disabled,
                 className,
+                }:{
+                theme: 'primary' | 'primary_light' | 'primary_deep' | 'secondary' | 'secondary_light' | 'secondary_deep' | 'tertiary' | 'tertiary_light' | 'tertiary_deep' | 'notification' | 'success' | 'warning' | 'black' | 'gray1' | 'gray2' | 'gray3' | 'gray4' | 'gray5' | 'gray6' | 'gray7' | 'gray8' | 'gray9' | 'graya' | 'grayb' | 'grayc' | 'grayd' | 'graye' | 'grayf5' | 'grayf8' | 'gray1-100' | 'gray2-100' | 'gray3-100' | 'gray4-100' | 'gray5-100' | 'gray6-100' | 'gray7-100' | 'gray8-100' | 'gray9-100' | 'graya-100' | 'grayb' | 'grayc-100' | 'grayd-100' | 'graye-100' | 'grayf5-100' | 'grayf8-100' | 'white' | 'white3' | 'white6' | 'white9' | 'whitec' | 'transparent' | 'disabled' | 'disabled_deep' ,
+                size: 'large' | 'medium' | 'small' | 'extraSmall',
+                color?:  'primary' | 'primary_light' | 'primary_deep' | 'secondary' | 'secondary_light' | 'secondary_deep' | 'tertiary' | 'tertiary_light' | 'tertiary_deep' | 'notification' | 'success' | 'warning' | 'black' | 'gray1' | 'gray2' | 'gray3' | 'gray4' | 'gray5' | 'gray6' | 'gray7' | 'gray8' | 'gray9' | 'graya' | 'grayb' | 'grayc' | 'grayd' | 'graye' | 'grayf5' | 'grayf8' | 'gray1-100' | 'gray2-100' | 'gray3-100' | 'gray4-100' | 'gray5-100' | 'gray6-100' | 'gray7-100' | 'gray8-100' | 'gray9-100' | 'graya-100' | 'grayb' | 'grayc-100' | 'grayd-100' | 'graye-100' | 'grayf5-100' | 'grayf8-100' | 'white' | 'white3' | 'white6' | 'white9' | 'whitec' | 'transparent' | 'disabled' | 'disabled_deep' ,
+                ripple?:  'primary' | 'primary_light' | 'primary_deep' | 'secondary' | 'secondary_light' | 'secondary_deep' | 'tertiary' | 'tertiary_light' | 'tertiary_deep' | 'notification' | 'success' | 'warning' | 'black' | 'gray1' | 'gray2' | 'gray3' | 'gray4' | 'gray5' | 'gray6' | 'gray7' | 'gray8' | 'gray9' | 'graya' | 'grayb' | 'grayc' | 'grayd' | 'graye' | 'grayf5' | 'grayf8' | 'gray1-100' | 'gray2-100' | 'gray3-100' | 'gray4-100' | 'gray5-100' | 'gray6-100' | 'gray7-100' | 'gray8-100' | 'gray9-100' | 'graya-100' | 'grayb' | 'grayc-100' | 'grayd-100' | 'graye-100' | 'grayf5-100' | 'grayf8-100' | 'white' | 'white3' | 'white6' | 'white9' | 'whitec' | 'transparent' | 'disabled' | 'disabled_deep' ,
+                defaultChecked?: boolean,
+                id?: string,
+                name?: string,
+                value?: string,
+                disabled?: boolean,
+                className?: string,
                 }) => {
   if (theme == 'primary') {color = color || 'primary'; ripple = ripple || 'primary'}
   else if (theme == 'primary_light') {color = color || 'primary_light'; ripple = ripple || 'primary_light'}
@@ -20,7 +31,7 @@ const Checkbox = ({
   else if (theme == 'secondary_light') {color = color || 'secondary_light'; ripple = ripple || 'secondary_light'}
   else if (theme == 'secondary_deep') {color = color || 'secondary_deep'; ripple = ripple || 'secondary_deep'}
   else if (theme == 'tertiary') {color = color || 'tertiary'; ripple = ripple || 'tertiary'}
-  else if (theme == 'tertiary_ligth') {color = color || 'tertiary_ligth'; ripple = ripple || 'tertiary_ligth'}
+  else if (theme == 'tertiary_light') {color = color || 'tertiary_light'; ripple = ripple || 'tertiary_light'}
   else if (theme == 'tertiary_deep') {color = color || 'tertiary_deep'; ripple = ripple || 'tertiary_deep'}
   else if (theme == 'black') {color = color || 'black'; ripple = ripple || 'black'}
   else if (theme == 'gray1') {color = color || 'gray1'; ripple = ripple || 'black'}

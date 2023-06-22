@@ -10,6 +10,15 @@ const Table = ({
     classTHead,
     classTBody,
     classColGroup,
+  }:{
+    colGroup?: React.ReactNode,
+    tHead?: React.ReactNode,
+    tBody?: React.ReactNode,
+    classWrap?: string,
+    classTable?: string,
+    classTHead?: string,
+    classTBody?: string,
+    classColGroup?: string,
   }) => {
   const [state, setState] = React.useState(false);
   return (

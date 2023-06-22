@@ -6,6 +6,11 @@ const Popup = ({
     onClose,
     children,
     className,
+  }:{
+    open: boolean,
+    onClose: (event: React.MouseEvent<HTMLButtonElement>) => void,
+    children?: React.ReactNode,
+    className?: string,
   }) => {
   
   return (

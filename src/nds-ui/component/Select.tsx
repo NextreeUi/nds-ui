@@ -8,6 +8,13 @@ const Select = ({
   list= ['데이터를 입력해주세요'],
   disabled = false,
   className
+}:{
+  size: 'large' | 'medium' | 'small' | 'extraSmall',
+  radius: 'rect' | 'normal' | 'round',
+  defaultValue: number,
+  list: string[],
+  disabled: boolean,
+  className?: string,
 }) => {
   const lists = list;
   const [contentIndex, setContentIndex] = React.useState(defaultValue)

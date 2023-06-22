@@ -7,6 +7,13 @@ const Popover = ({
     onClose,
     children,
     className,
+  }:{
+    X: 'leftEnd' | 'left' | 'center' | 'right' | 'rightEnd',
+    Y: 'topEnd' | 'top' | 'center' | 'bottom' | 'bottomEnd',
+    open: boolean,
+    onClose: (event: React.MouseEvent<HTMLButtonElement>) => void,
+    children?: React.ReactNode,
+    className?: string,
   }) => {
   const Close = (onClose) => {
     return onClose;

@@ -16,6 +16,16 @@ const Accordion = ({
     id,
     className,
     onClick,
+  }:{
+    wrap?: boolean,
+    title?: React.ReactNode | string,
+    icon?: React.ReactNode,
+    iconLocation?: 'right' | 'left',
+    iconRotate?: 'deg90' | 'deg180' | 'deg270',
+    children?: React.ReactNode,
+    id?: string,
+    className?: string,
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void,
   }) => {
   const [open, setOpen] = React.useState(false);
   const Click = () => {

@@ -14,6 +14,19 @@ const TextArea = ({
                 onFocus,
                 onKeyDown,
                 className,
+                }:{
+                rect?: boolean,
+                defaultValue?: string,
+                placeholder?: string,
+                rows?: number,
+                maxLength?: number,
+                readOnly?: boolean,
+                disabled?: boolean,
+                onChange?: (event: React.MouseEvent<HTMLButtonElement>) => void,
+                onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void,
+                onFocus?: (event: React.MouseEvent<HTMLButtonElement>) => void,
+                onKeyDown?: (event: React.MouseEvent<HTMLButtonElement>) => void,
+                className?: string,
                 }) => {
   return (
     <>

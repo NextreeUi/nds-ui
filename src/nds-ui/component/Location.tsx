@@ -16,9 +16,23 @@ const Location = ({
     depth4='Depth4',
     depthLast='Last',
     icon,
-
     id,
     className,
+  }:{
+    number: number,
+    link1: string,
+    link2: string,
+    link3: string,
+    link4: string,
+    linkLast: string,
+    depth1: string,
+    depth2: string,
+    depth3: string,
+    depth4: string,
+    depthLast: string,
+    icon?: React.ReactNode,
+    id?: string,
+    className?: string,
   }) => {
   return (
     <>

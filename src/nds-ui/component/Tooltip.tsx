@@ -10,6 +10,15 @@ const Tooltip = ({
     size = 'medium',
     children,
     className,
+  }:{
+    content?: string,
+    placement: 'top-start' | 'top' | 'top-end' | 'right-start' | 'right' | 'right-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end',
+    bg: "black" | "white" | "gray1" | "gray2" | "gray3" | "gray4" | "gray5" | "gray6" | "gray7" | "gray8" | "gray9" | "graya" | "grayb" | "grayc" | "grayd" | "graye" | "grayf5" | "grayf8",
+    color?: 'black' | 'white',
+    radius: 'rect' | 'normal' | 'round',
+    size: 'large' | 'medium' | 'small' | 'extraSmall',
+    children?: React.ReactNode,
+    className?: string,
   }) => {
   if      (bg == 'black' ) {color = color || 'white'}
   else if (bg == 'gray1' ) {color = color || 'white'}

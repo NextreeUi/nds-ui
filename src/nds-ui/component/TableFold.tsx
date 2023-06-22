@@ -9,6 +9,9 @@ import ArrowDown from './image/arrow-down.svg';
 const TableFold = ({
     children,
     parent,
+  }:{
+    children?: React.ReactNode,
+    parent?: React.ReactNode,
   }) => {
   const [state, setState] = React.useState(false);
   return (

@@ -16,6 +16,20 @@ const TextField = ({
                   onKeyDown,
                   classHelper,
                   className,
+                  }:{
+                  size: 'large' | 'medium' | 'small' | 'extraSmall',
+                  radius: 'rect' | 'normal' | 'round',
+                  defaultValue?: string,
+                  placeholder?: string,
+                  helperText?: string,
+                  error?: boolean,
+                  readOnly?: boolean,
+                  disabled?: boolean,
+                  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void,
+                  onFocus?: (event: React.MouseEvent<HTMLButtonElement>) => void,
+                  onKeyDown?: (event: React.MouseEvent<HTMLButtonElement>) => void,
+                  classHelper?: string,
+                  className?: string,
                   }) => {
   return (
     <>
