@@ -28,34 +28,34 @@
             border-radius: var(--radius);
         }
         &-round {
-            border-radius: 100rem;
+            border-radius: 100px;
         }
     }
 
     // size
     &.size {
         &-large {
-            height: 38rem;
-            font-size: 14rem;
-            gap: 10rem;
+            height: 38px;
+            font-size: 14px;
+            gap: 10px;
             padding: 0 var(--chip-p-large);
         }
         &-medium {
-            height: 32rem;
-            font-size: 12rem;
-            gap: 10rem;
+            height: 32px;
+            font-size: 12px;
+            gap: 10px;
             padding: 0 var(--chip-p-medium);
         }
         &-small {
-            height: 26rem;
-            font-size: 12rem;
-            gap: 5rem;
+            height: 26px;
+            font-size: 12px;
+            gap: 5px;
             padding: 0 var(--chip-p-small);
         }
         &-extraSmall {
-            height: 20rem;
-            font-size: 10rem;
-            gap: 5rem;
+            height: 20px;
+            font-size: 10px;
+            gap: 5px;
             padding: 0 var(--chip-p-extraSmall);
         }
     }
@@ -99,27 +99,27 @@
         justify-content: center;
         &.size {
             &-large {
-                width: 24rem ;
-                height: 24rem !important;
-                border-radius: 100rem !important;
+                width: 24px ;
+                height: 24px !important;
+                border-radius: 100px !important;
                 padding: 0 !important;
             }
             &-medium {
-                width: 20rem ;
-                height: 20rem !important;
-                border-radius: 100rem !important;
+                width: 20px ;
+                height: 20px !important;
+                border-radius: 100px !important;
                 padding: 0 !important;
             }
             &-small {
-                width: 16rem ;
-                height: 16rem !important;
-                border-radius: 100rem !important;
+                width: 16px ;
+                height: 16px !important;
+                border-radius: 100px !important;
                 padding: 0 !important;
             }
             &-extraSmall {
-                width: 14rem ;
-                height: 14rem !important;
-                border-radius: 100rem !important;
+                width: 14px ;
+                height: 14px !important;
+                border-radius: 100px !important;
                 padding: 0 !important;
             }
         }

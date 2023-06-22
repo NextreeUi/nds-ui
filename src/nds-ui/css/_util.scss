@@ -1,17 +1,17 @@
 // font size
 @for $i from 1 to 101 {
     .size#{$i} {
-        font-size: #{$i}rem !important;
+        font-size: #{$i}px !important;
     }
 }
 
 // width height
 @for $i from 1 to 3001 {
     .w#{$i} {
-        width: #{$i}rem !important;
+        width: #{$i}px !important;
     }
     .h#{$i} {
-        height: #{$i}rem !important;
+        height: #{$i}px !important;
     }
     .width#{$i} {
         width: calc(#{$i} * 1%) !important;
@@ -20,16 +20,16 @@
         height: calc(#{$i} * 1%) !important;
     }
     .minw#{$i} {
-        min-width: #{$i}rem !important;
+        min-width: #{$i}px !important;
     }
     .minh#{$i} {
-        min-height: #{$i}rem !important;
+        min-height: #{$i}px !important;
     }
     .maxw#{$i} {
-        max-width: #{$i}rem !important;
+        max-width: #{$i}px !important;
     }
     .maxh#{$i} {
-        max-height: #{$i}rem !important;
+        max-height: #{$i}px !important;
     }
     .vh#{$i} {
         height: #{$i}vh !important;
@@ -38,10 +38,10 @@
         width: #{$i}vw !important;
     }
     .vw100-#{$i} {
-        width: calc(100vw - #{$i}rem);
+        width: calc(100vw - #{$i}px);
     }
     .vh100-#{$i} {
-        height: calc(100vh - #{$i}rem);
+        height: calc(100vh - #{$i}px);
     }
 }
 .fitContent {
@@ -56,68 +56,69 @@
 }
 // letterSpacing
 @for $i from 1 to 101 {
-    .ls#{$i} {letter-spacing: #{$i}rem;}
+    .ls#{$i} {letter-spacing: #{$i}px;}
 }
 
 // margin/padding
 @for $i from 1 to 301 {
     .m#{$i} {
-        margin: #{$i}rem !important;
+        margin: #{$i}px !important;
     }
     .mx#{$i} {
-        margin-right: #{$i}rem !important;
-        margin-left: #{$i}rem !important;
+        margin-right: #{$i}px !important;
+        margin-left: #{$i}px !important;
     }
     .my#{$i} {
-        margin-top: #{$i}rem !important;
-        margin-bottom: #{$i}rem !important;
+        margin-top: #{$i}px !important;
+        margin-bottom: #{$i}px !important;
+        
     }
     .mt#{$i} {
-        margin-top: #{$i}rem !important;
+        margin-top: #{$i}px !important;
     }
     .mt-#{$i} {
-        margin-top: -#{$i}rem !important;
+        margin-top: -#{$i}px !important;
     }
     .mb#{$i} {
-        margin-bottom: #{$i}rem !important;
+        margin-bottom: #{$i}px !important;
     }
     .mb-#{$i} {
-        margin-bottom: -#{$i}rem !important;
+        margin-bottom: -#{$i}px !important;
     }
     .ml#{$i} {
-        margin-left: #{$i}rem !important;
+        margin-left: #{$i}px !important;
     }
     .ml-#{$i} {
-        margin-left: -#{$i}rem !important;
+        margin-left: -#{$i}px !important;
     }
     .mr#{$i} {
-        margin-right: #{$i}rem !important;
+        margin-right: #{$i}px !important;
     }
     .mr-#{$i} {
-        margin-right: -#{$i}rem !important;
+        margin-right: -#{$i}px !important;
     }
     .p#{$i} {
-        padding: #{$i}rem !important;
+        padding: #{$i}px !important;
     }
     .px#{$i} {
-        padding-right: #{$i}rem !important;
-        padding-left: #{$i}rem !important;
+        padding-right: #{$i}px !important;
+        padding-left: #{$i}px !important;
     }
     .py#{$i} {
-        padding-top: #{$i}rem !important;
-        padding-bottom: #{$i}rem !important;
+        padding-top: #{$i}px !important;
+        padding-bottom: #{$i}px !important;
     }
     .pt#{$i} {
-        padding-top: #{$i}rem !important;
+        padding-top: #{$i}px !important;
     }
     .pb#{$i} {
-        padding-bottom: #{$i}rem !important;
+        padding-bottom: #{$i}px !important;
     }
     .pl#{$i} {
-        padding-left: #{$i}rem !important;
+        padding-left: #{$i}px !important;
     }
     .pr#{$i} {
-        padding-right: #{$i}rem !important;
+        padding-right: #{$i}px !important;
     }
 }
 
@@ -300,14 +301,14 @@ tbody {
 }
 @for $i from 1 to 301 {
   .r#{$i} {
-    border-radius: #{$i}rem;
+    border-radius: #{$i}px;
   }
 }
 
 // gap
 @for $i from 1 to 101 {
     .gap#{$i} {
-        gap: #{$i}rem ;
+        gap: #{$i}px ;
     }
 }
 .gap-1 {
@@ -318,10 +319,10 @@ tbody {
 // backdrop-filter
 @for $i from 1 to 101 {
     .blur-back#{$i} {
-      backdrop-filter: blur(#{$i}rem);
+      backdrop-filter: blur(#{$i}px);
     }
     .blur#{$i} {
-        filter: blur(#{$i}rem);
+        filter: blur(#{$i}px);
     }
 }
   
@@ -352,28 +353,28 @@ tbody {
 .fixed    {position: fixed;   }
 @for $i from 1 to 101 {
     .at#{$i} {
-        top: #{$i}rem;
+        top: #{$i}px;
     }
     .at-#{$i} {
-        top: -#{$i}rem;
+        top: -#{$i}px;
     }
     .al#{$i} {
-        left: #{$i}rem;
+        left: #{$i}px;
     }
     .al-#{$i} {
-        left: -#{$i}rem;
+        left: -#{$i}px;
     }
     .ab#{$i} {
-        bottom: #{$i}rem;
+        bottom: #{$i}px;
     }
     .ab-#{$i} {
-        bottom: -#{$i}rem;
+        bottom: -#{$i}px;
     }
     .ar#{$i} {
-        right: #{$i}rem;
+        right: #{$i}px;
     }
     .ar-#{$i} {
-        right: -#{$i}rem;
+        right: -#{$i}px;
     }
 }
 .at0 {top: 0;   }

@@ -14,13 +14,13 @@
         padding-right: 4px;
         &>tr {
             &>th {
-                height: 50rem !important;
+                height: 50px !important;
                 position: sticky;
                 z-index: 99;
                 background-color: var(--table-th-bg);
                 top: 0;
-                font-size: 14rem;
-                padding: 10rem;
+                font-size: 14px;
+                padding: 10px;
                 color: var(--table-th-color);
             }
         }
@@ -31,9 +31,9 @@
                 border-bottom: var(--table-td-otlb) ;
             }
             &>td {
-                height: 50rem;
-                padding: 10rem;
-                font-size: 14rem;
+                height: 50px;
+                padding: 10px;
+                font-size: 14px;
                 color: var(--talbe-td-color);
             }
             &.folding-area {

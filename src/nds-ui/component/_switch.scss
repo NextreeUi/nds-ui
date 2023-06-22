@@ -17,7 +17,7 @@
         @include noMask;
         background-color: white;
         display: flex;
-        margin-left: 0rem;
+        margin-left: 0px;
         width: var(--switch-btn-width);
         height: var(--switch-btn-height);
         transition: 0.3s;
@@ -25,9 +25,9 @@
 
     &.radius {
         &-rect {
-            border-radius: 0rem;
+            border-radius: 0px;
             &::after {
-                border-radius: 0rem;
+                border-radius: 0px;
             }
         }
         &-normal {
@@ -37,9 +37,9 @@
             }
         }
         &-round {
-            border-radius: 100rem;
+            border-radius: 100px;
             &::after {
-                border-radius: 100rem;
+                border-radius: 100px;
             }
         }
     }
@@ -66,7 +66,7 @@
     }
     &:active::before {
         display: none;
-        width: 0rem;
-        height: 0rem;
+        width: 0px;
+        height: 0px;
     }
 }

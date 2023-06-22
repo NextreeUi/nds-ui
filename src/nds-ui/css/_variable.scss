@@ -1,10 +1,6 @@
 // image url
 $imgurl: "@/assets/images/";
 
-html {
-  font-size: 1px;
-}
-
 //이 부분만 복사하면 됩니다.
 :root {
   // mode
@@ -85,7 +81,7 @@ html {
   --font: Pretendard, sans-serif;
 
   // radius
-  --radius: 5rem;
+  --radius: 5px;
   // color
   --black    : rgb(var(--set-black))    ;
   --white    : rgb(var(--set-white))    ;
@@ -119,7 +115,7 @@ html {
   --white9     : rgb(var(--set-white), 0.4);
   --whitec     : rgb(var(--set-white), 0.2);
 
-  --shadow: 0 0 8rem 0 var(--grayc);
+  --shadow: 0 0 8px 0 var(--grayc);
 
   --backdrop : var(--gray9);
 
@@ -136,63 +132,63 @@ html {
 
   // accordion
   --accordion-otl: 1px solid var(--grayc);
-  --accordion-h : 36rem;
-  --accordion-font-size: 14rem;
+  --accordion-h : 36px;
+  --accordion-font-size: 14px;
   --accordion-color : var(--gray6);
-  --accordion-p: 0rem 10rem;
-  --accordion-gap: 10rem;
+  --accordion-p: 0px 10px;
+  --accordion-gap: 10px;
   --accordion-hover: var(--grayd);
 
   // avatar
-  --avatar-size-large     : 44rem;
-  --avatar-size-medium    : 34rem;
-  --avatar-size-small     : 28rem;
-  --avatar-size-extraSmall: 24rem;
+  --avatar-size-large     : 44px;
+  --avatar-size-medium    : 34px;
+  --avatar-size-small     : 28px;
+  --avatar-size-extraSmall: 24px;
   
   // badge
-  --badge-size: 16rem;
-  --badge-size-dot: 10rem;
+  --badge-size: 16px;
+  --badge-size-dot: 10px;
 
   // btn
-  --btn-size-large     : 44rem;
-  --btn-size-medium    : 34rem;
-  --btn-size-small     : 28rem;
-  --btn-size-extraSmall: 24rem;
-  --btn-txt-large     : 14rem;
-  --btn-txt-medium    : 13rem;
-  --btn-txt-small     : 12rem;
-  --btn-txt-extraSmall: 12rem;
-  --btn-p-large     : 0 30rem;
-  --btn-p-medium    : 0 20rem;
-  --btn-p-small     : 0 10rem;
-  --btn-p-extraSmall: 0 5rem ;
+  --btn-size-large     : 44px;
+  --btn-size-medium    : 34px;
+  --btn-size-small     : 28px;
+  --btn-size-extraSmall: 24px;
+  --btn-txt-large     : 14px;
+  --btn-txt-medium    : 13px;
+  --btn-txt-small     : 12px;
+  --btn-txt-extraSmall: 12px;
+  --btn-p-large     : 0 30px;
+  --btn-p-medium    : 0 20px;
+  --btn-p-small     : 0 10px;
+  --btn-p-extraSmall: 0 5px ;
   --btn-shadow : var(--shadow);
   
   // checkbox
   --checkbox: var(--gray6);
   --checkbox-disabled : var(--gray9);
-  --checkbox-size-large     : 24rem;
-  --checkbox-size-medium    : 20rem;
-  --checkbox-size-small     : 16rem;
-  --checkbox-size-extraSmall: 14rem;
+  --checkbox-size-large     : 24px;
+  --checkbox-size-medium    : 20px;
+  --checkbox-size-small     : 16px;
+  --checkbox-size-extraSmall: 14px;
   --checkbox-ripple-size-large     : calc(var(--checkbox-size-large) * 2)     ;
   --checkbox-ripple-size-medium    : calc(var(--checkbox-size-medium) * 2)    ;
   --checkbox-ripple-size-small     : calc(var(--checkbox-size-small) * 2)     ;
   --checkbox-ripple-size-extraSmall: calc(var(--checkbox-size-extraSmall) * 2);
   
   // chip
-  --chip-p-large      : 15rem;
-  --chip-p-medium     : 10rem;
-  --chip-p-small      : 5rem ;
-  --chip-p-extraSmall : 5rem ;
-  --chip-btnp-large      : 7rem;
-  --chip-btnp-medium     : 5rem;
-  --chip-btnp-small      : 5rem;
-  --chip-btnp-extraSmall : 3rem;
+  --chip-p-large      : 15px;
+  --chip-p-medium     : 10px;
+  --chip-p-small      : 5px ;
+  --chip-p-extraSmall : 5px ;
+  --chip-btnp-large      : 7px;
+  --chip-btnp-medium     : 5px;
+  --chip-btnp-small      : 5px;
+  --chip-btnp-extraSmall : 3px;
 
   // location
-  --location-gap : 5rem;
-  --location-font-size: 12rem;
+  --location-gap : 5px;
+  --location-font-size: 12px;
   --location-light: var(--gray9);
   --location-light-hover: var(--gray6);
   --location-bold: var(--black);
@@ -206,40 +202,40 @@ html {
   // radio
   --radio: var(--gray6);
   --radio-disabled : var(--gray9);
-  --radio-size-large     : 24rem;
-  --radio-size-medium    : 20rem;
-  --radio-size-small     : 16rem;
-  --radio-size-extraSmall: 14rem;
+  --radio-size-large     : 24px;
+  --radio-size-medium    : 20px;
+  --radio-size-small     : 16px;
+  --radio-size-extraSmall: 14px;
   --radio-ripple-size-large     : calc(var(--radio-size-large) * 2)     ;
   --radio-ripple-size-medium    : calc(var(--radio-size-medium) * 2)    ;
   --radio-ripple-size-small     : calc(var(--radio-size-small) * 2)     ;
   --radio-ripple-size-extraSmall: calc(var(--radio-size-extraSmall) * 2);
 
   // select 
-  --select-size-large     : 44rem;
-  --select-size-medium    : 34rem;
-  --select-size-small     : 28rem;
-  --select-size-extraSmall: 24rem;
-  --select-txt-large     :  14rem;
-  --select-txt-medium    :  13rem;
-  --select-txt-small     :  12rem;
-  --select-txt-extraSmall:  12rem;
-  --select-p-large     : 0 15rem;
-  --select-p-medium    : 0 13rem;
-  --select-p-small     : 0 11rem;
-  --select-p-extraSmall: 0 9rem ;
-  --select-width: 300rem;
+  --select-size-large     : 44px;
+  --select-size-medium    : 34px;
+  --select-size-small     : 28px;
+  --select-size-extraSmall: 24px;
+  --select-txt-large     :  14px;
+  --select-txt-medium    :  13px;
+  --select-txt-small     :  12px;
+  --select-txt-extraSmall:  12px;
+  --select-p-large     : 0 15px;
+  --select-p-medium    : 0 13px;
+  --select-p-small     : 0 11px;
+  --select-p-extraSmall: 0 9px ;
+  --select-width: 300px;
 
   --select-disabled-bg : var(--grayc);
   --select-disabled-otl : var(--transparent);
 
-  --select-option-max-h: 300rem;
+  --select-option-max-h: 300px;
 
   // switch
-  --switch-width: 24rem;
-  --switch-height: 14rem;
-  --switch-btn-width: 10rem;
-  --switch-btn-height: 10rem;
+  --switch-width: 24px;
+  --switch-height: 14px;
+  --switch-btn-width: 10px;
+  --switch-btn-height: 10px;
   --switch-padding: calc((var(--switch-height) - var(--switch-btn-height)) / 2);
   --switch-ml: calc(var(--switch-width) - (var(--switch-padding) * 2) - var(--switch-btn-width));
   --switch-unchecked : var(--gray9);
@@ -254,18 +250,18 @@ html {
   --talbe-folding-bg: var(--grayf5);
 
   // textfield
-  --textfield-size-large     : 44rem;
-  --textfield-size-medium    : 34rem;
-  --textfield-size-small     : 28rem;
-  --textfield-size-extraSmall: 24rem;
-  --textfield-txt-large     :  14rem;
-  --textfield-txt-medium    :  13rem;
-  --textfield-txt-small     :  12rem;
-  --textfield-txt-extraSmall:  12rem;
-  --textfield-p-large     : 0 15rem;
-  --textfield-p-medium    : 0 13rem;
-  --textfield-p-small     : 0 11rem;
-  --textfield-p-extraSmall: 0 9rem ;
+  --textfield-size-large     : 44px;
+  --textfield-size-medium    : 34px;
+  --textfield-size-small     : 28px;
+  --textfield-size-extraSmall: 24px;
+  --textfield-txt-large     :  14px;
+  --textfield-txt-medium    :  13px;
+  --textfield-txt-small     :  12px;
+  --textfield-txt-extraSmall:  12px;
+  --textfield-p-large     : 0 15px;
+  --textfield-p-medium    : 0 13px;
+  --textfield-p-small     : 0 11px;
+  --textfield-p-extraSmall: 0 9px ;
   --textfield-color: var(--gray9);
   --textfield-focus-color: var(--gray6);
   --textfield-otl: var(--grayc);
@@ -276,38 +272,38 @@ html {
   --textfield-disabled-bg: var(--grayc);
   --textfield-disabled-otl: var(--transparent);
 
-  --textfield-wrap-gap : 3rem;
+  --textfield-wrap-gap : 3px;
 
   --textfield-helpertext-color: var(--gray6);
 
   --textarea-otl: var(--grayc);
   --textarea-focus-otl: var(--gray6);
   --textarea-placeholder-color: var(--gray9);
-  --textarea-font-size: 12rem;
-  --textarea-p: 12rem 12rem;
+  --textarea-font-size: 12px;
+  --textarea-p: 12px 12px;
   
   // tooltip
-  --tooltip-margin : 5rem;
-  --tooltip-size-large      : 8rem 15rem;
-  --tooltip-size-medium     : 5rem 10rem;
-  --tooltip-size-small      : 3rem 7rem;
-  --tooltip-size-extraSmall : 2rem 5rem;
-  --tooltip-font-size-large      : 13rem;
-  --tooltip-font-size-medium     : 12rem;
-  --tooltip-font-size-small      : 11rem;
-  --tooltip-font-size-extraSmall : 10rem;
+  --tooltip-margin : 5px;
+  --tooltip-size-large      : 8px 15px;
+  --tooltip-size-medium     : 5px 10px;
+  --tooltip-size-small      : 3px 7px;
+  --tooltip-size-extraSmall : 2px 5px;
+  --tooltip-font-size-large      : 13px;
+  --tooltip-font-size-medium     : 12px;
+  --tooltip-font-size-small      : 11px;
+  --tooltip-font-size-extraSmall : 10px;
 
   // tree
-  --tree-h : 36rem;
-  --tree-font-size: 14rem;
+  --tree-h : 36px;
+  --tree-font-size: 14px;
   --tree-color : var(--gray6);
-  --tree-p: 0rem 10rem;
-  --tree-gap: 10rem;
+  --tree-p: 0px 10px;
+  --tree-gap: 10px;
   --tree-hover: var(--grayd);
-  --tree-detail-pl: 20rem;
-  --tree-item-h : 36rem;
-  --tree-item-font-size: 14rem;
-  --tree-item-p: 0rem 10rem;
+  --tree-detail-pl: 20px;
+  --tree-item-h : 36px;
+  --tree-item-font-size: 14px;
+  --tree-item-p: 0px 10px;
   --tree-item-gap: 10rem;
 
   // popup

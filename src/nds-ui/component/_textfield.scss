@@ -59,24 +59,24 @@
     }
     // radius
     &.round {
-        border-radius: 100rem;
+        border-radius: 100px;
     }
     &.rect {
-        border-radius: 0rem;
+        border-radius: 0px;
     }
     &-helper-text {
         color: var(--textfield-helpertext-color);
         &.large {
-            font-size: calc(var(--textfield-txt-large) - 2rem);
+            font-size: calc(var(--textfield-txt-large) - 2px);
         }
         &.medium {
-            font-size: calc(var(--textfield-txt-medium) - 2rem);
+            font-size: calc(var(--textfield-txt-medium) - 2px);
         }
         &.small {
-            font-size: calc(var(--textfield-txt-small) - 2rem);
+            font-size: calc(var(--textfield-txt-small) - 2px);
         }
         &.extraSmall {
-            font-size: calc(var(--textfield-txt-extraSmall) - 2rem);
+            font-size: calc(var(--textfield-txt-extraSmall) - 2px);
         }
         &.error {
             color: var(--notification);

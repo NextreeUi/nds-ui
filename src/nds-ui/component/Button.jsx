@@ -224,7 +224,7 @@ const Button = ({
         + ' ' +
         (className ? className : '' )
       }
-        onClick={onClick}
+        onClick={!disabled && onClick}
       >
         {children}
       </button>

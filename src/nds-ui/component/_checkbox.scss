@@ -99,8 +99,8 @@
 
     &:active::before {
         opacity: 1;
-        width: 0rem;
-        height: 0rem;
+        width: 0px;
+        height: 0px;
         transition: 0s;
     }
     &:disabled::before {

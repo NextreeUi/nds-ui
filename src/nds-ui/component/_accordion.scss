@@ -42,8 +42,8 @@
             }
             &>.arrow {
                 @include mask('arrow-down.svg');
-                width: 20rem !important;
-                height: 20rem !important;
+                width: 20px !important;
+                height: 20px !important;
                 background-color: var(--gray6);
                 transition: 0.5s;
             }

@@ -1,6 +1,11 @@
 import * as React from "react";
 import styles from './style.module.scss';
 
+// /**
+//  * 
+//  * @param {{name: string, title?:}} param0 
+//  * @returns 
+//  */
 const Accordion = ({
     wrap,
     title,
@@ -10,12 +15,12 @@ const Accordion = ({
     children,
     id,
     className,
-    click,
+    onClick,
   }) => {
   const [open, setOpen] = React.useState(false);
   const Click = () => {
     setOpen(!open)
-    click ? click() : ''
+    onClick ? onClick() : ''
   }
   return (
     <>

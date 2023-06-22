@@ -19,8 +19,8 @@
     }
     &-arrow {
         @include mask('arrow-right.svg');
-        width: 20rem;
-        height: 20rem;
+        width: 20px;
+        height: 20px;
         background-color: var(--gray6);
     }
 }

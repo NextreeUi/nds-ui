@@ -37,8 +37,8 @@
             }
             &>.arrow {
                 @include mask('arrow-right.svg');
-                width: 20rem !important;
-                height: 20rem !important;
+                width: 20px !important;
+                height: 20px !important;
                 background-color: var(--gray6);
                 transition: 0.5s;
             }
@@ -78,8 +78,8 @@
         }
         &>.item {
             @include mask('file.svg');
-            width: 20rem;
-            height: 20rem;
+            width: 20px;
+            height: 20px;
             background-color: var(--gray6);
         }
     }

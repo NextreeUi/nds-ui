@@ -24,7 +24,9 @@ const AccordionPage = () => {
   const IconRotateCodeClick = () => {
     setIconRotateCode(!IconRotateCode)
   }
-
+  const AcoordionClick = () => {
+    console.log('asd')
+  }
   return (
     <>
       <div className='layout-all'>
@@ -33,7 +35,7 @@ const AccordionPage = () => {
           <h1>Accordion</h1>
           <p className='description'>Accordion은 클릭시 확장되는 컴포넌트입니다.</p>
         </div>
-
+        
         {/* Import */}
         <div className='layout-small'>
           <div className='layout-title'>
@@ -63,11 +65,13 @@ import Accordion from 'nds-ui/component/Accordion';`}/>
               Accordion 컴포넌트는 다양한 속성이 있습니다. <br/>
               wrap / title / icon / iconLocation / iconRotate 등이 있습니다.
             </p>
+            
           </div>
         </div>
 
         {/* Basic Accordion */}
         <div className='layout-small'>
+          
           <div className='layout-title'>
             <h3>Basic Accordion</h3>
             <p className='description'>
@@ -78,8 +82,8 @@ import Accordion from 'nds-ui/component/Accordion';`}/>
             </p>
           </div>
           <div className='layout-example'>
-            <Accordion wrap>
-              <Accordion title='아코디언'>
+            <Accordion wrap >
+              <Accordion title='아코디언' onClick={AcoordionClick}>
                 <div className='p20'> 아코디언 내용입니다.</div>
               </Accordion>
             </Accordion>
@@ -275,7 +279,7 @@ export default Example;`}/>
             </p>
           </div>
           <div className='layout-example'>
-            <Accordion wrap>
+            <Accordion wrap >
               <Accordion title='아이콘이 90도 회전합니다.' iconRotate='deg90'>
                 <div className='p20'> 아코디언 내용입니다.</div>
               </Accordion>

@@ -10,7 +10,7 @@
     border: 1px solid var(--textarea-otl) ;
     background-color: var(--white);
     &.rect {
-        border-radius: 0rem;
+        border-radius: 0px;
     }
     &::placeholder {
         color: var(--textarea-placeholder-color);

@@ -1,6 +1,8 @@
 html {
-  font-size: 1px;
   letter-spacing: 0rem;
+  body {
+    font-size: 14px !important;
+  }
 }
 
 @media (max-width : 1600px) {  
@@ -15,8 +17,8 @@ html {
   --value-color: #c86523;
 
   // location
-  --location-font-size: 12rem;
-  --location-gap: 10rem;
+  --location-font-size: 12px;
+  --location-gap: 10px;
   --location-light: var(--black);
   --location-light-hover: var(--black);
   --location-bold: var(--black);

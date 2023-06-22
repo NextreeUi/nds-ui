@@ -5,7 +5,7 @@
     justify-content: space-between;
     color: var(--gray9);
     border: 1px solid var(--grayc);
-    width: var(--select-width);
+    width: 100%;
     background-color: var(--white);
     cursor: pointer;
 
@@ -75,7 +75,7 @@
         }
     }
     &-wrap {
-        width: fit-content;
+        width: var(--select-width);
         position: relative;
     }
     &-option {

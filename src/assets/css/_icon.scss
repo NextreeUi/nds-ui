@@ -16,8 +16,8 @@ $iconsList :
   @each $item in $iconsList {
     &-#{$item} {
       @include mask('icons/#{$item}.svg');
-      width: 20rem;
-      height: 20rem;
+      width: 20px;
+      height: 20px;
       &:not([class*="bgc-"]) {
         background-color: var(--gray6);
       }
@@ -25,22 +25,22 @@ $iconsList :
   }
   &-location-arrow {
     @include mask('icons/location-arrow.svg');
-    width: 5rem;
-    height: 8rem;
+    width: 5px;
+    height: 8px;
   }
   &-gitlab {
     @include image("gitlab.svg");
-    width: 43rem;
-    height: 43rem;
+    width: 43px;
+    height: 43px;
   }
   &-github {
     @include image("github.svg");
-    width: 43rem;
-    height: 43rem;
+    width: 43px;
+    height: 43px;
   }
   &-figma {
     @include image("figma.svg");
-    width: 43rem;
-    height: 43rem;
+    width: 43px;
+    height: 43px;
   }
 }
