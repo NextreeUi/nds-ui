@@ -28,9 +28,9 @@ const Accordion = ({
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void,
   }) => {
   const [open, setOpen] = React.useState(false);
-  const Click = () => {
+  const Click = (event: React.MouseEvent<HTMLButtonElement>) => {
     setOpen(!open)
-    onClick ? onClick() : ''
+    onClick ? onClick(event) : ''
   }
   return (
     <>
